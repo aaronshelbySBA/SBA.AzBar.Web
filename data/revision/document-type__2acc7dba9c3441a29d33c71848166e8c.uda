@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/c673818bb5084602ac6c278c65b6965e",
+  "AllowedTemplates": [
+    "umb://template/c673818bb5084602ac6c278c65b6965e"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": "Home Page, Section Home Pages",
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/2acc7dba9c3441a29d33c71848166e8c",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/c673818bb5084602ac6c278c65b6965e",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Landing Page",
+  "Alias": "landingPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.1"
+}
