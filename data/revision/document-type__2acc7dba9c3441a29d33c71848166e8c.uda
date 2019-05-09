@@ -38,7 +38,7 @@
           "Key": "199a8b83-7079-4877-b7f0-b8a785ca479f",
           "Alias": "backgroundColor",
           "DataType": "umb://data-type/05f6e70e8c3e44ba9047c3845372e302",
-          "Description": null,
+          "Description": "Default Background Color for Top Banner Slideshow",
           "Mandatory": false,
           "Name": "Background Color",
           "SortOrder": 0,
