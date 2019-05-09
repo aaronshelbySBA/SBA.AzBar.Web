@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Umbraco.ColorPicker",
+  "DatabaseType": 1,
+  "Configuration": {"useLabel":false,"items":[]},
+  "Parent": null,
+  "Udi": "umb://data-type/05f6e70e8c3e44ba9047c3845372e302",
+  "Dependencies": [],
+  "Name": "Landing Page - Color Picker",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.1"
+}
