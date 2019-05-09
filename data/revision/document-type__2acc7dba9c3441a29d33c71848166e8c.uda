@@ -16,10 +16,35 @@
   },
   "Parent": null,
   "CompositionContentTypes": [],
-  "PropertyGroups": [],
+  "PropertyGroups": [
+    {
+      "Key": "da60420a-f503-45e7-b7f7-6fe56829cde5",
+      "Name": "Top Banner",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "199a8b83-7079-4877-b7f0-b8a785ca479f",
+          "Alias": "backgroundColor",
+          "DataType": "umb://data-type/05f6e70e8c3e44ba9047c3845372e302",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Background Color",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    }
+  ],
   "PropertyTypes": [],
   "Udi": "umb://document-type/2acc7dba9c3441a29d33c71848166e8c",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type/05f6e70e8c3e44ba9047c3845372e302",
+      "Ordering": true,
+      "Mode": 0
+    },
     {
       "Udi": "umb://template/c673818bb5084602ac6c278c65b6965e",
       "Ordering": true,
