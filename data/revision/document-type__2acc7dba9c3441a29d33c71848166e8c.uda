@@ -18,6 +18,25 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
+      "Key": "c29b0098-6a14-4ea9-816e-aa4eb01756a3",
+      "Name": "Introduction Text",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "a4ccf161-9244-410a-9b9f-53b1b2304c98",
+          "Alias": "introText",
+          "DataType": "umb://data-type/3bef396edf6c460da187cd85693cfd9f",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "IntroText",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    },
+    {
       "Key": "da60420a-f503-45e7-b7f7-6fe56829cde5",
       "Name": "Top Banner Group",
       "SortOrder": 0,
@@ -54,6 +73,11 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/05f6e70e8c3e44ba9047c3845372e302",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3bef396edf6c460da187cd85693cfd9f",
       "Ordering": true,
       "Mode": 0
     },
