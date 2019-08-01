@@ -1,0 +1,106 @@
+{
+  "DefaultTemplate": "umb://template/cc497403330d402881fa230c34c1688d",
+  "AllowedTemplates": [
+    "umb://template/cc497403330d402881fa230c34c1688d"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "16d24542-882c-431f-b9f4-fc7b325d2733",
+      "Name": "Details",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "2f00582e-372f-42ae-9cc1-82491c6266de",
+          "Alias": "title",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Title",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "d12c7427-ce94-4a56-ba79-8f08d572df73",
+          "Alias": "subtitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Subtitle",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    },
+    {
+      "Key": "999f8e5d-34bf-458c-a394-d64595875132",
+      "Name": "Sections",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "1d62eec7-714d-4f47-94bd-e21a9f42d07f",
+          "Alias": "secondaryLinks",
+          "DataType": "umb://data-type/29496bd02d6543b3929e1264ca1a114b",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Secondary Links",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "3d960b17-99be-477c-a67e-1a73c1149838",
+          "Alias": "primaryLinks",
+          "DataType": "umb://data-type/29496bd02d6543b3929e1264ca1a114b",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Primary Links",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/42b47634a4ba4b7ab7bf7522d0db552a",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/29496bd02d6543b3929e1264ca1a114b",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/cc497403330d402881fa230c34c1688d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Landing",
+  "Alias": "landing",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
