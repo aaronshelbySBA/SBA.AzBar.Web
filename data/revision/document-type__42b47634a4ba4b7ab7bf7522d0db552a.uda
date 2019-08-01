@@ -18,6 +18,25 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
+      "Key": "1645d7f4-6ffd-474c-b101-ef22fd6013d6",
+      "Name": "Tags/Meta",
+      "SortOrder": 2,
+      "PropertyTypes": [
+        {
+          "Key": "52424f40-9a0b-4d19-ab72-3be4f8864656",
+          "Alias": "tags",
+          "DataType": "umb://data-type/b6b73142b9c14bf8a16de1c23320b549",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Tags",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    },
+    {
       "Key": "16d24542-882c-431f-b9f4-fc7b325d2733",
       "Name": "Details",
       "SortOrder": 0,
@@ -54,9 +73,9 @@
       "SortOrder": 1,
       "PropertyTypes": [
         {
-          "Key": "1d62eec7-714d-4f47-94bd-e21a9f42d07f",
+          "Key": "9267255d-9a47-430d-9cbf-80f2a9e0a537",
           "Alias": "secondaryLinks",
-          "DataType": "umb://data-type/29496bd02d6543b3929e1264ca1a114b",
+          "DataType": "umb://data-type/eec495cda5e047d69e82d144dc3ec8d6",
           "Description": null,
           "Mandatory": false,
           "Name": "Secondary Links",
@@ -66,9 +85,9 @@
           "VariesBySegment": false
         },
         {
-          "Key": "3d960b17-99be-477c-a67e-1a73c1149838",
+          "Key": "f2d1acb3-d2e4-4f8f-9a97-0b6af05a3752",
           "Alias": "primaryLinks",
-          "DataType": "umb://data-type/29496bd02d6543b3929e1264ca1a114b",
+          "DataType": "umb://data-type/eec495cda5e047d69e82d144dc3ec8d6",
           "Description": null,
           "Mandatory": false,
           "Name": "Primary Links",
@@ -89,7 +108,12 @@
       "Mode": 0
     },
     {
-      "Udi": "umb://data-type/29496bd02d6543b3929e1264ca1a114b",
+      "Udi": "umb://data-type/b6b73142b9c14bf8a16de1c23320b549",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/eec495cda5e047d69e82d144dc3ec8d6",
       "Ordering": true,
       "Mode": 0
     },
