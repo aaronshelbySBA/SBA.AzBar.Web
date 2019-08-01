@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Umbraco.MultiNodeTreePicker",
+  "DatabaseType": 0,
+  "Configuration": {"startNode":{"type":"content","query":null,"id":null},"filter":null,"minNumber":3,"maxNumber":6,"showOpenButton":true},
+  "Parent": null,
+  "Udi": "umb://data-type/eec495cda5e047d69e82d144dc3ec8d6",
+  "Dependencies": [],
+  "Name": "Landing - Multinode Treepicker",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}
