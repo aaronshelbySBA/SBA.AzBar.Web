@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/Landing.cshtml",
+  "Master": null,
+  "Udi": "umb://template/cc497403330d402881fa230c34c1688d",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Landing.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Landing",
+  "Alias": "Landing",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
