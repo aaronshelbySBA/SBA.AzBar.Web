@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Umbraco.MultiUrlPicker",
+  "DatabaseType": 0,
+  "Configuration": {"minNumber":3,"maxNumber":6},
+  "Parent": null,
+  "Udi": "umb://data-type/29496bd02d6543b3929e1264ca1a114b",
+  "Dependencies": [],
+  "Name": "Landing - Multi Url Picker",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}
