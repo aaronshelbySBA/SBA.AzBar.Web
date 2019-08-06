@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Umbraco.TextArea",
+  "DatabaseType": 0,
+  "Configuration": {},
+  "Parent": null,
+  "Udi": "umb://data-type/2ee0cfd43a534d65ae93448af7dec4e8",
+  "Dependencies": [],
+  "Name": "Text Page - Content",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}

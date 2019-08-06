@@ -10,9 +10,11 @@
   "Permissions": {
     "AllowVaryingByCulture": false,
     "AllowVaryingBySegment": false,
-    "AllowedAtRoot": false,
+    "AllowedAtRoot": true,
     "IsElementType": false,
-    "AllowedChildContentTypes": []
+    "AllowedChildContentTypes": [
+      "umb://document-type/1708273810ac42a29e25a08b1412a620"
+    ]
   },
   "Parent": null,
   "CompositionContentTypes": [],
@@ -87,6 +89,11 @@
       "Mode": 0
     },
     {
+      "Udi": "umb://document-type/1708273810ac42a29e25a08b1412a620",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
       "Udi": "umb://template/c673818bb5084602ac6c278c65b6965e",
       "Ordering": true,
       "Mode": 0
@@ -95,5 +102,5 @@
   "Name": "Landing Page",
   "Alias": "landingPage",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
-  "__version": "3.0.1"
+  "__version": "3.0.2"
 }

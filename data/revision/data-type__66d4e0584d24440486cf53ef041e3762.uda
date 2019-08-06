@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Umbraco.TextBox",
+  "DatabaseType": 1,
+  "Configuration": {},
+  "Parent": null,
+  "Udi": "umb://data-type/66d4e0584d24440486cf53ef041e3762",
+  "Dependencies": [],
+  "Name": "Text Page - Title",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}
