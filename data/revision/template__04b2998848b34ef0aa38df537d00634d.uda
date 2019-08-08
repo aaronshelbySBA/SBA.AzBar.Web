@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/DeptContainer.cshtml",
+  "Master": null,
+  "Udi": "umb://template/04b2998848b34ef0aa38df537d00634d",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/DeptContainer.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Dept Container",
+  "Alias": "DeptContainer",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
