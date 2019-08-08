@@ -11,7 +11,7 @@
     "AllowedAtRoot": false,
     "IsElementType": false,
     "AllowedChildContentTypes": [
-      "umb://document-type/c5b27d996979476290353fdbf8d671e0"
+      "umb://document-type/44d0e8d643dc44798f3badcb1553dd34"
     ]
   },
   "Parent": null,
@@ -21,7 +21,7 @@
   "Udi": "umb://document-type/1708273810ac42a29e25a08b1412a620",
   "Dependencies": [
     {
-      "Udi": "umb://document-type/c5b27d996979476290353fdbf8d671e0",
+      "Udi": "umb://document-type/44d0e8d643dc44798f3badcb1553dd34",
       "Ordering": false,
       "Mode": 0
     }
