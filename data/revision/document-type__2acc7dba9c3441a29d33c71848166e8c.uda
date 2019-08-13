@@ -13,7 +13,7 @@
     "AllowedAtRoot": true,
     "IsElementType": false,
     "AllowedChildContentTypes": [
-      "umb://document-type/1708273810ac42a29e25a08b1412a620"
+      "umb://document-type/c5924ec705be48e3970e71510919b4ae"
     ]
   },
   "Parent": null,
@@ -89,7 +89,7 @@
       "Mode": 0
     },
     {
-      "Udi": "umb://document-type/1708273810ac42a29e25a08b1412a620",
+      "Udi": "umb://document-type/c5924ec705be48e3970e71510919b4ae",
       "Ordering": false,
       "Mode": 0
     },
