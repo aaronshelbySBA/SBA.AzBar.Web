@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/Placeholder.cshtml",
+  "Master": null,
+  "Udi": "umb://template/0260b834bedd488f9985f253cab11add",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Placeholder.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Placeholder",
+  "Alias": "Placeholder",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
