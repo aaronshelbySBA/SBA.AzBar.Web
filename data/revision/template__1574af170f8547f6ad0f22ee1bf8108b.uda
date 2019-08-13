@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/BaseNode.cshtml",
+  "Master": null,
+  "Udi": "umb://template/1574af170f8547f6ad0f22ee1bf8108b",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/BaseNode.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Base Node",
+  "Alias": "BaseNode",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
