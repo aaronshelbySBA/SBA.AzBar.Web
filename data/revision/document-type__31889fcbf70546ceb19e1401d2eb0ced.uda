@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/b961b06bdbe2417ea06c3ffab62b9b3d",
+  "AllowedTemplates": [
+    "umb://template/b961b06bdbe2417ea06c3ffab62b9b3d"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": "AZ Bar Home Page",
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/31889fcbf70546ceb19e1401d2eb0ced",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/b961b06bdbe2417ea06c3ffab62b9b3d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Home Page",
+  "Alias": "homePage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
