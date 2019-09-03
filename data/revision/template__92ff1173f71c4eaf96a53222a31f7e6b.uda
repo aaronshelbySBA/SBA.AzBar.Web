@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/Article.cshtml",
+  "Master": null,
+  "Udi": "umb://template/92ff1173f71c4eaf96a53222a31f7e6b",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Article.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Article",
+  "Alias": "Article",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
