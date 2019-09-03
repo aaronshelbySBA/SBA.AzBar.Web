@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/Calendar.cshtml",
+  "Master": null,
+  "Udi": "umb://template/343c7e1db9664b78838b18b0427ea63b",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Calendar.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Calendar",
+  "Alias": "Calendar",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
