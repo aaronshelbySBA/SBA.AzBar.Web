@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/9b96dea1cbc5407eb34889c54c638fda",
+  "AllowedTemplates": [
+    "umb://template/9b96dea1cbc5407eb34889c54c638fda"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/567080102efc43ab9c997c95b7cc8545",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/9b96dea1cbc5407eb34889c54c638fda",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "For the Public Page",
+  "Alias": "forThePublicPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
