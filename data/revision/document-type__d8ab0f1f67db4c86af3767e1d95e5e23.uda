@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/eabcd9ab7dcf4131a8e026e75583d7ff",
+  "AllowedTemplates": [
+    "umb://template/eabcd9ab7dcf4131a8e026e75583d7ff"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/d8ab0f1f67db4c86af3767e1d95e5e23",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/eabcd9ab7dcf4131a8e026e75583d7ff",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "For Lawyer Page",
+  "Alias": "forLawyerPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
