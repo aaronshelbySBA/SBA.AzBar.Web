@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/c784d1e971184a55ae3975398e43d20a",
+  "AllowedTemplates": [
+    "umb://template/c784d1e971184a55ae3975398e43d20a"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/74f48422300d46efb6b8592d4e64f881",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/c784d1e971184a55ae3975398e43d20a",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "List",
+  "Alias": "list",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
