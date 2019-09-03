@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/ForLawyerPage.cshtml",
+  "Master": null,
+  "Udi": "umb://template/eabcd9ab7dcf4131a8e026e75583d7ff",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/ForLawyerPage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "For Lawyer Page",
+  "Alias": "ForLawyerPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
