@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/Directory.cshtml",
+  "Master": null,
+  "Udi": "umb://template/b2c050cc2631413795549b1f20036f3b",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Directory.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Directory",
+  "Alias": "Directory",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
