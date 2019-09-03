@@ -13,8 +13,8 @@
     "AllowedAtRoot": true,
     "IsElementType": false,
     "AllowedChildContentTypes": [
+      "umb://document-type/51659e64818a4c21b8bef6d62c96786b",
       "umb://document-type/567080102efc43ab9c997c95b7cc8545",
-      "umb://document-type/8dac7dd28c5840b097ffac12641961f6",
       "umb://document-type/d8ab0f1f67db4c86af3767e1d95e5e23"
     ]
   },
@@ -91,12 +91,12 @@
       "Mode": 0
     },
     {
-      "Udi": "umb://document-type/567080102efc43ab9c997c95b7cc8545",
+      "Udi": "umb://document-type/51659e64818a4c21b8bef6d62c96786b",
       "Ordering": false,
       "Mode": 0
     },
     {
-      "Udi": "umb://document-type/8dac7dd28c5840b097ffac12641961f6",
+      "Udi": "umb://document-type/567080102efc43ab9c997c95b7cc8545",
       "Ordering": false,
       "Mode": 0
     },
