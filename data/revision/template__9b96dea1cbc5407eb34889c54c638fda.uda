@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/ForThePublicPage.cshtml",
+  "Master": null,
+  "Udi": "umb://template/9b96dea1cbc5407eb34889c54c638fda",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/ForThePublicPage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "For the Public Page",
+  "Alias": "ForThePublicPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
