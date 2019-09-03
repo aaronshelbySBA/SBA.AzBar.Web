@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/343c7e1db9664b78838b18b0427ea63b",
+  "AllowedTemplates": [
+    "umb://template/343c7e1db9664b78838b18b0427ea63b"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/5bb08b4865114868bfe3fc39cd8db57f",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/343c7e1db9664b78838b18b0427ea63b",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Calendar",
+  "Alias": "calendar",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
