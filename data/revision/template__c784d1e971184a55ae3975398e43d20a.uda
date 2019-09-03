@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/List.cshtml",
+  "Master": null,
+  "Udi": "umb://template/c784d1e971184a55ae3975398e43d20a",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/List.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "List",
+  "Alias": "List",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
