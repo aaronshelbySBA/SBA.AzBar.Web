@@ -14,8 +14,8 @@
       "Mode": 0
     }
   ],
-  "Name": "Landing Page",
+  "Name": "Home Page",
   "Alias": "LandingPage",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
-  "__version": "3.0.1"
+  "__version": "3.0.2"
 }
