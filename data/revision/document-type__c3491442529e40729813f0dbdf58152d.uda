@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/6a231576e8524a3bae5e3edc5d85c9fd",
+  "AllowedTemplates": [
+    "umb://template/6a231576e8524a3bae5e3edc5d85c9fd"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c3491442529e40729813f0dbdf58152d",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/6a231576e8524a3bae5e3edc5d85c9fd",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "AZ Attorney News Center",
+  "Alias": "aZAttorneyNewsCenter",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
