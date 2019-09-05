@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/AZAttorneyNewsCenter.cshtml",
+  "Master": null,
+  "Udi": "umb://template/6a231576e8524a3bae5e3edc5d85c9fd",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/AZAttorneyNewsCenter.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "AZ Attorney News Center",
+  "Alias": "AZAttorneyNewsCenter",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
