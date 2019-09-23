@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/5ecdb6894ce14a33a0b35860a2256f8c",
+  "AllowedTemplates": [
+    "umb://template/5ecdb6894ce14a33a0b35860a2256f8c"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/709ecfe02ca349009bbb3928928fd972",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/5ecdb6894ce14a33a0b35860a2256f8c",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Election Candidates",
+  "Alias": "electionCandidates",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
