@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/ElectionCandidates.cshtml",
+  "Master": null,
+  "Udi": "umb://template/5ecdb6894ce14a33a0b35860a2256f8c",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/ElectionCandidates.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Election Candidates",
+  "Alias": "ElectionCandidates",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
