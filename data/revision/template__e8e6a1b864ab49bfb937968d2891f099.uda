@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/SubMenuLinkList.cshtml",
+  "Master": null,
+  "Udi": "umb://template/e8e6a1b864ab49bfb937968d2891f099",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/SubMenuLinkList.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Sub Menu Link List",
+  "Alias": "SubMenuLinkList",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
