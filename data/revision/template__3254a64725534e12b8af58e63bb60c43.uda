@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/NavigationSubMenuColumn.cshtml",
+  "Master": null,
+  "Udi": "umb://template/3254a64725534e12b8af58e63bb60c43",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/NavigationSubMenuColumn.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Navigation Sub Menu Column",
+  "Alias": "NavigationSubMenuColumn",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
