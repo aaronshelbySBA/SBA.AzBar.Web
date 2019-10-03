@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/NavigationLink.cshtml",
+  "Master": null,
+  "Udi": "umb://template/fe9f319e51934f76b096d1ff1d4b1d85",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/NavigationLink.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Navigation Link",
+  "Alias": "NavigationLink",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
