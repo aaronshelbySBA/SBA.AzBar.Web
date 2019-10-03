@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/fe9f319e51934f76b096d1ff1d4b1d85",
+  "AllowedTemplates": [
+    "umb://template/fe9f319e51934f76b096d1ff1d4b1d85"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/5b2e6204efef43978b2e4ee6e1d07614",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/fe9f319e51934f76b096d1ff1d4b1d85",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Navigation Link",
+  "Alias": "navigationLink",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
