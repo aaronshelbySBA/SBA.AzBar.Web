@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/3254a64725534e12b8af58e63bb60c43",
+  "AllowedTemplates": [
+    "umb://template/3254a64725534e12b8af58e63bb60c43"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/8f8714c2b18e4002a1df416f1098ede2",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/3254a64725534e12b8af58e63bb60c43",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Navigation Sub Menu Column",
+  "Alias": "navigationSubMenuColumn",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
