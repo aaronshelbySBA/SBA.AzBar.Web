@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/e8e6a1b864ab49bfb937968d2891f099",
+  "AllowedTemplates": [
+    "umb://template/e8e6a1b864ab49bfb937968d2891f099"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/2324b882e14a4d0cb6ade99152d6ae5e",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/e8e6a1b864ab49bfb937968d2891f099",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Sub Menu Link List",
+  "Alias": "subMenuLinkList",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
