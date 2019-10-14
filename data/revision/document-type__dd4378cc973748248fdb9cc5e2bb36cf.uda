@@ -1,0 +1,31 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/f1331b5953cf46fca74f3bf8f54d98ff",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/dd4378cc973748248fdb9cc5e2bb36cf",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/f1331b5953cf46fca74f3bf8f54d98ff",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "BasePage_Search",
+  "Alias": "basePage_Search",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
