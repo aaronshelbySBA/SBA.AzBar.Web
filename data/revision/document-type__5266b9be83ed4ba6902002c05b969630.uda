@@ -14,10 +14,35 @@
   },
   "Parent": "umb://document-type-container/f1331b5953cf46fca74f3bf8f54d98ff",
   "CompositionContentTypes": [],
-  "PropertyGroups": [],
+  "PropertyGroups": [
+    {
+      "Key": "f2eb832a-570c-42ef-9fb1-9d6752f68271",
+      "Name": "Advertising",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "da0638a7-dfe8-4978-9bb3-b90d7dff8858",
+          "Alias": "showAds",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Show Ads",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    }
+  ],
   "PropertyTypes": [],
   "Udi": "umb://document-type/5266b9be83ed4ba6902002c05b969630",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+      "Ordering": true,
+      "Mode": 0
+    },
     {
       "Udi": "umb://document-type-container/f1331b5953cf46fca74f3bf8f54d98ff",
       "Ordering": true,
