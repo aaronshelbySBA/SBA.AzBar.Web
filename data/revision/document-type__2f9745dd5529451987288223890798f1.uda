@@ -16,6 +16,49 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
+      "Key": "62b5f24d-be80-4ee5-9780-42e6f3ed9483",
+      "Name": "Contact",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "1e585b72-fc68-4abb-9341-7b3b2ef9a783",
+          "Alias": "contactName",
+          "DataType": "umb://data-type/98b1bacaa0c8497dad344b05121a27f0",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Contact Name",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "7ec258ce-f7cb-41b7-a0b9-940de0e173e1",
+          "Alias": "email",
+          "DataType": "umb://data-type/80a89a81dd0648638b38f286854bb312",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Email",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "dc64b66e-7222-4a1a-ba9b-7805914d91b8",
+          "Alias": "phone",
+          "DataType": "umb://data-type/b3ad133bdc8d4fac94bbcc9477adf76c",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Phone",
+          "SortOrder": 2,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    },
+    {
       "Key": "d172d56b-3669-4a2f-b31c-381c32190aef",
       "Name": "Page",
       "SortOrder": 0,
@@ -25,7 +68,7 @@
           "Alias": "title",
           "DataType": "umb://data-type/cf522736639f42bcba14c81a144b6080",
           "Description": "Page Title",
-          "Mandatory": false,
+          "Mandatory": true,
           "Name": "Title",
           "SortOrder": 0,
           "Validation": null,
@@ -33,25 +76,13 @@
           "VariesBySegment": false
         },
         {
-          "Key": "9bfa634c-33db-4256-8a08-527dbddff609",
-          "Alias": "contactName",
-          "DataType": "umb://data-type/cfff34d0875c4c56894916287acee209",
+          "Key": "8940cd0b-7e89-42d8-9a65-2e267d4dbcab",
+          "Alias": "subTitle",
+          "DataType": "umb://data-type/49c0a3ba1e954b6aa0b3e07b7fb2ee8d",
           "Description": null,
           "Mandatory": false,
-          "Name": "Contact Name",
+          "Name": "SubTitle",
           "SortOrder": 1,
-          "Validation": null,
-          "VariesByCulture": false,
-          "VariesBySegment": false
-        },
-        {
-          "Key": "bf33a2ab-2aec-460f-91c7-a4404535487d",
-          "Alias": "contactTitle",
-          "DataType": "umb://data-type/03a156a9bd4d4e13bf07499836c5a109",
-          "Description": null,
-          "Mandatory": false,
-          "Name": "Contact Title",
-          "SortOrder": 2,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -63,17 +94,27 @@
   "Udi": "umb://document-type/2f9745dd5529451987288223890798f1",
   "Dependencies": [
     {
-      "Udi": "umb://data-type/03a156a9bd4d4e13bf07499836c5a109",
+      "Udi": "umb://data-type/49c0a3ba1e954b6aa0b3e07b7fb2ee8d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/80a89a81dd0648638b38f286854bb312",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/98b1bacaa0c8497dad344b05121a27f0",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/b3ad133bdc8d4fac94bbcc9477adf76c",
       "Ordering": true,
       "Mode": 0
     },
     {
       "Udi": "umb://data-type/cf522736639f42bcba14c81a144b6080",
-      "Ordering": true,
-      "Mode": 0
-    },
-    {
-      "Udi": "umb://data-type/cfff34d0875c4c56894916287acee209",
       "Ordering": true,
       "Mode": 0
     },
