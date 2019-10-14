@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Umbraco.TextBox",
+  "DatabaseType": 1,
+  "Configuration": {},
+  "Parent": null,
+  "Udi": "umb://data-type/98b1bacaa0c8497dad344b05121a27f0",
+  "Dependencies": [],
+  "Name": "BasePage_ContactName (3)",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}
