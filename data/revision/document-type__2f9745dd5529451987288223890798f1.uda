@@ -1,0 +1,90 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": "Page Components",
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/f1331b5953cf46fca74f3bf8f54d98ff",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "d172d56b-3669-4a2f-b31c-381c32190aef",
+      "Name": "Page",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "851a9bc8-a842-492c-8e2a-4012f5f4a7b4",
+          "Alias": "title",
+          "DataType": "umb://data-type/cf522736639f42bcba14c81a144b6080",
+          "Description": "Page Title",
+          "Mandatory": false,
+          "Name": "Title",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "9bfa634c-33db-4256-8a08-527dbddff609",
+          "Alias": "contactName",
+          "DataType": "umb://data-type/cfff34d0875c4c56894916287acee209",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Contact Name",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "bf33a2ab-2aec-460f-91c7-a4404535487d",
+          "Alias": "contactTitle",
+          "DataType": "umb://data-type/03a156a9bd4d4e13bf07499836c5a109",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Contact Title",
+          "SortOrder": 2,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/2f9745dd5529451987288223890798f1",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/03a156a9bd4d4e13bf07499836c5a109",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/cf522736639f42bcba14c81a144b6080",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/cfff34d0875c4c56894916287acee209",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/f1331b5953cf46fca74f3bf8f54d98ff",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "BasePage",
+  "Alias": "basePage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
