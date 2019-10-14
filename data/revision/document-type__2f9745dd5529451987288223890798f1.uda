@@ -23,7 +23,7 @@
         {
           "Key": "1e585b72-fc68-4abb-9341-7b3b2ef9a783",
           "Alias": "contactName",
-          "DataType": "umb://data-type/98b1bacaa0c8497dad344b05121a27f0",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Description": null,
           "Mandatory": false,
           "Name": "Contact Name",
@@ -35,19 +35,19 @@
         {
           "Key": "7ec258ce-f7cb-41b7-a0b9-940de0e173e1",
           "Alias": "email",
-          "DataType": "umb://data-type/80a89a81dd0648638b38f286854bb312",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Description": null,
           "Mandatory": false,
           "Name": "Email",
           "SortOrder": 1,
-          "Validation": null,
+          "Validation": "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+",
           "VariesByCulture": false,
           "VariesBySegment": false
         },
         {
           "Key": "dc64b66e-7222-4a1a-ba9b-7805914d91b8",
           "Alias": "phone",
-          "DataType": "umb://data-type/b3ad133bdc8d4fac94bbcc9477adf76c",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Description": null,
           "Mandatory": false,
           "Name": "Phone",
@@ -95,21 +95,6 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true,
-      "Mode": 0
-    },
-    {
-      "Udi": "umb://data-type/80a89a81dd0648638b38f286854bb312",
-      "Ordering": true,
-      "Mode": 0
-    },
-    {
-      "Udi": "umb://data-type/98b1bacaa0c8497dad344b05121a27f0",
-      "Ordering": true,
-      "Mode": 0
-    },
-    {
-      "Udi": "umb://data-type/b3ad133bdc8d4fac94bbcc9477adf76c",
       "Ordering": true,
       "Mode": 0
     },
