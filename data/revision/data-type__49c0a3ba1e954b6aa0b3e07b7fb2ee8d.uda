@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Umbraco.TextArea",
+  "DatabaseType": 0,
+  "Configuration": {"maxChars":500,"rows":4},
+  "Parent": null,
+  "Udi": "umb://data-type/49c0a3ba1e954b6aa0b3e07b7fb2ee8d",
+  "Dependencies": [],
+  "Name": "BasePage_SubTitle",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}
