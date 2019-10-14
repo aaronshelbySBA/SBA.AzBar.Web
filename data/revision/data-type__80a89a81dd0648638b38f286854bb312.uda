@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Umbraco.EmailAddress",
+  "DatabaseType": 1,
+  "Configuration": {"IsRequired":false},
+  "Parent": null,
+  "Udi": "umb://data-type/80a89a81dd0648638b38f286854bb312",
+  "Dependencies": [],
+  "Name": "BasePage_ContactEmail",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}
