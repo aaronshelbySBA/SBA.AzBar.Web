@@ -16,9 +16,9 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "ffe91a66-7cfd-4cc2-945e-3975552b28fd",
-      "Name": "Page Settings",
-      "SortOrder": 0,
+      "Key": "5cd60ac7-e3a2-4cfe-87ca-e617883f8cc2",
+      "Name": "Markup",
+      "SortOrder": 1,
       "PropertyTypes": [
         {
           "Key": "314f887a-09c8-4ab1-a18e-4ad384fbe4fe",
@@ -28,18 +28,6 @@
           "Mandatory": false,
           "Name": "Scripts",
           "SortOrder": 1,
-          "Validation": null,
-          "VariesByCulture": false,
-          "VariesBySegment": false
-        },
-        {
-          "Key": "4b4bac65-2688-4533-8e02-38cadf7cbc95",
-          "Alias": "umbracoUrlAlias",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Description": null,
-          "Mandatory": false,
-          "Name": "Umbraco URL Alias",
-          "SortOrder": 3,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -55,6 +43,25 @@
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
+        }
+      ]
+    },
+    {
+      "Key": "ffe91a66-7cfd-4cc2-945e-3975552b28fd",
+      "Name": "Page Settings",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "4b4bac65-2688-4533-8e02-38cadf7cbc95",
+          "Alias": "umbracoUrlAlias",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Umbraco URL Alias",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
         },
         {
           "Key": "9798dd86-2c8b-40d5-8c2d-bc5b92c33cc9",
@@ -63,7 +70,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Umbraco Redirect",
-          "SortOrder": 2,
+          "SortOrder": 0,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
