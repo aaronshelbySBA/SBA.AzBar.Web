@@ -1,0 +1,23 @@
+{
+  "EditorAlias": "Umbraco.ContentPicker",
+  "DatabaseType": 1,
+  "Configuration": {"showOpenButton":false,"startNodeId":"umb://document/9efedef4e91947aaa55046050c2915e9"},
+  "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+  "Udi": "umb://data-type/a57625742ff849a58bd3a50b22618640",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document/9efedef4e91947aaa55046050c2915e9",
+      "Ordering": false,
+      "Mode": 1
+    }
+  ],
+  "Name": "Advert Picker",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}
