@@ -35,6 +35,18 @@
           "VariesBySegment": false
         },
         {
+          "Key": "63e51590-2023-44a5-b623-deb6764b8d91",
+          "Alias": "faxNumber",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Fax Number",
+          "SortOrder": 6,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
           "Key": "76f35658-d612-4eaa-8b17-45efa2ddc177",
           "Alias": "twitterHandle",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
@@ -42,6 +54,18 @@
           "Mandatory": false,
           "Name": "Twitter Handle",
           "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "778b4695-9530-4c6f-9f10-bbefd1cae16a",
+          "Alias": "tollFreeBusinessPhone",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Toll Free Business Phone",
+          "SortOrder": 5,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
