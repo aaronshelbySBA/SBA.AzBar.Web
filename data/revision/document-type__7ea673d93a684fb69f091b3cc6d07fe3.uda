@@ -90,8 +90,8 @@
       "Mode": 0
     }
   ],
-  "Name": "Search",
-  "Alias": "compSearch",
+  "Name": "Search Settings",
+  "Alias": "compSearchSettings",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
   "__version": "3.0.2"
 }
