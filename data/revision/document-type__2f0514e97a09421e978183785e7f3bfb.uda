@@ -3,7 +3,7 @@
   "AllowedTemplates": [],
   "Icon": "icon-settings color-black",
   "Thumbnail": "folder.png",
-  "Description": null,
+  "Description": "*Admin Permissions Required",
   "IsContainer": false,
   "Permissions": {
     "AllowVaryingByCulture": false,
