@@ -20,7 +20,7 @@
 
 @helper Traverse(IPublishedContent node)
 {
-    var selection = node.Children.Where(x => !x.Value<bool>("hideInXmlSitemap") && x.ContentType.Alias != "globalSettings").ToArray();
+    var selection = node.Children.Where(x => !x.Value<bool>("hideInXMLSitemap") && x.ContentType.Alias != "globalSettings").ToArray();
     if (selection.Length > 0)
     {
         foreach (var page in selection)
