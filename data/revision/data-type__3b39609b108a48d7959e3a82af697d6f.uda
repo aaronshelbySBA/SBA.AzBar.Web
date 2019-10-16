@@ -1,7 +1,7 @@
 {
-  "EditorAlias": "Umbraco.MultiNodeTreePicker",
+  "EditorAlias": "Umbraco.NestedContent",
   "DatabaseType": 0,
-  "Configuration": {"startNode":{"type":"content","query":null,"id":null},"filter":"nestedContact","minNumber":0,"maxNumber":1,"showOpenButton":false},
+  "Configuration": {"contentTypes":[{"ncAlias":"nestedContact","ncTabAlias":"Content","nameTemplate":"{{contactName}}"}],"confirmDeletes":true,"showIcons":true,"hideLabel":false},
   "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
   "Udi": "umb://data-type/3b39609b108a48d7959e3a82af697d6f",
   "Dependencies": [
