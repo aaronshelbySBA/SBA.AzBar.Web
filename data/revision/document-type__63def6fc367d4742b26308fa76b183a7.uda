@@ -1,0 +1,31 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-megaphone color-orange",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/63def6fc367d4742b26308fa76b183a7",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Advert Item",
+  "Alias": "advertItem",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
