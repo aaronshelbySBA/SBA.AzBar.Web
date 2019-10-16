@@ -10,14 +10,22 @@
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": true,
     "IsElementType": false,
-    "AllowedChildContentTypes": []
+    "AllowedChildContentTypes": [
+      "umb://document-type/9e81e1b1fd51457f8adc79b97469bef3"
+    ]
   },
   "Parent": null,
   "CompositionContentTypes": [],
   "PropertyGroups": [],
   "PropertyTypes": [],
   "Udi": "umb://document-type/2c44ea4b047e4e75a6b31d754e27950b",
-  "Dependencies": [],
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/9e81e1b1fd51457f8adc79b97469bef3",
+      "Ordering": false,
+      "Mode": 0
+    }
+  ],
   "Name": "Home",
   "Alias": "home",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
