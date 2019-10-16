@@ -6,7 +6,15 @@
   "CacheByPage": false,
   "CacheByMember": false,
   "DontRender": true,
-  "Properties": [],
+  "Properties": [
+    {
+      "Key": "4266121c-40b3-439e-ac6d-9fe8871c05da",
+      "Alias": "parentPage",
+      "Name": "Accordion Parent Page",
+      "SortOrder": 0,
+      "EditorAlias": "Umbraco.ContentPicker"
+    }
+  ],
   "Udi": "umb://macro/0d34230fabf14c55ad1c21fdea859db5",
   "Dependencies": [
     {
