@@ -11,7 +11,7 @@
     "AllowVaryingByCulture": false,
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": false,
-    "IsElementType": true,
+    "IsElementType": false,
     "AllowedChildContentTypes": []
   },
   "Parent": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
@@ -92,8 +92,8 @@
       "Mode": 0
     }
   ],
-  "Name": "Nested Contact",
-  "Alias": "nestedContact",
+  "Name": "Page Contact",
+  "Alias": "pageContact",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
   "__version": "3.0.2"
 }
