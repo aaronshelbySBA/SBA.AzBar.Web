@@ -18,6 +18,25 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
+      "Key": "6150abe2-46f5-4fb1-8a60-73caf747b6eb",
+      "Name": "Global Advertising Settings",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "7e553b7b-a46c-41d9-adaf-d3b3809f012b",
+          "Alias": "globalAds",
+          "DataType": "umb://data-type/a57625742ff849a58bd3a50b22618640",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Global Ads",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    },
+    {
       "Key": "753919df-fc4a-445b-b740-6945e802c6c4",
       "Name": "Global Markup",
       "SortOrder": 0,
@@ -64,6 +83,11 @@
   "PropertyTypes": [],
   "Udi": "umb://document-type/1a47edf1c3fc4660b9f28c27201c4515",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type/a57625742ff849a58bd3a50b22618640",
+      "Ordering": true,
+      "Mode": 0
+    },
     {
       "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
       "Ordering": true,
