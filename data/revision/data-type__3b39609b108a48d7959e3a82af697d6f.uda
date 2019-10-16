@@ -1,7 +1,7 @@
 {
-  "EditorAlias": "Umbraco.NestedContent",
+  "EditorAlias": "Umbraco.MultiNodeTreePicker",
   "DatabaseType": 0,
-  "Configuration": {"contentTypes":[{"ncAlias":"nestedContact","ncTabAlias":"Content","nameTemplate":"{{contactName}}"}],"confirmDeletes":true,"showIcons":true,"hideLabel":false},
+  "Configuration": {"startNode":{"type":"content","query":null,"id":null},"filter":null,"minNumber":0,"maxNumber":1,"showOpenButton":false},
   "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
   "Udi": "umb://data-type/3b39609b108a48d7959e3a82af697d6f",
   "Dependencies": [
@@ -11,7 +11,7 @@
       "Mode": 0
     }
   ],
-  "Name": "Nested Contact Picker",
+  "Name": "Contact Picker",
   "Alias": null,
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
   "__version": "3.0.2"
