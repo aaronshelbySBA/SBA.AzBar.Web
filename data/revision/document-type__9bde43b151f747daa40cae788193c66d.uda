@@ -50,7 +50,7 @@
     }
   ],
   "Name": "Advertising Settings",
-  "Alias": "advertisingSettings",
+  "Alias": "compAdSettings",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
   "__version": "3.0.2"
 }
