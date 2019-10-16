@@ -1,0 +1,21 @@
+{
+  "File": "umb://template-file/home.cshtml",
+  "Master": "umb://template/01443a6ed047410686e5fd175f620783",
+  "Udi": "umb://template/21d620a871714448ae54a49ca43b0503",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/01443a6ed047410686e5fd175f620783",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template-file/home.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Home",
+  "Alias": "home",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
