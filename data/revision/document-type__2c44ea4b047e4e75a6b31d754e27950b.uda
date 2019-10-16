@@ -12,6 +12,7 @@
     "IsElementType": false,
     "AllowedChildContentTypes": [
       "umb://document-type/1a47edf1c3fc4660b9f28c27201c4515",
+      "umb://document-type/3ec597f0b05841049e7fae62868a9ba4",
       "umb://document-type/9e81e1b1fd51457f8adc79b97469bef3"
     ]
   },
@@ -130,6 +131,11 @@
     },
     {
       "Udi": "umb://document-type/1a47edf1c3fc4660b9f28c27201c4515",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/3ec597f0b05841049e7fae62868a9ba4",
       "Ordering": false,
       "Mode": 0
     },
