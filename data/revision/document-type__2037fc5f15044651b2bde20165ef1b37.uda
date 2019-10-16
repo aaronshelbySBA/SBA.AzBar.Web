@@ -9,7 +9,7 @@
     "AllowVaryingByCulture": false,
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": false,
-    "IsElementType": false,
+    "IsElementType": true,
     "AllowedChildContentTypes": []
   },
   "Parent": "umb://document-type-container/63c2ce8d038c4b63a583b7a2d2f6f2f2",
