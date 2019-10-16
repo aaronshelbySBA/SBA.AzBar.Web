@@ -35,7 +35,7 @@
         {
           "Key": "9ac3da3e-5cab-4d05-9cd2-7c734d125a2c",
           "Alias": "ogImage",
-          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "DataType": "umb://data-type/ecc9f4905ee643e0812cb7b8efb09243",
           "Description": null,
           "Mandatory": false,
           "Name": "Open Graph Image",
@@ -97,7 +97,7 @@
       "Mode": 0
     },
     {
-      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Udi": "umb://data-type/ecc9f4905ee643e0812cb7b8efb09243",
       "Ordering": true,
       "Mode": 0
     },
