@@ -1,0 +1,31 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-globe-alt color-orange",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1a47edf1c3fc4660b9f28c27201c4515",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Global Settings",
+  "Alias": "globalSettings",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
