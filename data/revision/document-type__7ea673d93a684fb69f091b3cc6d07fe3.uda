@@ -1,0 +1,85 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-settings color-black",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/caebe16815c44eccbe6f780c20bde573",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "59a1ac01-e95a-4200-abe5-bde3cfa48ae3",
+      "Name": "Search",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "7148e93c-534e-4f85-b2ec-33eda36f5db2",
+          "Alias": "searchTags",
+          "DataType": "umb://data-type/b6b73142b9c14bf8a16de1c23320b549",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Search Tags",
+          "SortOrder": 2,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "91d9dd55-1e3d-4396-b106-990c1512bca2",
+          "Alias": "hideInSitemap",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Hide In Sitemap",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "b69a11cf-8073-4786-8537-7fb4de5f998a",
+          "Alias": "noIndex",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "No Index",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/b6b73142b9c14bf8a16de1c23320b549",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/caebe16815c44eccbe6f780c20bde573",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Search",
+  "Alias": "compSearch",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
