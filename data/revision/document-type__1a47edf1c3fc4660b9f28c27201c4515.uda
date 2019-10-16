@@ -23,6 +23,18 @@
       "SortOrder": 0,
       "PropertyTypes": [
         {
+          "Key": "27d9b3e0-374f-4479-9ad5-884b65d9aba9",
+          "Alias": "globalScripts",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "Inserted at the bottom of body tag markup.",
+          "Mandatory": false,
+          "Name": "Scripts",
+          "SortOrder": 2,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
           "Key": "6d568272-1873-4281-9655-7dd87586b0a2",
           "Alias": "globalHeadTag",
           "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
