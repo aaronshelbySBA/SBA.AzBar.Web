@@ -21,13 +21,25 @@
       "SortOrder": 0,
       "PropertyTypes": [
         {
+          "Key": "2c7338b5-860c-4bdf-b015-b1a3a2beb1dc",
+          "Alias": "canonicalTag",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Overrides default",
+          "Mandatory": false,
+          "Name": "Canonical URL",
+          "SortOrder": 4,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
           "Key": "9ac3da3e-5cab-4d05-9cd2-7c734d125a2c",
           "Alias": "ogImage",
           "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
           "Description": null,
           "Mandatory": false,
           "Name": "Open Graph Image",
-          "SortOrder": 2,
+          "SortOrder": 3,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -52,6 +64,18 @@
           "Mandatory": false,
           "Name": "Meta Description",
           "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "d7a3a313-f2bd-4378-94ed-0462b729fa8b",
+          "Alias": "openGraphTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Open Graph Title",
+          "SortOrder": 2,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
