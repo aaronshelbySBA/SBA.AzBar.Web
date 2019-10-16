@@ -1,11 +1,11 @@
 {
   "MacroType": 7,
   "MacroSource": "~/Views/MacroPartials/Accordion.cshtml",
-  "UseInEditor": false,
+  "UseInEditor": true,
   "CacheDuration": 0,
   "CacheByPage": false,
   "CacheByMember": false,
-  "DontRender": false,
+  "DontRender": true,
   "Properties": [],
   "Udi": "umb://macro/0d34230fabf14c55ad1c21fdea859db5",
   "Dependencies": [
