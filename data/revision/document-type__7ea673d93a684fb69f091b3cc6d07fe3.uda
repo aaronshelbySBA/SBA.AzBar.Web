@@ -27,7 +27,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Search Tags",
-          "SortOrder": 2,
+          "SortOrder": 3,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -45,13 +45,25 @@
           "VariesBySegment": false
         },
         {
+          "Key": "9bd20a95-1df2-4f57-b053-ac63e99f5c0f",
+          "Alias": "hideInXMLSitemap",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Hide In XML Sitemap",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
           "Key": "b69a11cf-8073-4786-8537-7fb4de5f998a",
           "Alias": "noIndex",
           "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
           "Description": null,
           "Mandatory": false,
           "Name": "No Index",
-          "SortOrder": 1,
+          "SortOrder": 2,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
