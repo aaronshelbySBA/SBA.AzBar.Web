@@ -11,7 +11,7 @@
       "Mode": 0
     }
   ],
-  "Name": "Contact Picker",
+  "Name": "Nested Contact Picker",
   "Alias": null,
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
   "__version": "3.0.2"
