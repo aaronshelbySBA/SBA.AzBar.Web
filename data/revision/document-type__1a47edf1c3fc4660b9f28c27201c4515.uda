@@ -5,7 +5,7 @@
   ],
   "Icon": "icon-globe-alt color-orange",
   "Thumbnail": "folder.png",
-  "Description": null,
+  "Description": "*Admin Permissions Required",
   "IsContainer": false,
   "Permissions": {
     "AllowVaryingByCulture": false,
