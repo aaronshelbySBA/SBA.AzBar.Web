@@ -6,13 +6,15 @@
   "Icon": "icon-folder-close color-orange",
   "Thumbnail": "folder.png",
   "Description": null,
-  "IsContainer": false,
+  "IsContainer": true,
   "Permissions": {
     "AllowVaryingByCulture": false,
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": false,
     "IsElementType": false,
-    "AllowedChildContentTypes": []
+    "AllowedChildContentTypes": [
+      "umb://document-type/0d9a588bf2c6431bb5783f4cbfb89e54"
+    ]
   },
   "Parent": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
   "CompositionContentTypes": [],
@@ -20,6 +22,11 @@
   "PropertyTypes": [],
   "Udi": "umb://document-type/3ec597f0b05841049e7fae62868a9ba4",
   "Dependencies": [
+    {
+      "Udi": "umb://document-type/0d9a588bf2c6431bb5783f4cbfb89e54",
+      "Ordering": false,
+      "Mode": 0
+    },
     {
       "Udi": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
       "Ordering": true,
