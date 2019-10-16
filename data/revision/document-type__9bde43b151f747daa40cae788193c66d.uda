@@ -23,7 +23,7 @@
         {
           "Key": "a4aa3c2c-da6f-4d7f-a899-4321b02fe5df",
           "Alias": "pageAds",
-          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "DataType": "umb://data-type/a57625742ff849a58bd3a50b22618640",
           "Description": "Override global ads with page settings.",
           "Mandatory": false,
           "Name": "Page Ads",
@@ -56,7 +56,7 @@
       "Mode": 0
     },
     {
-      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Udi": "umb://data-type/a57625742ff849a58bd3a50b22618640",
       "Ordering": true,
       "Mode": 0
     },
