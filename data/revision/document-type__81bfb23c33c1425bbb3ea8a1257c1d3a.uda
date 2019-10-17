@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/600b7c361c624737aa7660c8ad5213da",
+  "AllowedTemplates": [
+    "umb://template/600b7c361c624737aa7660c8ad5213da"
+  ],
+  "Icon": "icon-bulleted-list color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/81bfb23c33c1425bbb3ea8a1257c1d3a",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/600b7c361c624737aa7660c8ad5213da",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "List Page",
+  "Alias": "listPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
