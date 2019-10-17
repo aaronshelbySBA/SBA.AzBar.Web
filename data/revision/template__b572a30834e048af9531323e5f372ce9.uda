@@ -1,8 +1,13 @@
 {
   "File": "umb://template-file/CalendarPage.cshtml",
-  "Master": null,
+  "Master": "umb://template/01443a6ed047410686e5fd175f620783",
   "Udi": "umb://template/b572a30834e048af9531323e5f372ce9",
   "Dependencies": [
+    {
+      "Udi": "umb://template/01443a6ed047410686e5fd175f620783",
+      "Ordering": true,
+      "Mode": 0
+    },
     {
       "Udi": "umb://template-file/CalendarPage.cshtml",
       "Ordering": true,
