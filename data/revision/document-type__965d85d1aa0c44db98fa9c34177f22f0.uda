@@ -24,7 +24,7 @@
       "Mode": 0
     }
   ],
-  "Name": "Landing Page",
+  "Name": "Landing Page Setup",
   "Alias": "compLandingPage",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
   "__version": "3.0.2"
