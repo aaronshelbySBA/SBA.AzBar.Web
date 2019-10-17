@@ -1,8 +1,13 @@
 {
   "File": "umb://template-file/LandingPage.cshtml",
-  "Master": null,
+  "Master": "umb://template/01443a6ed047410686e5fd175f620783",
   "Udi": "umb://template/2efcd4494bab4e51a6e65c20cd3291be",
   "Dependencies": [
+    {
+      "Udi": "umb://template/01443a6ed047410686e5fd175f620783",
+      "Ordering": true,
+      "Mode": 0
+    },
     {
       "Udi": "umb://template-file/LandingPage.cshtml",
       "Ordering": true,
