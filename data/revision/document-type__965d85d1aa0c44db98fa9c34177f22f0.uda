@@ -1,0 +1,31 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-forms-libreoffice color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/caebe16815c44eccbe6f780c20bde573",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/965d85d1aa0c44db98fa9c34177f22f0",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/caebe16815c44eccbe6f780c20bde573",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Landing Page",
+  "Alias": "landingPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
