@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/650d090b1be74a19986b0baf954173a8",
+  "AllowedTemplates": [
+    "umb://template/650d090b1be74a19986b0baf954173a8"
+  ],
+  "Icon": "icon-forms-file-xml color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/6b9fc72d54444d4497ed9bc45ce5dd31",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/650d090b1be74a19986b0baf954173a8",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Application Page",
+  "Alias": "applicationPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
