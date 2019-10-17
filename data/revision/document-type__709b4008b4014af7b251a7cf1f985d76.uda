@@ -6,7 +6,7 @@
   "Icon": "icon-calendar-alt color-deep-purple",
   "Thumbnail": "folder.png",
   "Description": null,
-  "IsContainer": false,
+  "IsContainer": true,
   "Permissions": {
     "AllowVaryingByCulture": false,
     "AllowVaryingBySegment": false,
