@@ -15,8 +15,10 @@
     "AllowedChildContentTypes": [
       "umb://document-type/1a47edf1c3fc4660b9f28c27201c4515",
       "umb://document-type/3ec597f0b05841049e7fae62868a9ba4",
+      "umb://document-type/4fb3c2d318664ec2a5a4c542ca920c2e",
       "umb://document-type/9036a9d386a44b02a3ddd2937a5c39c4",
-      "umb://document-type/9e81e1b1fd51457f8adc79b97469bef3"
+      "umb://document-type/9e81e1b1fd51457f8adc79b97469bef3",
+      "umb://document-type/dd683da4b3ba499c9ef2ecf0e706280d"
     ]
   },
   "Parent": null,
@@ -143,12 +145,22 @@
       "Mode": 0
     },
     {
+      "Udi": "umb://document-type/4fb3c2d318664ec2a5a4c542ca920c2e",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
       "Udi": "umb://document-type/9036a9d386a44b02a3ddd2937a5c39c4",
       "Ordering": false,
       "Mode": 0
     },
     {
       "Udi": "umb://document-type/9e81e1b1fd51457f8adc79b97469bef3",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/dd683da4b3ba499c9ef2ecf0e706280d",
       "Ordering": false,
       "Mode": 0
     },
