@@ -1,7 +1,7 @@
 {
   "DefaultTemplate": null,
   "AllowedTemplates": [],
-  "Icon": "icon-forms-libreoffice color-deep-purple",
+  "Icon": "icon-settings color-black",
   "Thumbnail": "folder.png",
   "Description": null,
   "IsContainer": false,
@@ -25,7 +25,7 @@
     }
   ],
   "Name": "Landing Page",
-  "Alias": "landingPage",
+  "Alias": "compLandingPage",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
   "__version": "3.0.2"
 }
