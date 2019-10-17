@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/1dbe8007b4d040579107046e74303978",
+  "AllowedTemplates": [
+    "umb://template/1dbe8007b4d040579107046e74303978"
+  ],
+  "Icon": "icon-document color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/4fb3c2d318664ec2a5a4c542ca920c2e",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/1dbe8007b4d040579107046e74303978",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Textpage",
+  "Alias": "textpage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
