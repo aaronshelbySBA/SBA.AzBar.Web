@@ -45,6 +45,42 @@
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
+        },
+        {
+          "Key": "4d392e55-74a7-45a0-bb97-7e98d7e9ba88",
+          "Alias": "pageContact",
+          "DataType": "umb://data-type/3b39609b108a48d7959e3a82af697d6f",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Page Contact",
+          "SortOrder": 4,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "61c8772c-04da-4e59-8904-4f9d46d967a6",
+          "Alias": "articleImage",
+          "DataType": "umb://data-type/8ab4c88f17f542b8a8c8a72d1b31896e",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Article Image",
+          "SortOrder": 2,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "670fa8de-8c20-4c7e-90e1-8f9251e0f875",
+          "Alias": "previewText",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Preview Text",
+          "SortOrder": 3,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
         }
       ]
     }
@@ -58,7 +94,22 @@
       "Mode": 0
     },
     {
+      "Udi": "umb://data-type/3b39609b108a48d7959e3a82af697d6f",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
       "Udi": "umb://data-type/5046194e4237453ca54715db3a07c4e1",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/8ab4c88f17f542b8a8c8a72d1b31896e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
       "Ordering": true,
       "Mode": 0
     },
