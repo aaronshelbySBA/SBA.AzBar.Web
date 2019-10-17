@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/ListPage.cshtml",
+  "Master": null,
+  "Udi": "umb://template/600b7c361c624737aa7660c8ad5213da",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/ListPage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "List Page",
+  "Alias": "ListPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
