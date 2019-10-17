@@ -24,8 +24,8 @@
       "Mode": 0
     }
   ],
-  "Name": "Base Page Setup",
-  "Alias": "compBasePage",
+  "Name": "Textpage Setup",
+  "Alias": "compTextpage",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
   "__version": "3.0.2"
 }
