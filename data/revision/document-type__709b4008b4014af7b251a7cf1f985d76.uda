@@ -12,7 +12,9 @@
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": false,
     "IsElementType": false,
-    "AllowedChildContentTypes": []
+    "AllowedChildContentTypes": [
+      "umb://document-type/5a10a93e3b47406cbf0b8f77a676528a"
+    ]
   },
   "Parent": null,
   "CompositionContentTypes": [],
@@ -20,6 +22,11 @@
   "PropertyTypes": [],
   "Udi": "umb://document-type/709b4008b4014af7b251a7cf1f985d76",
   "Dependencies": [
+    {
+      "Udi": "umb://document-type/5a10a93e3b47406cbf0b8f77a676528a",
+      "Ordering": false,
+      "Mode": 0
+    },
     {
       "Udi": "umb://template/b572a30834e048af9531323e5f372ce9",
       "Ordering": true,
