@@ -3,7 +3,7 @@
   "AllowedTemplates": [
     "umb://template/2efcd4494bab4e51a6e65c20cd3291be"
   ],
-  "Icon": "icon-forms-libreoffice color-deep-purple",
+  "Icon": "icon-documents color-deep-purple",
   "Thumbnail": "folder.png",
   "Description": null,
   "IsContainer": false,
