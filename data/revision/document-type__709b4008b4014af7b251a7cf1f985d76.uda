@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/b572a30834e048af9531323e5f372ce9",
+  "AllowedTemplates": [
+    "umb://template/b572a30834e048af9531323e5f372ce9"
+  ],
+  "Icon": "icon-calendar-alt color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/709b4008b4014af7b251a7cf1f985d76",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/b572a30834e048af9531323e5f372ce9",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Calendar Page",
+  "Alias": "calendarPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
