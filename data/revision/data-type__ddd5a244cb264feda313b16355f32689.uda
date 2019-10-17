@@ -1,7 +1,7 @@
 {
   "EditorAlias": "Umbraco.Grid",
   "DatabaseType": 0,
-  "Configuration": {"items":{"styles":[{"label":"Set a background image","description":"Set a row background","key":"background-image","view":"imagepicker","modifier":"url({0})"}],"config":[{"label":"Class","description":"Set a css class","key":"class","view":"textstring"}],"columns":12,"templates":[{"name":"1 column layout","sections":[{"grid":12}]}],"layouts":[{"label":"Headline","name":"Headline","areas":[{"grid":12,"editors":["headline"]}]}]},"rte":{"toolbar":["ace","styleselect","bold","italic","alignleft","aligncenter","alignright","bullist","numlist","outdent","indent","link","umbmediapicker","umbmacro","umbembeddialog"],"stylesheets":[],"maxImageSize":500,"mode":"classic"}},
+  "Configuration": {"items":{"styles":[{"label":"Set a background image","description":"Set a row background","key":"background-image","view":"imagepicker","modifier":"url({0})"}],"config":[{"label":"Class","description":"Set a css class","key":"class","view":"textstring"}],"columns":12,"templates":[{"name":"1 column layout","sections":[{"grid":12}]}],"layouts":[{"label":"Headline","name":"Headline","areas":[{"grid":12,"editors":["headline"]}]}]},"rte":{"toolbar":["bold","italic","alignleft","aligncenter","alignright","bullist","numlist","outdent","indent","link","unlink","anchor","umbmediapicker","umbmacro"],"stylesheets":[],"maxImageSize":0,"mode":"classic"}},
   "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
   "Udi": "umb://data-type/ddd5a244cb264feda313b16355f32689",
   "Dependencies": [
