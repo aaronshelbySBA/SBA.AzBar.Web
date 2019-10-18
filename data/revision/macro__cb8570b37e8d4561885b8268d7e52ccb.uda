@@ -1,11 +1,11 @@
 {
   "MacroType": 7,
   "MacroSource": "~/Views/MacroPartials/Candidates.cshtml",
-  "UseInEditor": false,
+  "UseInEditor": true,
   "CacheDuration": 0,
   "CacheByPage": false,
   "CacheByMember": false,
-  "DontRender": false,
+  "DontRender": true,
   "Properties": [],
   "Udi": "umb://macro/cb8570b37e8d4561885b8268d7e52ccb",
   "Dependencies": [
