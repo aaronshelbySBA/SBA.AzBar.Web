@@ -1,0 +1,44 @@
+{
+  "MacroType": 7,
+  "MacroSource": "~/Views/MacroPartials/InsertUmbracoFormWithTheme.cshtml",
+  "UseInEditor": false,
+  "CacheDuration": 0,
+  "CacheByPage": false,
+  "CacheByMember": false,
+  "DontRender": false,
+  "Properties": [
+    {
+      "Key": "bcc3b55e-96a6-41c3-981e-bec704923e21",
+      "Alias": "FormTheme",
+      "Name": "Theme",
+      "SortOrder": 1,
+      "EditorAlias": "UmbracoForms.ThemePicker"
+    },
+    {
+      "Key": "d3038fc9-db5f-4fa3-a2aa-b8015b4d9636",
+      "Alias": "FormGuid",
+      "Name": "Choose a form",
+      "SortOrder": 0,
+      "EditorAlias": "UmbracoForms.FormPicker"
+    },
+    {
+      "Key": "fe3a1d7c-ca21-4033-816e-e316ab39aa5b",
+      "Alias": "ExcludeScripts",
+      "Name": "Exclude Scripts",
+      "SortOrder": 2,
+      "EditorAlias": "Umbraco.TrueFalse"
+    }
+  ],
+  "Udi": "umb://macro/480075d73f9d4190935611978ddbb8cf",
+  "Dependencies": [
+    {
+      "Udi": "umb://partial-view-macro/InsertUmbracoFormWithTheme.cshtml",
+      "Ordering": true,
+      "Mode": 1
+    }
+  ],
+  "Name": "Insert Form with Theme",
+  "Alias": "renderUmbracoForm",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.MacroArtifact",
+  "__version": "3.0.2"
+}
