@@ -119,8 +119,8 @@
       "Mode": 0
     }
   ],
-  "Name": "Article",
-  "Alias": "article",
+  "Name": "Article Page",
+  "Alias": "articlePage",
   "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
   "__version": "3.0.2"
 }
