@@ -14,35 +14,10 @@
   },
   "Parent": "umb://document-type-container/caebe16815c44eccbe6f780c20bde573",
   "CompositionContentTypes": [],
-  "PropertyGroups": [
-    {
-      "Key": "5723015d-37f9-4851-8bc2-6b5c393cbeeb",
-      "Name": "Content",
-      "SortOrder": 0,
-      "PropertyTypes": [
-        {
-          "Key": "781a3697-8867-4dc4-a7bb-3b057419b7b0",
-          "Alias": "title",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Description": null,
-          "Mandatory": false,
-          "Name": "Title",
-          "SortOrder": 0,
-          "Validation": null,
-          "VariesByCulture": false,
-          "VariesBySegment": false
-        }
-      ]
-    }
-  ],
+  "PropertyGroups": [],
   "PropertyTypes": [],
   "Udi": "umb://document-type/2af28e7ce4a649e0a535b38fd338ccc3",
   "Dependencies": [
-    {
-      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true,
-      "Mode": 0
-    },
     {
       "Udi": "umb://document-type-container/caebe16815c44eccbe6f780c20bde573",
       "Ordering": true,
