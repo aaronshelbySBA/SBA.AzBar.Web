@@ -18,7 +18,7 @@
     {
       "Key": "5cd60ac7-e3a2-4cfe-87ca-e617883f8cc2",
       "Name": "Markup",
-      "SortOrder": 1,
+      "SortOrder": 10,
       "PropertyTypes": [
         {
           "Key": "314f887a-09c8-4ab1-a18e-4ad384fbe4fe",
@@ -49,7 +49,7 @@
     {
       "Key": "ffe91a66-7cfd-4cc2-945e-3975552b28fd",
       "Name": "Page Settings",
-      "SortOrder": 0,
+      "SortOrder": 9,
       "PropertyTypes": [
         {
           "Key": "4b4bac65-2688-4533-8e02-38cadf7cbc95",
