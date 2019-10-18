@@ -59,6 +59,18 @@
           "VariesBySegment": false
         },
         {
+          "Key": "5b21fe7a-0b70-458f-a675-1ad313726fb4",
+          "Alias": "bodyText",
+          "DataType": "umb://data-type/ddd5a244cb264feda313b16355f32689",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Body Text",
+          "SortOrder": 5,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
           "Key": "61c8772c-04da-4e59-8904-4f9d46d967a6",
           "Alias": "articleImage",
           "DataType": "umb://data-type/8ab4c88f17f542b8a8c8a72d1b31896e",
@@ -110,6 +122,11 @@
     },
     {
       "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/ddd5a244cb264feda313b16355f32689",
       "Ordering": true,
       "Mode": 0
     },
