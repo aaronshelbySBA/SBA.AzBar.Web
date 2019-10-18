@@ -1,0 +1,33 @@
+{
+  "DefaultTemplate": "umb://template/e1677f5763ab4a4b9c0b7957524ecd8f",
+  "AllowedTemplates": [
+    "umb://template/e1677f5763ab4a4b9c0b7957524ecd8f"
+  ],
+  "Icon": "icon-newspaper color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/8aec8647cf154fde839884edb9d878a6",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/e1677f5763ab4a4b9c0b7957524ecd8f",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "News Page",
+  "Alias": "newsPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
