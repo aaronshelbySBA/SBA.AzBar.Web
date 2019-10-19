@@ -15,11 +15,42 @@
     "AllowedChildContentTypes": []
   },
   "Parent": null,
-  "CompositionContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+    "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+    "umb://document-type/85ce8bab4fcb4a9fae975ab9ec519a1d",
+    "umb://document-type/9bde43b151f747daa40cae788193c66d",
+    "umb://document-type/9d28055904c14f65acf6241c0ef873f9"
+  ],
   "PropertyGroups": [],
   "PropertyTypes": [],
   "Udi": "umb://document-type/81bfb23c33c1425bbb3ea8a1257c1d3a",
   "Dependencies": [
+    {
+      "Udi": "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/85ce8bab4fcb4a9fae975ab9ec519a1d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9bde43b151f747daa40cae788193c66d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9d28055904c14f65acf6241c0ef873f9",
+      "Ordering": true,
+      "Mode": 0
+    },
     {
       "Udi": "umb://template/600b7c361c624737aa7660c8ad5213da",
       "Ordering": true,
