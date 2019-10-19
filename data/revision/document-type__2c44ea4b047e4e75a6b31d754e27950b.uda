@@ -25,12 +25,16 @@
     ]
   },
   "Parent": null,
-  "CompositionContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+    "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+    "umb://document-type/9d28055904c14f65acf6241c0ef873f9"
+  ],
   "PropertyGroups": [
     {
       "Key": "84586a6b-dee2-476a-8fc2-2f0460ecf356",
       "Name": "SEO",
-      "SortOrder": 0,
+      "SortOrder": 7,
       "PropertyTypes": [
         {
           "Key": "49b76e46-4b9b-4813-be1a-15f365511fb4",
@@ -39,7 +43,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Business Phone",
-          "SortOrder": 4,
+          "SortOrder": 9,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -51,7 +55,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Fax Number",
-          "SortOrder": 6,
+          "SortOrder": 11,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -63,7 +67,7 @@
           "Description": "No special characters.",
           "Mandatory": false,
           "Name": "Twitter Handle",
-          "SortOrder": 0,
+          "SortOrder": 5,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -75,7 +79,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Toll Free Business Phone",
-          "SortOrder": 5,
+          "SortOrder": 10,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -87,7 +91,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Business Address",
-          "SortOrder": 3,
+          "SortOrder": 8,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -99,7 +103,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Business Name",
-          "SortOrder": 2,
+          "SortOrder": 7,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -111,7 +115,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Schema Markup Type",
-          "SortOrder": 1,
+          "SortOrder": 6,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -143,6 +147,11 @@
       "Mode": 0
     },
     {
+      "Udi": "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
       "Udi": "umb://document-type/3ec597f0b05841049e7fae62868a9ba4",
       "Ordering": false,
       "Mode": 0
@@ -163,6 +172,11 @@
       "Mode": 0
     },
     {
+      "Udi": "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
       "Udi": "umb://document-type/8aec8647cf154fde839884edb9d878a6",
       "Ordering": false,
       "Mode": 0
@@ -170,6 +184,11 @@
     {
       "Udi": "umb://document-type/9036a9d386a44b02a3ddd2937a5c39c4",
       "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9d28055904c14f65acf6241c0ef873f9",
+      "Ordering": true,
       "Mode": 0
     },
     {
