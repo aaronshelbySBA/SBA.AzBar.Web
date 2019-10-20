@@ -1,0 +1,31 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-settings color-black",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/63c2ce8d038c4b63a583b7a2d2f6f2f2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/dea977a016bd4e0f84446d2c81d75c31",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/63c2ce8d038c4b63a583b7a2d2f6f2f2",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Nested Quick Link",
+  "Alias": "nestedQuickLink",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
