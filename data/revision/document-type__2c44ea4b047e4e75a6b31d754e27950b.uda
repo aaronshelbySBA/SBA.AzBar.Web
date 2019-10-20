@@ -32,6 +32,25 @@
   ],
   "PropertyGroups": [
     {
+      "Key": "35419a43-6b27-470a-a34c-78acab11fefb",
+      "Name": "Content",
+      "SortOrder": 11,
+      "PropertyTypes": [
+        {
+          "Key": "23b41cd8-5238-41a3-89a5-dd412c7a1ac3",
+          "Alias": "title",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Title",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    },
+    {
       "Key": "84586a6b-dee2-476a-8fc2-2f0460ecf356",
       "Name": "SEO",
       "SortOrder": 7,
