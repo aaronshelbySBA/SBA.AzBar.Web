@@ -28,6 +28,7 @@
   "CompositionContentTypes": [
     "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
     "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+    "umb://document-type/965d85d1aa0c44db98fa9c34177f22f0",
     "umb://document-type/9d28055904c14f65acf6241c0ef873f9"
   ],
   "PropertyGroups": [
@@ -184,6 +185,11 @@
     {
       "Udi": "umb://document-type/9036a9d386a44b02a3ddd2937a5c39c4",
       "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/965d85d1aa0c44db98fa9c34177f22f0",
+      "Ordering": true,
       "Mode": 0
     },
     {
