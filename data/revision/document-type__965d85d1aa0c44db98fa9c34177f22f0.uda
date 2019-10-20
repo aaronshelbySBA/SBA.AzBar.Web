@@ -21,6 +21,18 @@
       "SortOrder": 0,
       "PropertyTypes": [
         {
+          "Key": "00a55bf4-8ec8-4e79-adc1-9d7666265366",
+          "Alias": "highlightSections",
+          "DataType": "umb://data-type/6eecbf86db3c4777977dc37e9ceaca94",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Highlight Sections",
+          "SortOrder": 3,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
           "Key": "10c58bf2-91ed-4bb4-afc8-38e551bd5f39",
           "Alias": "title",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
@@ -28,6 +40,30 @@
           "Mandatory": false,
           "Name": "Title",
           "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "66402658-3004-48e0-a3c0-03f9b4245606",
+          "Alias": "quickLinks",
+          "DataType": "umb://data-type/98c76e34267e424089fd41457e6917cb",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Quick Links",
+          "SortOrder": 2,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "f596450b-4595-4983-be29-3c676f08d047",
+          "Alias": "carouselPanels",
+          "DataType": "umb://data-type/9beb1523932c42d6888c655e514b1331",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Carousel Panels",
+          "SortOrder": 1,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -40,6 +76,21 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/6eecbf86db3c4777977dc37e9ceaca94",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/98c76e34267e424089fd41457e6917cb",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/9beb1523932c42d6888c655e514b1331",
       "Ordering": true,
       "Mode": 0
     },
