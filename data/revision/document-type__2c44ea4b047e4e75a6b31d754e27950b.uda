@@ -33,6 +33,25 @@
   ],
   "PropertyGroups": [
     {
+      "Key": "792a9910-5d97-455e-b626-6eab709cd5c4",
+      "Name": "Alert",
+      "SortOrder": 11,
+      "PropertyTypes": [
+        {
+          "Key": "6660d191-030f-44ef-a38b-65b7349576b1",
+          "Alias": "alertContent",
+          "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Alert Content",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    },
+    {
       "Key": "84586a6b-dee2-476a-8fc2-2f0460ecf356",
       "Name": "SEO",
       "SortOrder": 7,
@@ -139,6 +158,11 @@
     },
     {
       "Udi": "umb://data-type/5d72e592856b471d87c7beecad9aa86a",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
       "Ordering": true,
       "Mode": 0
     },
