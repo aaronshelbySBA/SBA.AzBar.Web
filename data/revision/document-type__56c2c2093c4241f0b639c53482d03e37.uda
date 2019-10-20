@@ -1,0 +1,31 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-settings color-black",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/63c2ce8d038c4b63a583b7a2d2f6f2f2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/56c2c2093c4241f0b639c53482d03e37",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/63c2ce8d038c4b63a583b7a2d2f6f2f2",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Nested Carousel Panel",
+  "Alias": "nestedCarouselPanel",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
