@@ -27,7 +27,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Link",
-          "SortOrder": 2,
+          "SortOrder": 1,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
@@ -51,7 +51,7 @@
           "Description": null,
           "Mandatory": false,
           "Name": "Image",
-          "SortOrder": 1,
+          "SortOrder": 2,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false
