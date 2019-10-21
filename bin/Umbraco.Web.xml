@@ -317,6 +317,200 @@
         <member name="M:Umbraco.Web.Composing.ModuleInjector`1.Dispose">
             <inheritdoc />
         </member>
+        <member name="T:Umbraco.Web.Editors.Filters.ContentSaveModelValidator">
+            <summary>
+            Validator for <see cref="T:Umbraco.Web.Models.ContentEditing.ContentItemSave"/>
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Editors.Filters.MediaSaveModelValidator">
+            <summary>
+            Validator for <see cref="T:Umbraco.Web.Models.ContentEditing.MediaItemSave"/>
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Editors.Filters.MemberSaveModelValidator">
+            <summary>
+            Custom validation helper so that we can exclude the Member.StandardPropertyTypeStubs from being validating for existence
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.MemberSaveModelValidator.ValidatePropertiesData(Umbraco.Web.Models.ContentEditing.MemberSave,Umbraco.Web.Models.ContentEditing.IContentProperties{Umbraco.Web.Models.ContentEditing.ContentPropertyBasic},Umbraco.Web.Models.ContentEditing.ContentPropertyCollectionDto,System.Web.Http.ModelBinding.ModelStateDictionary)">
+            <summary>
+            We need to manually validate a few things here like email and login to make sure they are valid and aren't duplicates
+            </summary>
+            <param name="model"></param>
+            <param name="dto"></param>
+            <param name="modelState"></param>
+            <param name="modelWithProperties"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.MemberSaveModelValidator.ValidateProperties(Umbraco.Web.Models.ContentEditing.MemberSave,Umbraco.Web.Models.ContentEditing.IContentProperties{Umbraco.Web.Models.ContentEditing.ContentPropertyBasic},System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            This ensures that the internal membership property types are removed from validation before processing the validation
+            since those properties are actually mapped to real properties of the IMember.
+            This also validates any posted data for fields that are sensitive.
+            </summary>
+            <param name="model"></param>
+            <param name="modelWithProperties"></param>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Umbraco.Web.Editors.Filters.IsCurrentUserModelFilterAttribute">
+            <summary>
+            This sets the IsCurrentUser property on any outgoing <see cref="T:Umbraco.Web.Models.ContentEditing.UserDisplay"/> model or any collection of <see cref="T:Umbraco.Web.Models.ContentEditing.UserDisplay"/> models
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Editors.Filters.UserGroupAuthorizationAttribute">
+            <summary>
+            Authorizes that the current user has access to the user group Id in the request
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.UserGroupAuthorizationAttribute.#ctor(System.String,Umbraco.Web.IUmbracoContextAccessor)">
+            <summary>
+            THIS SHOULD BE ONLY USED FOR UNIT TESTS
+            </summary>
+            <param name="paramName"></param>
+            <param name="umbracoContextAccessor"></param>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.UserGroupEditorAuthorizationHelper.AuthorizeGroupAccess(Umbraco.Core.Models.Membership.IUser,System.Int32[])">
+            <summary>
+            Authorize that the current user belongs to these groups
+            </summary>
+            <param name="currentUser"></param>
+            <param name="groupIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.UserGroupEditorAuthorizationHelper.AuthorizeGroupAccess(Umbraco.Core.Models.Membership.IUser,System.String[])">
+            <summary>
+            Authorize that the current user belongs to these groups
+            </summary>
+            <param name="currentUser"></param>
+            <param name="groupAliases"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.UserGroupEditorAuthorizationHelper.AuthorizeSectionChanges(Umbraco.Core.Models.Membership.IUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Authorize that the user is not adding a section to the group that they don't have access to
+            </summary>
+            <param name="currentUser"></param>
+            <param name="currentAllowedSections"></param>
+            <param name="proposedAllowedSections"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.UserGroupEditorAuthorizationHelper.AuthorizeStartNodeChanges(Umbraco.Core.Models.Membership.IUser,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Authorize that the user is not changing to a start node that they don't have access to (including admins)
+            </summary>
+            <param name="currentUser"></param>
+            <param name="currentContentStartId"></param>
+            <param name="proposedContentStartId"></param>
+            <param name="currentMediaStartId"></param>
+            <param name="proposedMediaStartId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Umbraco.Web.Editors.Filters.MediaItemSaveValidationAttribute">
+            <summary>
+            Validates the incoming <see cref="T:Umbraco.Web.Models.ContentEditing.MediaItemSave"/> model
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.MediaItemSaveValidationAttribute.ValidateUserAccess(Umbraco.Web.Models.ContentEditing.MediaItemSave,System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Checks if the user has access to post a content item based on whether it's being created or saved.
+            </summary>
+            <param name="mediaItem"></param>
+            <param name="actionContext"></param>
+        </member>
+        <member name="T:Umbraco.Web.Editors.Filters.MemberSaveValidationAttribute">
+            <summary>
+            Validates the incoming <see cref="T:Umbraco.Web.Models.ContentEditing.MemberSave"/> model
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Editors.Filters.ContentSaveValidationAttribute">
+            <summary>
+            Validates the incoming <see cref="T:Umbraco.Web.Models.ContentEditing.ContentItemSave"/> model along with if the user is allowed to perform the operation
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.ContentSaveValidationAttribute.ValidateAtLeastOneVariantIsBeingSaved(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            If there are no variants tagged for Saving, then this is an invalid request
+            </summary>
+            <param name="contentItem"></param>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.ContentSaveValidationAttribute.ValidateUserAccess(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Web.Http.Controllers.HttpActionContext,Umbraco.Web.Security.WebSecurity)">
+            <summary>
+            Checks if the user has access to post a content item based on whether it's being created or saved.
+            </summary>
+            <param name="actionContext"></param>
+            <param name="contentItem"></param>
+            <param name="webSecurity"></param>
+        </member>
+        <member name="T:Umbraco.Web.Editors.Filters.ContentModelValidator">
+            <summary>
+            A base class purely used for logging without generics
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Editors.Filters.ContentModelValidator`3">
+            <summary>
+            A validation helper class used with ContentItemValidationFilterAttribute to be shared between content, media, etc...
+            </summary>
+            <typeparam name="TPersisted"></typeparam>
+            <typeparam name="TModelSave"></typeparam>
+            <typeparam name="TModelWithProperties"></typeparam>
+            <remarks>
+            If any severe errors occur then the response gets set to an error and execution will not continue. Property validation
+            errors will just be added to the ModelState.
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.ContentModelValidator`3.ValidateExistingContent(`1,System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Ensure the content exists
+            </summary>
+            <param name="postedItem"></param>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.ContentModelValidator`3.ValidateProperties(`1,Umbraco.Web.Models.ContentEditing.IContentProperties{Umbraco.Web.Models.ContentEditing.ContentPropertyBasic},System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Ensure all of the ids in the post are valid
+            </summary>
+            <param name="model"></param>
+            <param name="modelWithProperties"></param>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.ContentModelValidator`3.ValidateProperties(System.Collections.Generic.List{Umbraco.Web.Models.ContentEditing.ContentPropertyBasic},System.Collections.Generic.List{Umbraco.Core.Models.Property},System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            This validates that all of the posted properties exist on the persisted entity
+            </summary>
+            <param name="postedProperties"></param>
+            <param name="persistedProperties"></param>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.ContentModelValidator`3.ValidatePropertiesData(`1,`2,Umbraco.Web.Models.ContentEditing.ContentPropertyCollectionDto,System.Web.Http.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validates the data for each property
+            </summary>
+            <param name="model"></param>
+            <param name="modelWithProperties"></param>
+            <param name="dto"></param>
+            <param name="modelState"></param>
+            <returns></returns>
+            <remarks>
+            All property data validation goes into the model state with a prefix of "Properties"
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.Editors.Filters.ContentModelValidator`3.ValidatePropertyValue(`1,`2,Umbraco.Core.PropertyEditors.IDataEditor,Umbraco.Web.Models.ContentEditing.ContentPropertyDto,System.Object,System.Web.Http.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validates a property's value and adds the error to model state if found
+            </summary>
+            <param name="model"></param>
+            <param name="modelWithProperties"></param>
+            <param name="editor"></param>
+            <param name="property"></param>
+            <param name="postedValue"></param>
+            <param name="modelState"></param>
+        </member>
         <member name="T:Umbraco.Web.Editors.PackageController">
             <summary>
             A controller used for managing packages in the back office
@@ -749,178 +943,6 @@
             Provides a base class for <see cref="T:Umbraco.Web.Editors.IEditorValidator"/> implementations.
             </summary>
             <typeparam name="T">The validated object type.</typeparam>
-        </member>
-        <member name="T:Umbraco.Web.Editors.Filters.MemberValidationHelper">
-            <summary>
-            Custom validation helper so that we can exclude the Member.StandardPropertyTypeStubs from being validating for existence
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.MemberValidationHelper.ValidatePropertyData(Umbraco.Web.Models.ContentEditing.MemberSave,Umbraco.Web.Models.ContentEditing.IContentProperties{Umbraco.Web.Models.ContentEditing.ContentPropertyBasic},Umbraco.Web.Models.ContentEditing.ContentPropertyCollectionDto,System.Web.Http.ModelBinding.ModelStateDictionary)">
-            <summary>
-            We need to manually validate a few things here like email and login to make sure they are valid and aren't duplicates
-            </summary>
-            <param name="model"></param>
-            <param name="dto"></param>
-            <param name="modelState"></param>
-            <param name="modelWithProperties"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.MemberValidationHelper.ValidateProperties(Umbraco.Web.Models.ContentEditing.MemberSave,Umbraco.Web.Models.ContentEditing.IContentProperties{Umbraco.Web.Models.ContentEditing.ContentPropertyBasic},System.Web.Http.Controllers.HttpActionContext)">
-            <summary>
-            This ensures that the internal membership property types are removed from validation before processing the validation
-            since those properties are actually mapped to real properties of the IMember.
-            This also validates any posted data for fields that are sensitive.
-            </summary>
-            <param name="model"></param>
-            <param name="modelWithProperties"></param>
-            <param name="actionContext"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Umbraco.Web.Editors.Filters.IsCurrentUserModelFilterAttribute">
-            <summary>
-            This sets the IsCurrentUser property on any outgoing <see cref="T:Umbraco.Web.Models.ContentEditing.UserDisplay"/> model or any collection of <see cref="T:Umbraco.Web.Models.ContentEditing.UserDisplay"/> models
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Editors.Filters.UserGroupAuthorizationAttribute">
-            <summary>
-            Authorizes that the current user has access to the user group Id in the request
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.UserGroupAuthorizationAttribute.#ctor(System.String,Umbraco.Web.IUmbracoContextAccessor)">
-            <summary>
-            THIS SHOULD BE ONLY USED FOR UNIT TESTS
-            </summary>
-            <param name="paramName"></param>
-            <param name="umbracoContextAccessor"></param>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.UserGroupEditorAuthorizationHelper.AuthorizeGroupAccess(Umbraco.Core.Models.Membership.IUser,System.Int32[])">
-            <summary>
-            Authorize that the current user belongs to these groups
-            </summary>
-            <param name="currentUser"></param>
-            <param name="groupIds"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.UserGroupEditorAuthorizationHelper.AuthorizeGroupAccess(Umbraco.Core.Models.Membership.IUser,System.String[])">
-            <summary>
-            Authorize that the current user belongs to these groups
-            </summary>
-            <param name="currentUser"></param>
-            <param name="groupAliases"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.UserGroupEditorAuthorizationHelper.AuthorizeSectionChanges(Umbraco.Core.Models.Membership.IUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
-            <summary>
-            Authorize that the user is not adding a section to the group that they don't have access to
-            </summary>
-            <param name="currentUser"></param>
-            <param name="currentAllowedSections"></param>
-            <param name="proposedAllowedSections"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.UserGroupEditorAuthorizationHelper.AuthorizeStartNodeChanges(Umbraco.Core.Models.Membership.IUser,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <summary>
-            Authorize that the user is not changing to a start node that they don't have access to (including admins)
-            </summary>
-            <param name="currentUser"></param>
-            <param name="currentContentStartId"></param>
-            <param name="proposedContentStartId"></param>
-            <param name="currentMediaStartId"></param>
-            <param name="proposedMediaStartId"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Umbraco.Web.Editors.Filters.MediaItemSaveValidationAttribute">
-            <summary>
-            Validates the incoming <see cref="T:Umbraco.Web.Models.ContentEditing.MediaItemSave"/> model
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.MediaItemSaveValidationAttribute.ValidateUserAccess(Umbraco.Web.Models.ContentEditing.MediaItemSave,System.Web.Http.Controllers.HttpActionContext)">
-            <summary>
-            Checks if the user has access to post a content item based on whether it's being created or saved.
-            </summary>
-            <param name="mediaItem"></param>
-            <param name="actionContext"></param>
-        </member>
-        <member name="T:Umbraco.Web.Editors.Filters.MemberSaveValidationAttribute">
-            <summary>
-            Validates the incoming <see cref="T:Umbraco.Web.Models.ContentEditing.MemberSave"/> model
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Editors.Filters.ContentSaveValidationAttribute">
-            <summary>
-            Validates the incoming <see cref="T:Umbraco.Web.Models.ContentEditing.ContentItemSave"/> model along with if the user is allowed to perform the operation
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.ContentSaveValidationAttribute.ValidateAtLeastOneVariantIsBeingSaved(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Web.Http.Controllers.HttpActionContext)">
-            <summary>
-            If there are no variants tagged for Saving, then this is an invalid request
-            </summary>
-            <param name="contentItem"></param>
-            <param name="actionContext"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.ContentSaveValidationAttribute.ValidateUserAccess(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Web.Http.Controllers.HttpActionContext,Umbraco.Web.Security.WebSecurity)">
-            <summary>
-            Checks if the user has access to post a content item based on whether it's being created or saved.
-            </summary>
-            <param name="actionContext"></param>
-            <param name="contentItem"></param>
-            <param name="webSecurity"></param>
-        </member>
-        <member name="T:Umbraco.Web.Editors.Filters.ContentItemValidationHelper">
-            <summary>
-            A base class purely used for logging without generics
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Editors.Filters.ContentItemValidationHelper`2">
-            <summary>
-            A validation helper class used with ContentItemValidationFilterAttribute to be shared between content, media, etc...
-            </summary>
-            <typeparam name="TPersisted"></typeparam>
-            <typeparam name="TModelSave"></typeparam>
-            <remarks>
-            If any severe errors occur then the response gets set to an error and execution will not continue. Property validation
-            errors will just be added to the ModelState.
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.ContentItemValidationHelper`2.ValidateExistingContent(`1,System.Web.Http.Controllers.HttpActionContext)">
-            <summary>
-            Ensure the content exists
-            </summary>
-            <param name="postedItem"></param>
-            <param name="actionContext"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.ContentItemValidationHelper`2.ValidateProperties(`1,Umbraco.Web.Models.ContentEditing.IContentProperties{Umbraco.Web.Models.ContentEditing.ContentPropertyBasic},System.Web.Http.Controllers.HttpActionContext)">
-            <summary>
-            Ensure all of the ids in the post are valid
-            </summary>
-            <param name="model"></param>
-            <param name="modelWithProperties"></param>
-            <param name="actionContext"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.ContentItemValidationHelper`2.ValidateProperties(System.Collections.Generic.List{Umbraco.Web.Models.ContentEditing.ContentPropertyBasic},System.Collections.Generic.List{Umbraco.Core.Models.Property},System.Web.Http.Controllers.HttpActionContext)">
-            <summary>
-            This validates that all of the posted properties exist on the persisted entity
-            </summary>
-            <param name="postedProperties"></param>
-            <param name="persistedProperties"></param>
-            <param name="actionContext"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Editors.Filters.ContentItemValidationHelper`2.ValidatePropertyData(`1,Umbraco.Web.Models.ContentEditing.IContentProperties{Umbraco.Web.Models.ContentEditing.ContentPropertyBasic},Umbraco.Web.Models.ContentEditing.ContentPropertyCollectionDto,System.Web.Http.ModelBinding.ModelStateDictionary)">
-            <summary>
-            Validates the data for each property
-            </summary>
-            <param name="model"></param>
-            <param name="modelWithProperties"></param>
-            <param name="dto"></param>
-            <param name="modelState"></param>
-            <returns></returns>
-            <remarks>
-            All property data validation goes into the model state with a prefix of "Properties"
-            </remarks>
         </member>
         <member name="M:Umbraco.Web.Editors.ExamineManagementController.GetIndexerDetails">
             <summary>
@@ -1458,7 +1480,25 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Editors.ContentController.SaveAndNotify(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Func{Umbraco.Core.Models.IContent,Umbraco.Core.Services.OperationResult},System.Int32,System.Collections.Generic.Dictionary{System.String,Umbraco.Web.Models.ContentEditing.SimpleNotificationModel},Umbraco.Web.Models.ContentEditing.SimpleNotificationModel,System.String,System.String,System.Boolean@)">
+        <member name="M:Umbraco.Web.Editors.ContentController.ValidateCriticalData(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Int32@)">
+            <summary>
+            Validates critical data for persistence and updates the ModelState and result accordingly
+            </summary>
+            <param name="contentItem"></param>
+            <param name="variantCount">Returns the total number of variants (will be one if it's an invariant content item)</param>
+            <returns></returns>
+            <remarks>
+            For invariant, the variants collection count will be 1 and this will check if that invariant item has the critical values for persistence (i.e. Name)
+            
+            For variant, each variant will be checked for critical data for persistence and if it's not there then it's flags will be reset and it will not
+            be persisted. However, we also need to deal with the case where all variants don't pass this check and then there is nothing to save. This also deals
+            with removing the Name validation keys based on data annotations validation for items that haven't been marked to be saved.
+            </remarks>
+            <returns>
+            returns false if persistence cannot take place, returns true if persistence can take place even if there are validation errors
+            </returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.ContentController.SaveAndNotify(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Func{Umbraco.Core.Models.IContent,Umbraco.Core.Services.OperationResult},System.Int32,System.Collections.Generic.Dictionary{System.String,Umbraco.Web.Models.ContentEditing.SimpleNotificationModel},Umbraco.Web.Models.ContentEditing.SimpleNotificationModel,System.String,System.String,System.String,System.Boolean@)">
             <summary>
             Helper method to perform the saving of the content and add the notifications to the result
             </summary>
@@ -1501,7 +1541,7 @@
             <param name="contentItem"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Editors.ContentController.PublishInternal(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Boolean@,System.String[]@)">
+        <member name="M:Umbraco.Web.Editors.ContentController.PublishInternal(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.String,System.String,System.Boolean@,System.String[]@)">
             <summary>
             Performs the publishing operation for a content item
             </summary>
@@ -1514,19 +1554,18 @@
             If this is a culture variant than we need to do some validation, if it's not we'll publish as normal
             </remarks>
         </member>
-        <member name="M:Umbraco.Web.Editors.ContentController.ValidatePublishingMandatoryLanguages(Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Collections.Generic.IReadOnlyCollection{Umbraco.Web.Models.ContentEditing.ContentVariantSave},System.Collections.Generic.IReadOnlyList{System.String},System.String,System.Func{Umbraco.Web.Models.ContentEditing.ContentVariantSave,System.Boolean},System.Collections.Generic.IReadOnlyList{System.ValueTuple{Umbraco.Web.Models.ContentEditing.ContentVariantSave,System.Boolean}}@)">
+        <member name="M:Umbraco.Web.Editors.ContentController.ValidatePublishingMandatoryLanguages(System.Collections.Generic.IReadOnlyCollection{System.String},Umbraco.Web.Models.ContentEditing.ContentItemSave,System.Collections.Generic.IReadOnlyCollection{Umbraco.Web.Models.ContentEditing.ContentVariantSave},System.Collections.Generic.IReadOnlyList{System.String},System.Func{Umbraco.Web.Models.ContentEditing.ContentVariantSave,System.Boolean})">
             <summary>
             Validate if publishing is possible based on the mandatory language requirements
             </summary>
+            <param name="culturesWithValidationErrors"></param>
             <param name="contentItem"></param>
             <param name="cultureVariants"></param>
             <param name="mandatoryCultures"></param>
-            <param name="localizationKey"></param>
             <param name="publishingCheck"></param>
-            <param name="mandatoryVariants"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Editors.ContentController.PublishCulture(Umbraco.Core.Models.IContent,System.Collections.Generic.IEnumerable{Umbraco.Web.Models.ContentEditing.ContentVariantSave})">
+        <member name="M:Umbraco.Web.Editors.ContentController.PublishCulture(Umbraco.Core.Models.IContent,System.Collections.Generic.IEnumerable{Umbraco.Web.Models.ContentEditing.ContentVariantSave},System.String)">
             <summary>
             Call PublishCulture on the content item for each culture to get a validation result for each culture
             </summary>
@@ -1537,12 +1576,15 @@
             This would generally never fail unless someone is tampering with the request
             </remarks>
         </member>
-        <member name="M:Umbraco.Web.Editors.ContentController.AddCultureValidationError(System.String,System.String)">
+        <member name="M:Umbraco.Web.Editors.ContentController.AddCultureValidationError(System.String,System.String,System.String)">
             <summary>
             Adds a generic culture error for use in displaying the culture validation error in the save/publish/etc... dialogs
             </summary>
-            <param name="culture"></param>
+            <param name="culture">Culture to assign the error to</param>
             <param name="localizationKey"></param>
+            <param name="cultureToken">
+            The culture used in the localization message, null by default which means <see cref="!:culture"/> will be used. 
+            </param>
         </member>
         <member name="M:Umbraco.Web.Editors.ContentController.PostPublishById(System.Int32)">
              <summary>
@@ -1604,9 +1646,10 @@
             <param name="model">The content and variants to unpublish</param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Editors.ContentController.HandleInvalidModelState(Umbraco.Web.Models.ContentEditing.IErrorModel)">
+        <member name="M:Umbraco.Web.Editors.ContentController.HandleInvalidModelState(Umbraco.Web.Models.ContentEditing.ContentItemDisplay,System.String)">
             <summary>
-            Override to ensure there is culture specific errors in the result if any errors are for culture properties
+            Ensure there is culture specific errors in the result if any errors are for culture properties
+            and we're dealing with variant content, then call the base class HandleInvalidModelState
             </summary>
             <param name="display"></param>
             <remarks>
@@ -1626,11 +1669,11 @@
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Editors.ContentController.AddMessageForPublishStatus(System.Collections.Generic.IEnumerable{Umbraco.Core.Services.PublishResult},Umbraco.Web.Models.ContentEditing.INotificationModel,System.String[])">
+        <member name="M:Umbraco.Web.Editors.ContentController.AddMessageForPublishStatus(System.Collections.Generic.IReadOnlyCollection{Umbraco.Core.Services.PublishResult},Umbraco.Web.Models.ContentEditing.INotificationModel,System.String[])">
             <summary>
             Adds notification messages to the outbound display model for a given published status
             </summary>
-            <param name="status"></param>
+            <param name="statuses"></param>
             <param name="display"></param>
             <param name="successfulCultures">
             This is null when dealing with invariant content, else it's the cultures that were successfully published
@@ -2030,7 +2073,12 @@
             The API controller used for getting entity objects, basic name, icon, id representation of umbraco objects that are based on CMSNode
             </summary>
             <remarks>
-            Some objects such as macros are not based on CMSNode
+            <para>
+            This controller allows resolving basic entity data for various entities without placing the hard restrictions on users that may not have access
+            to the sections these entities entities exist in. This is to allow pickers, etc... of data to work for all users. In some cases such as accessing
+            Members, more explicit security checks are done.
+            </para>
+            <para>Some objects such as macros are not based on CMSNode</para>
             </remarks>
         </member>
         <member name="T:Umbraco.Web.Editors.EntityController.EntityControllerConfigurationAttribute">
@@ -2046,7 +2094,7 @@
             <param name="camelCase"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Editors.EntityController.Search(System.String,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.String)">
+        <member name="M:Umbraco.Web.Editors.EntityController.Search(System.String,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.String,System.Nullable{System.Guid})">
             <summary>
             Searches for results based on the entity type
             </summary>
@@ -2055,6 +2103,7 @@
             <param name="searchFrom">
             A starting point for the search, generally a node id, but for members this is a member type alias
             </param>
+            <param name="dataTypeKey">If set used to look up whether user and group start node permissions will be ignored.</param>
             <returns></returns>
         </member>
         <member name="M:Umbraco.Web.Editors.EntityController.SearchAll(System.String)">
@@ -2103,6 +2152,9 @@
             <param name="id">Int id of the entity to fetch URL for</param>
             <param name="type">The type of entity such as Document, Media, Member</param>
             <returns>The URL or path to the item</returns>
+            <remarks>
+            We are not restricting this with security because there is no sensitive data
+            </remarks>
         </member>
         <member name="M:Umbraco.Web.Editors.EntityController.GetByQuery(System.String,System.Int32,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes)">
             <summary>
@@ -2172,7 +2224,7 @@
             We allow for POST because there could be quite a lot of Ids.
             </remarks>
         </member>
-        <member name="M:Umbraco.Web.Editors.EntityController.GetPagedChildren(System.String,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.Int32,System.Int32,System.String,Umbraco.Core.Persistence.DatabaseModelDefinitions.Direction,System.String)">
+        <member name="M:Umbraco.Web.Editors.EntityController.GetPagedChildren(System.String,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.Int32,System.Int32,System.String,Umbraco.Core.Persistence.DatabaseModelDefinitions.Direction,System.String,System.Nullable{System.Guid})">
             <summary>
             Get paged child entities by id
             </summary>
@@ -2185,7 +2237,7 @@
             <param name="filter"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Editors.EntityController.GetPagedChildren(System.Int32,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.Int32,System.Int32,System.String,Umbraco.Core.Persistence.DatabaseModelDefinitions.Direction,System.String)">
+        <member name="M:Umbraco.Web.Editors.EntityController.GetPagedChildren(System.Int32,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.Int32,System.Int32,System.String,Umbraco.Core.Persistence.DatabaseModelDefinitions.Direction,System.String,System.Nullable{System.Guid})">
             <summary>
             Get paged child entities by id
             </summary>
@@ -2198,13 +2250,14 @@
             <param name="filter"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Editors.EntityController.ExamineSearch(System.String,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.String)">
+        <member name="M:Umbraco.Web.Editors.EntityController.ExamineSearch(System.String,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.String,System.Boolean)">
             <summary>
             Searches for results based on the entity type
             </summary>
             <param name="query"></param>
             <param name="entityType"></param>
             <param name="searchFrom"></param>
+            <param name="ignoreUserStartNodes">If set to true, user and group start node permissions will be ignored.</param>
             <returns></returns>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Umbraco.Web.Editors.EntityController.GetAll(Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.String)" -->
@@ -3314,8 +3367,8 @@
             </summary>
             <param name="frequest">The <see cref="T:Umbraco.Web.Routing.PublishedRequest"/> pointing to the document.</param>
             <remarks>
-            The difference between creating the page with PublishedContentRequest vs an IPublishedContent item is
-            that the PublishedContentRequest takes into account how a template is assigned during the routing process whereas
+            The difference between creating the page with PublishedRequest vs an IPublishedContent item is
+            that the PublishedRequest takes into account how a template is assigned during the routing process whereas
             with an IPublishedContent item, the template id is assigned purely based on the default.
             </remarks>
         </member>
@@ -3342,6 +3395,11 @@
         <member name="P:Umbraco.Web.Macros.PublishedContentHashtableConverter.Elements">
             <summary>
             Returns a Hashtable of data for a published content item
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Media.EmbedProviders.Giphy">
+            <summary>
+            Embed Provider for Giphy.com the popular online GIFs and animated sticker provider.
             </summary>
         </member>
         <member name="T:Umbraco.Web.Media.EmbedProviders.OEmbedResponse">
@@ -7028,6 +7086,182 @@
             Warning icon
             </summary>
         </member>
+        <member name="T:Umbraco.Web.Models.Mapping.MapperContextExtensions">
+            <summary>
+            Provides extension methods for the <see cref="T:Umbraco.Core.Mapping.MapperContext"/> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.MapperContextExtensions.GetCulture(Umbraco.Core.Mapping.MapperContext)">
+            <summary>
+            Gets the context culture.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.MapperContextExtensions.SetCulture(Umbraco.Core.Mapping.MapperContext,System.String)">
+            <summary>
+            Sets a context culture.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.MapperContextExtensions.GetIncludedProperties(Umbraco.Core.Mapping.MapperContext)">
+            <summary>
+            Get included properties.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.MapperContextExtensions.SetIncludedProperties(Umbraco.Core.Mapping.MapperContext,System.String[])">
+            <summary>
+            Sets included properties.
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.ContentBasicSavedStateMapper`1">
+            <summary>
+            Returns the <see cref="!:ContentSavedState?"/> for an <see cref="T:Umbraco.Core.Models.IContent"/> item
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.ContentSavedStateMapper`1">
+            <summary>
+            Returns the <see cref="T:Umbraco.Web.Models.ContentEditing.ContentSavedState"/> for an <see cref="T:Umbraco.Core.Models.IContent"/> item
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.DictionaryMapDefinition">
+            <inheritdoc />
+            <summary>
+            The dictionary model mapper.
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.MemberTabsAndPropertiesMapper">
+            <summary>
+            A custom tab/property resolver for members which will ensure that the built-in membership properties are or aren't displayed
+            depending on if the member type has these properties
+            </summary>
+            <remarks>
+            This also ensures that the IsLocked out property is readonly when the member is not locked out - this is because
+            an admin cannot actually set isLockedOut = true, they can only unlock.
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.MemberTabsAndPropertiesMapper.Map(Umbraco.Core.Models.IMember,Umbraco.Core.Mapping.MapperContext)">
+            <inheritdoc />
+            <remarks>Overridden to deal with custom member properties and permissions.</remarks>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.MemberTabsAndPropertiesMapper.MapProperties(Umbraco.Core.Models.IContentBase,System.Collections.Generic.List{Umbraco.Core.Models.Property},Umbraco.Core.Mapping.MapperContext)">
+            <summary>
+            Overridden to assign the IsSensitive property values
+            </summary>
+            <param name="content"></param>
+            <param name="properties"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.MemberTabsAndPropertiesMapper.GetLoginProperty(Umbraco.Core.Services.IMemberService,Umbraco.Core.Models.IMember,Umbraco.Core.Services.ILocalizedTextService)">
+            <summary>
+            Returns the login property display field
+            </summary>
+            <param name="memberService"></param>
+            <param name="member"></param>
+            <param name="display"></param>
+            <param name="localizedText"></param>
+            <returns></returns>
+            <remarks>
+            If the membership provider installed is the umbraco membership provider, then we will allow changing the username, however if
+            the membership provider is a custom one, we cannot allow changing the username because MembershipProvider's do not actually natively
+            allow that.
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.PropertyTypeGroupMapper`1.GetContentTypeForPropertyGroup(Umbraco.Core.Models.IContentTypeComposition,System.Int32)">
+            <summary>
+            Gets the content type that defines a property group, within a composition.
+            </summary>
+            <param name="contentType">The composition.</param>
+            <param name="propertyGroupId">The identifier of the property group.</param>
+            <returns>The composition content type that defines the specified property group.</returns>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.PropertyTypeGroupMapper`1.GetContentTypeForPropertyType(Umbraco.Core.Models.IContentTypeComposition,System.Int32)">
+            <summary>
+            Gets the content type that defines a property group, within a composition.
+            </summary>
+            <param name="contentType">The composition.</param>
+            <param name="propertyTypeId">The identifier of the property type.</param>
+            <returns>The composition content type that defines the specified property group.</returns>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.MemberMapDefinition">
+            <summary>
+            Declares model mappings for members.
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.ContentPropertyBasicMapper`1">
+            <summary>
+            Creates a base generic ContentPropertyBasic from a Property
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.ContentPropertyBasicMapper`1.Map(Umbraco.Core.Models.Property,`0,Umbraco.Core.Mapping.MapperContext)">
+            <summary>
+            Assigns the PropertyEditor, Id, Alias and Value to the property
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.ContentPropertyDisplayMapper">
+            <summary>
+            Creates a ContentPropertyDisplay from a Property
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.ContentPropertyDtoMapper">
+            <summary>
+            Creates a ContentPropertyDto from a Property
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.ContentPropertyMapDefinition">
+            <summary>
+            A mapper which declares how to map content properties. These mappings are shared among media (and probably members) which is
+            why they are in their own mapper
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.MediaMapDefinition">
+            <summary>
+            Declares model mappings for media.
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.ContentTypeMapDefinition">
+            <summary>
+            Defines mappings for content/media/members type mappings
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.ContentMapDefinition">
+            <summary>
+            Declares how model mappings for content
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.TabsAndPropertiesMapper.GetCustomGenericProperties(Umbraco.Core.Models.IContentBase)">
+            <summary>
+            Returns a collection of custom generic properties that exist on the generic properties tab
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.TabsAndPropertiesMapper.MapGenericProperties(Umbraco.Core.Models.IContentBase,System.Collections.Generic.List{Umbraco.Web.Models.ContentEditing.Tab{Umbraco.Web.Models.ContentEditing.ContentPropertyDisplay}},Umbraco.Core.Mapping.MapperContext)">
+            <summary>
+            Maps properties on to the generic properties tab
+            </summary>
+            <param name="content"></param>
+            <param name="tabs"></param>
+            <param name="context"></param>
+            <remarks>
+            The generic properties tab is responsible for
+            setting up the properties such as Created date, updated date, template selected, etc...
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.Models.Mapping.TabsAndPropertiesMapper.MapProperties(Umbraco.Core.Models.IContentBase,System.Collections.Generic.List{Umbraco.Core.Models.Property},Umbraco.Core.Mapping.MapperContext)">
+            <summary>
+            Maps a list of <see cref="T:Umbraco.Core.Models.Property"/> to a list of <see cref="T:Umbraco.Web.Models.ContentEditing.ContentPropertyDisplay"/>
+            </summary>
+            <param name="content"></param>
+            <param name="properties"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Umbraco.Web.Models.Mapping.TabsAndPropertiesMapper`1">
+            <summary>
+            Creates the tabs collection with properties assigned for display models
+            </summary>
+        </member>
         <member name="T:Umbraco.Web.Models.PublishedContent.HybridVariationContextAccessor">
             <summary>
             Implements a hybrid <see cref="T:Umbraco.Core.Models.PublishedContent.IVariationContextAccessor"/>.
@@ -7081,343 +7315,6 @@
         </member>
         <member name="M:Umbraco.Web.Models.PublishedContent.PublishedValueFallback.TryGetValue``1(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String,System.String,System.String,Umbraco.Core.Models.PublishedContent.Fallback,``0,``0@,Umbraco.Core.Models.PublishedContent.IPublishedProperty@)">
             <inheritdoc />
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MappingOperationOptionsExtensions">
-            <summary>
-            Provides extension methods for AutoMapper's <see cref="T:AutoMapper.IMappingOperationOptions"/>.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.MappingOperationOptionsExtensions.GetCulture(AutoMapper.IMappingOperationOptions)">
-            <summary>
-            Gets the context culture.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.MappingOperationOptionsExtensions.SetCulture(AutoMapper.IMappingOperationOptions,System.String)">
-            <summary>
-            Sets a context culture.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.MappingOperationOptionsExtensions.GetIncludedProperties(AutoMapper.IMappingOperationOptions)">
-            <summary>
-            Get included properties.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.MappingOperationOptionsExtensions.SetIncludedProperties(AutoMapper.IMappingOperationOptions,System.String[])">
-            <summary>
-            Sets included properties.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentBasicSavedStateResolver`1">
-            <summary>
-            Returns the <see cref="!:ContentSavedState?"/> for an <see cref="T:Umbraco.Core.Models.IContent"/> item
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentSavedStateResolver`1">
-            <summary>
-            Returns the <see cref="T:Umbraco.Web.Models.ContentEditing.ContentSavedState"/> for an <see cref="T:Umbraco.Core.Models.IContent"/> item
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ActionButtonsResolver">
-            <summary>
-            Creates the list of action buttons allowed for this user - Publish, Send to publish, save, unpublish returned as the button's 'letter'
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.DictionaryMapperProfile">
-            <inheritdoc />
-            <summary>
-            The dictionary model mapper.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.DictionaryMapperProfile.GetParentId(System.Guid,Umbraco.Core.Services.ILocalizationService,System.Collections.Generic.List{System.Int32})">
-            <summary>
-            Goes up the dictionary tree to get all parent ids
-            </summary>
-            <param name="parentId">
-            The parent id.
-            </param>
-            <param name="localizationService">
-            The localization service.
-            </param>
-            <param name="ids">
-            The ids.
-            </param>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.LanguageMapperProfile.LanguageCollectionTypeConverter">
-            <summary>
-            Converts a list of <see cref="T:Umbraco.Core.Models.ILanguage"/> to a list of <see cref="T:Umbraco.Web.Models.ContentEditing.Language"/> and ensures the correct order and defaults are set
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentTreeNodeUrlResolver`2">
-            <summary>
-            Gets the tree node url for the content or media
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentTypeUdiResolver">
-            <summary>
-            Resolves a UDI for a content type based on it's type
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.EntityProfileExtensions">
-            <summary>
-            Mapping extension methods for re-use with other mappers (saves code duplication)
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.EntityProfileExtensions.IgnoreEntityCommonProperties``2(AutoMapper.IMappingExpression{``0,``1})">
-            <summary>
-            Ignores readonly properties and the date values
-            </summary>
-            <param name="mapping"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentTypeBasicResolver`2">
-            <summary>
-            Resolves a <see cref="T:Umbraco.Web.Models.ContentEditing.ContentTypeBasic"/> from the <see cref="T:Umbraco.Core.Models.IContent"/> item and checks if the current user
-            has access to see this data
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MemberBasicPropertiesResolver">
-            <summary>
-            A resolver to map <see cref="T:Umbraco.Core.Models.IMember"/> properties to a collection of <see cref="T:Umbraco.Web.Models.ContentEditing.ContentPropertyBasic"/>
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MemberDtoPropertiesResolver">
-            <summary>
-            This ensures that the custom membership provider properties are not mapped - these property values are controller by the membership provider
-            </summary>
-            <remarks>
-            Because these properties don't exist on the form, if we don't remove them for this map we'll get validation errors when posting data
-            </remarks>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MemberProviderFieldResolver">
-            <summary>
-            A resolver to map the provider field aliases
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MembershipUserTypeConverter">
-            <summary>
-            A converter to go from a <see cref="T:System.Web.Security.MembershipUser"/> to a <see cref="T:Umbraco.Web.Models.ContentEditing.MemberDisplay"/>
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MemberTabsAndPropertiesResolver">
-            <summary>
-            A custom tab/property resolver for members which will ensure that the built-in membership properties are or aren't displayed
-            depending on if the member type has these properties
-            </summary>
-            <remarks>
-            This also ensures that the IsLocked out property is readonly when the member is not locked out - this is because
-            an admin cannot actually set isLockedOut = true, they can only unlock.
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.MemberTabsAndPropertiesResolver.Resolve(Umbraco.Core.Models.IMember,Umbraco.Web.Models.ContentEditing.MemberDisplay,System.Collections.Generic.IEnumerable{Umbraco.Web.Models.ContentEditing.Tab{Umbraco.Web.Models.ContentEditing.ContentPropertyDisplay}},AutoMapper.ResolutionContext)">
-            <inheritdoc />
-            <remarks>Overridden to deal with custom member properties and permissions.</remarks>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.MemberTabsAndPropertiesResolver.MapProperties(Umbraco.Core.Models.IContentBase,System.Collections.Generic.List{Umbraco.Core.Models.Property},AutoMapper.ResolutionContext)">
-            <summary>
-            Overridden to assign the IsSensitive property values
-            </summary>
-            <param name="content"></param>
-            <param name="properties"></param>
-            <param name="context"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.MemberTabsAndPropertiesResolver.GetLoginProperty(Umbraco.Core.Services.IMemberService,Umbraco.Core.Models.IMember,Umbraco.Core.Services.ILocalizedTextService)">
-            <summary>
-            Returns the login property display field
-            </summary>
-            <param name="memberService"></param>
-            <param name="member"></param>
-            <param name="display"></param>
-            <param name="localizedText"></param>
-            <returns></returns>
-            <remarks>
-            If the membership provider installed is the umbraco membership provider, then we will allow changing the username, however if
-            the membership provider is a custom one, we cannot allow changing the username because MembershipProvider's do not actually natively
-            allow that.
-            </remarks>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MemberTreeNodeUrlResolver">
-            <summary>
-            Gets the tree node url for the IMember
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.PropertyTypeVariationsResolver">
-            <summary>
-            Returns the <see cref="T:Umbraco.Core.Models.ContentVariation"/> for a <see cref="T:Umbraco.Core.Models.PropertyType"/>
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.UserGroupDefaultPermissionsResolver">
-            <summary>
-            Converts an IUserGroup instance into a dictionary of permissions by category
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentTypeProfileExtensions">
-            <summary>
-            Used as a shared way to do the underlying mapping for content types base classes
-            </summary>
-            <remarks>
-            We used to use 'Include' Automapper inheritance functionality and although this works, the unit test
-                to assert mappings fails which is an Automapper bug. So instead we will use an extension method for the mappings
-                to re-use mappings.
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.ContentTypeProfileExtensions.MapBaseContentTypeSaveToEntity``3(AutoMapper.IMappingExpression{``0,``2})">
-            <summary>
-            Display -> Entity class base mapping logic
-            </summary>
-            <typeparam name="TSource"></typeparam>
-            <typeparam name="TDestination"></typeparam>
-            <typeparam name="TSourcePropertyType"></typeparam>
-            <param name="mapping"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.PropertyTypeGroupResolver`1.GetContentTypeForPropertyGroup(Umbraco.Core.Models.IContentTypeComposition,System.Int32)">
-            <summary>
-            Gets the content type that defines a property group, within a composition.
-            </summary>
-            <param name="contentType">The composition.</param>
-            <param name="propertyGroupId">The identifier of the property group.</param>
-            <returns>The composition content type that defines the specified property group.</returns>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.PropertyTypeGroupResolver`1.GetContentTypeForPropertyType(Umbraco.Core.Models.IContentTypeComposition,System.Int32)">
-            <summary>
-            Gets the content type that defines a property group, within a composition.
-            </summary>
-            <param name="contentType">The composition.</param>
-            <param name="propertyTypeId">The identifier of the property type.</param>
-            <returns>The composition content type that defines the specified property group.</returns>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MacroMapperProfile">
-            <summary>
-            Declares model mappings for macros.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MemberMapperProfile">
-            <summary>
-            Declares model mappings for members.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.DatabaseTypeResolver">
-            <summary>
-            Gets the DataTypeDatabaseType from the selected property editor for the data type
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.DataTypeMapperProfile">
-            <summary>
-            Configures model mappings for datatypes.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.EntityMapperProfile.NameResolver">
-            <summary>
-            Resolves the name for a content item/content variant
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.DataTypeConfigurationFieldDisplayResolver.MapConfigurationFields(Umbraco.Core.Logging.ILogger,Umbraco.Web.Models.ContentEditing.DataTypeConfigurationFieldDisplay[],System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            Maps pre-values in the dictionary to the values for the fields
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.DataTypeConfigurationFieldDisplayResolver.Resolve(Umbraco.Core.Models.IDataType)">
-            <summary>
-            Creates a set of configuration fields for a data type.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentPropertyBasicConverter`1">
-            <summary>
-            Creates a base generic ContentPropertyBasic from a Property
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.ContentPropertyBasicConverter`1.Convert(Umbraco.Core.Models.Property,`0,AutoMapper.ResolutionContext)">
-            <summary>
-            Assigns the PropertyEditor, Id, Alias and Value to the property
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentPropertyDisplayConverter">
-            <summary>
-            Creates a ContentPropertyDisplay from a Property
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentPropertyDtoConverter">
-            <summary>
-            Creates a ContentPropertyDto from a Property
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentPropertyMapperProfile">
-            <summary>
-            A mapper which declares how to map content properties. These mappings are shared among media (and probably members) which is
-            why they are in their own mapper
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.CreatorResolver">
-            <summary>
-            Maps the Creator for content
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.MediaMapperProfile">
-            <summary>
-            Declares model mappings for media.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentTypeMapperProfile">
-            <summary>
-            Defines mappings for content/media/members type mappings
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentMapperProfile">
-            <summary>
-            Declares how model mappings for content
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentMapperProfile.UpdateDateResolver">
-            <summary>
-            Resolves the update date for a content item/content variant
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.ContentMapperProfile.NameResolver">
-            <summary>
-            Resolves the name for a content item/content variant
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.OwnerResolver`1">
-            <summary>
-            Maps the Owner for IContentBase
-            </summary>
-            <typeparam name="TPersisted"></typeparam>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.TabsAndPropertiesResolver.GetCustomGenericProperties(Umbraco.Core.Models.IContentBase)">
-            <summary>
-            Returns a collection of custom generic properties that exist on the generic properties tab
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.TabsAndPropertiesResolver.MapGenericProperties(Umbraco.Core.Models.IContentBase,System.Collections.Generic.List{Umbraco.Web.Models.ContentEditing.Tab{Umbraco.Web.Models.ContentEditing.ContentPropertyDisplay}},AutoMapper.ResolutionContext)">
-            <summary>
-            Maps properties on to the generic properties tab
-            </summary>
-            <param name="content"></param>
-            <param name="tabs"></param>
-            <param name="context"></param>
-            <remarks>
-            The generic properties tab is responsible for
-            setting up the properties such as Created date, updated date, template selected, etc...
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.Models.Mapping.TabsAndPropertiesResolver.MapProperties(Umbraco.Core.Models.IContentBase,System.Collections.Generic.List{Umbraco.Core.Models.Property},AutoMapper.ResolutionContext)">
-            <summary>
-            Maps a list of <see cref="T:Umbraco.Core.Models.Property"/> to a list of <see cref="T:Umbraco.Web.Models.ContentEditing.ContentPropertyDisplay"/>
-            </summary>
-            <param name="content"></param>
-            <param name="properties"></param>
-            <param name="context"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Umbraco.Web.Models.Mapping.TabsAndPropertiesResolver`2">
-            <summary>
-            Creates the tabs collection with properties assigned for display models
-            </summary>
         </member>
         <member name="T:Umbraco.Web.Models.BackOfficeTour">
             <summary>
@@ -7962,17 +7859,6 @@
             redirected to the current Umbraco page
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Models.PublishedProperty.MapProperties(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.PublishedContent.PublishedPropertyType},System.Collections.Generic.IEnumerable{Umbraco.Core.Models.Property},System.Func{Umbraco.Core.Models.PublishedContent.PublishedPropertyType,System.Object,Umbraco.Core.Models.PublishedContent.IPublishedProperty})">
-            <summary>
-            Maps a collection of Property to a collection of IPublishedProperty for a specified collection of PublishedPropertyType.
-            </summary>
-            <param name="propertyTypes">The published property types.</param>
-            <param name="properties">The properties.</param>
-            <param name="map">A mapping function.</param>
-            <returns>A collection of IPublishedProperty corresponding to the collection of PublishedPropertyType
-            and taking values from the collection of Property.</returns>
-            <remarks>Ensures that all conversions took place correctly.</remarks>
-        </member>
         <member name="M:Umbraco.Web.Models.ContentModel`1.#ctor(`0)">
             <summary>
             Initializes a new instance of the <see cref="T:Umbraco.Web.Models.ContentModel`1"/> class with a content.
@@ -8214,16 +8100,6 @@
         <member name="P:Umbraco.Web.Models.PublishedContentBase.Url">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.Models.PublishedContentBase.GetUrl(System.String)">
-            <inheritdoc />
-            <remarks>
-            The url of documents are computed by the document url providers. The url of medias are, at the moment,
-            computed here from the 'umbracoFile' property -- but we should move to media url providers at some point.
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.Models.PublishedContentBase.GetCulture(System.String)">
-            <inheritdoc />
-        </member>
         <member name="P:Umbraco.Web.Models.PublishedContentBase.Cultures">
             <inheritdoc />
         </member>
@@ -8240,6 +8116,9 @@
             <inheritdoc />
         </member>
         <member name="P:Umbraco.Web.Models.PublishedContentBase.Children">
+            <inheritdoc />
+        </member>
+        <member name="P:Umbraco.Web.Models.PublishedContentBase.ChildrenForAllCultures">
             <inheritdoc />
         </member>
         <member name="P:Umbraco.Web.Models.PublishedContentBase.Properties">
@@ -8263,6 +8142,71 @@
             <summary>
             Gets the content.
             </summary>
+        </member>
+        <member name="T:Umbraco.Web.Mvc.HttpUmbracoFormRouteStringException">
+            <summary>
+            Exception that occurs when an Umbraco form route string is invalid
+            </summary>
+            <seealso cref="T:System.Web.HttpException" />
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Umbraco.Web.Mvc.HttpUmbracoFormRouteStringException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" -->
+        <member name="M:Umbraco.Web.Mvc.HttpUmbracoFormRouteStringException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Web.Mvc.HttpUmbracoFormRouteStringException" /> class.
+            </summary>
+            <param name="message">The error message displayed to the client when the exception is thrown.</param>
+        </member>
+        <member name="M:Umbraco.Web.Mvc.HttpUmbracoFormRouteStringException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Web.Mvc.HttpUmbracoFormRouteStringException" /> class.
+            </summary>
+            <param name="message">The error message displayed to the client when the exception is thrown.</param>
+            <param name="innerException">The <see cref="P:System.Exception.InnerException" />, if any, that threw the current exception.</param>
+        </member>
+        <member name="T:Umbraco.Web.Mvc.ModelBindingExceptionFilter">
+            <summary>
+                An exception filter checking if we get a <see cref="T:Umbraco.Web.Mvc.ModelBindingException" /> or <see cref="T:System.InvalidCastException" /> with the same model. in which case it returns a redirect to the same page after 1 sec.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Mvc.ModelBindingExceptionFilter.IsMessageAboutTheSameModelType(System.String)">
+             <summary>
+                 Returns true if the message is about two models with the same name.
+             </summary>
+             <remarks>
+                 Message could be something like:
+             <para>
+                 InvalidCastException:
+                 [A]Umbraco.Web.PublishedModels.Home cannot be cast to [B]Umbraco.Web.PublishedModels.Home. Type A originates from 'App_Web_all.generated.cs.8f9494c4.rtdigm_z, Version=0.0.0.3, Culture=neutral, PublicKeyToken=null' in the context 'Default' at location 'C:\Users\User\AppData\Local\Temp\Temporary ASP.NET Files\root\c5c63f4d\c168d9d4\App_Web_all.generated.cs.8f9494c4.rtdigm_z.dll'. Type B originates from 'App_Web_all.generated.cs.8f9494c4.rbyqlplu, Version=0.0.0.5, Culture=neutral, PublicKeyToken=null' in the context 'Default' at location 'C:\Users\User\AppData\Local\Temp\Temporary ASP.NET Files\root\c5c63f4d\c168d9d4\App_Web_all.generated.cs.8f9494c4.rbyqlplu.dll'.
+            </para>
+             <para>
+                 ModelBindingException:
+                 Cannot bind source content type Umbraco.Web.PublishedModels.Home to model type Umbraco.Web.PublishedModels.Home. Both view and content models are PureLive, with different versions. The application is in an unstable state and is going to be restarted. The application is restarting now.
+             </para>
+             </remarks>
+        </member>
+        <member name="T:Umbraco.Web.Mvc.ValidateUmbracoFormRouteStringAttribute">
+            <summary>
+            Attribute used to check that the request contains a valid Umbraco form request string.
+            </summary>
+            <seealso cref="T:System.Web.Mvc.FilterAttribute" />
+            <seealso cref="T:System.Web.Mvc.IAuthorizationFilter" />
+            <remarks>
+            Applying this attribute/filter to a <see cref="T:Umbraco.Web.Mvc.SurfaceController"/> or SurfaceController Action will ensure that the Action can only be executed
+            when it is routed to from within Umbraco, typically when rendering a form with BegingUmbracoForm. It will mean that the natural MVC route for this Action
+            will fail with a <see cref="T:Umbraco.Web.Mvc.HttpUmbracoFormRouteStringException"/>.
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.Mvc.ValidateUmbracoFormRouteStringAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            Called when authorization is required.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+            <exception cref="T:System.ArgumentNullException">filterContext</exception>
+            <exception cref="T:Umbraco.Web.Mvc.HttpUmbracoFormRouteStringException">The required request field \"ufprt\" is not present.
+            or
+            The Umbraco form request route string could not be decrypted.
+            or
+            The provided Umbraco form request route string was meant for a different controller and action.</exception>
         </member>
         <member name="M:Umbraco.Web.Mvc.ControllerContextExtensions.GetUmbracoContext(System.Web.Mvc.ControllerContext)">
             <summary>
@@ -8448,7 +8392,7 @@
         </member>
         <member name="M:Umbraco.Web.Mvc.EnsurePublishedContentRequestAttribute.#ctor(System.Int32)">
             <summary>
-            A constructor used to set an explicit content Id to the PublishedContentRequest that will be created
+            A constructor used to set an explicit content Id to the PublishedRequest that will be created
             </summary>
             <param name="contentId"></param>
         </member>
@@ -9682,6 +9626,27 @@
             <param name="result"></param>
             <param name="controller"></param>
         </member>
+        <member name="T:Umbraco.Web.Profiling.WebProfilingController">
+            <summary>
+            The API controller used to display the state of the web profiler
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.PublishedCache.NuCache.PublishedSnapshotServiceOptions">
+            <summary>
+            Options class for configuring the <see cref="T:Umbraco.Web.PublishedCache.IPublishedSnapshotService"/>
+            </summary>
+        </member>
+        <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedSnapshotServiceOptions.IgnoreLocalDb">
+            <summary>
+            If true this disables the persisted local cache files for content and media
+            </summary>
+            <remarks>
+            By default this is false which means umbraco will use locally persisted cache files for reading in all published content and media on application startup.
+            The reason for this is to improve startup times because the alternative to populating the published content and media on application startup is to read
+            these values from the database. In scenarios where sites are relatively small (below a few thousand nodes) reading the content/media from the database to populate
+            the in memory cache isn't that slow and is only marginally slower than reading from the locally persisted cache files.
+            </remarks>
+        </member>
         <member name="T:Umbraco.Web.PublishedCache.NuCache.DataSource.ContentNestedData">
             <summary>
             The content item 1:M data that is serialized to JSON
@@ -9702,6 +9667,34 @@
             The collection of language Id to name for the content item
             </summary>
         </member>
+        <member name="T:Umbraco.Web.PublishedCache.NuCache.DomainCache">
+            <summary>
+            Implements <see cref="T:Umbraco.Web.PublishedCache.IDomainCache"/> for NuCache.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.PublishedCache.NuCache.DomainCache.#ctor(Umbraco.Web.PublishedCache.NuCache.SnapDictionary{System.Int32,Umbraco.Web.Routing.Domain}.Snapshot,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Web.PublishedCache.NuCache.DomainCache"/> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.PublishedCache.NuCache.DomainCache.GetAll(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Umbraco.Web.PublishedCache.NuCache.DomainCache.GetAssigned(System.Int32,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Umbraco.Web.PublishedCache.NuCache.DomainCache.HasAssigned(System.Int32,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="P:Umbraco.Web.PublishedCache.NuCache.DomainCache.DefaultCulture">
+            <inheritdoc />
+        </member>
+        <member name="M:Umbraco.Web.PublishedCache.NuCache.PublishedSnapshotService.Notify(Umbraco.Web.Cache.MediaCacheRefresher.JsonPayload[],System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Umbraco.Web.PublishedCache.NuCache.PublishedSnapshotService.Notify(Umbraco.Web.Cache.ContentTypeCacheRefresher.JsonPayload[])">
+            <inheritdoc />
+        </member>
         <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.ContentType">
             <inheritdoc />
         </member>
@@ -9709,12 +9702,6 @@
             <inheritdoc />
         </member>
         <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.Id">
-            <inheritdoc />
-        </member>
-        <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.Name">
-            <inheritdoc />
-        </member>
-        <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.UrlSegment">
             <inheritdoc />
         </member>
         <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.SortOrder">
@@ -9747,9 +9734,6 @@
         <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.UpdateDate">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.PublishedCache.NuCache.PublishedContent.GetCulture(System.String)">
-            <inheritdoc />
-        </member>
         <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.Cultures">
             <inheritdoc />
         </member>
@@ -9765,7 +9749,7 @@
         <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.Parent">
             <inheritdoc />
         </member>
-        <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.Children">
+        <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.ChildrenForAllCultures">
             <inheritdoc />
         </member>
         <member name="P:Umbraco.Web.PublishedCache.NuCache.PublishedContent.Properties">
@@ -9844,18 +9828,29 @@
         </member>
         <member name="M:Umbraco.Web.PublishedCache.IDomainCache.GetAll(System.Boolean)">
             <summary>
-            Returns all <see cref="T:Umbraco.Web.Routing.Domain"/> in the current domain cache including any domains that may be referenced by content items that are no longer published
+            Gets all <see cref="T:Umbraco.Web.Routing.Domain"/> in the current domain cache, including any domains that may be referenced by documents that are no longer published.
             </summary>
             <param name="includeWildcards"></param>
             <returns></returns>
         </member>
         <member name="M:Umbraco.Web.PublishedCache.IDomainCache.GetAssigned(System.Int32,System.Boolean)">
             <summary>
-            Returns all assigned <see cref="T:Umbraco.Web.Routing.Domain"/> for the content id specified even if the content item is not published
+            Gets all assigned <see cref="T:Umbraco.Web.Routing.Domain"/> for specified document, even if it is not published.
             </summary>
-            <param name="contentId"></param>
-            <param name="includeWildcards"></param>
-            <returns></returns>
+            <param name="documentId">The document identifier.</param>
+            <param name="includeWildcards">A value indicating whether to consider wildcard domains.</param>
+        </member>
+        <member name="M:Umbraco.Web.PublishedCache.IDomainCache.HasAssigned(System.Int32,System.Boolean)">
+            <summary>
+            Determines whether a document has domains.
+            </summary>
+            <param name="documentId">The document identifier.</param>
+            <param name="includeWildcards">A value indicating whether to consider wildcard domains.</param>
+        </member>
+        <member name="P:Umbraco.Web.PublishedCache.IDomainCache.DefaultCulture">
+            <summary>
+            Gets the system default culture.
+            </summary>
         </member>
         <member name="T:Umbraco.Web.PublishedCache.IPublishedSnapshotAccessor">
             <summary>
@@ -10064,6 +10059,15 @@
             <returns>The content, or null.</returns>
             <remarks>The value of <paramref name="preview"/> overrides defaults.</remarks>
         </member>
+        <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetById(System.Boolean,Umbraco.Core.Udi)">
+            <summary>
+            Gets a content identified by its Udi identifier.
+            </summary>
+            <param name="preview">A value indicating whether to consider unpublished content.</param>
+            <param name="contentId">The content Udi identifier.</param>
+            <returns>The content, or null.</returns>
+            <remarks>The value of <paramref name="preview"/> overrides defaults.</remarks>
+        </member>
         <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetById(System.Int32)">
             <summary>
             Gets a content identified by its unique identifier.
@@ -10073,6 +10077,14 @@
             <remarks>Considers published or unpublished content depending on defaults.</remarks>
         </member>
         <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetById(System.Guid)">
+            <summary>
+            Gets a content identified by its unique identifier.
+            </summary>
+            <param name="contentId">The content unique identifier.</param>
+            <returns>The content, or null.</returns>
+            <remarks>Considers published or unpublished content depending on defaults.</remarks>
+        </member>
+        <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetById(Umbraco.Core.Udi)">
             <summary>
             Gets a content identified by its unique identifier.
             </summary>
@@ -10097,18 +10109,20 @@
             <returns>A value indicating whether to the cache contains the specified content.</returns>
             <remarks>Considers published or unpublished content depending on defaults.</remarks>
         </member>
-        <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetAtRoot(System.Boolean)">
+        <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetAtRoot(System.Boolean,System.String)">
             <summary>
             Gets contents at root.
             </summary>
             <param name="preview">A value indicating whether to consider unpublished content.</param>
+            <param name="culture">A culture.</param>
             <returns>The contents.</returns>
             <remarks>The value of <paramref name="preview"/> overrides defaults.</remarks>
         </member>
-        <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetAtRoot">
+        <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetAtRoot(System.String)">
             <summary>
             Gets contents at root.
             </summary>
+            <param name="culture">A culture.</param>
             <returns>The contents.</returns>
             <remarks>Considers published or unpublished content depending on defaults.</remarks>
         </member>
@@ -10244,7 +10258,7 @@
             <returns>The content type, or null.</returns>
             <remarks>The alias is case-insensitive.</remarks>
         </member>
-        <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetByContentType(Umbraco.Core.Models.PublishedContent.PublishedContentType)">
+        <member name="M:Umbraco.Web.PublishedCache.IPublishedCache.GetByContentType(Umbraco.Core.Models.PublishedContent.IPublishedContentType)">
             <summary>
             Gets contents of a given content type.
             </summary>
@@ -10294,6 +10308,39 @@
             <param name="contentId">The content unique identifier.</param>
             <returns>The route.</returns>
             <remarks>Considers published or unpublished content depending on defaults.</remarks>
+        </member>
+        <member name="T:Umbraco.Web.Routing.DefaultMediaUrlProvider">
+            <summary>
+            Default media url provider.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Routing.DefaultMediaUrlProvider.GetMediaUrl(Umbraco.Web.UmbracoContext,Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String,Umbraco.Core.Models.PublishedContent.UrlMode,System.String,System.Uri)">
+            <inheritdoc />
+        </member>
+        <member name="T:Umbraco.Web.Routing.IMediaUrlProvider">
+            <summary>
+            Provides media urls.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Routing.IMediaUrlProvider.GetMediaUrl(Umbraco.Web.UmbracoContext,Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String,Umbraco.Core.Models.PublishedContent.UrlMode,System.String,System.Uri)">
+            <summary>
+            Gets the url of a media item.
+            </summary>
+            <param name="umbracoContext">The Umbraco context.</param>
+            <param name="content">The published content.</param>
+            <param name="propertyAlias">The property alias to resolve the url from.</param>
+            <param name="mode">The url mode.</param>
+            <param name="culture">The variation language.</param>
+            <param name="current">The current absolute url.</param>
+            <returns>The url for the media.</returns>
+            <remarks>
+            <para>The url is absolute or relative depending on <c>mode</c> and on <c>current</c>.</para>
+            <para>If the media is multi-lingual, gets the url for the specified culture or,
+            when no culture is specified, the current culture.</para>
+            <para>The url provider can ignore the mode and always return an absolute url,
+            e.g. a cdn url provider will most likely always return an absolute url.</para>
+            <para>If the provider is unable to provide a url, it returns <c>null</c>.</para>
+            </remarks>
         </member>
         <member name="T:Umbraco.Web.Routing.IPublishedRouter">
             <summary>
@@ -10360,14 +10407,14 @@
         </member>
         <member name="M:Umbraco.Web.Routing.ContentFinderByUrl.TryFindContent(Umbraco.Web.Routing.PublishedRequest)">
             <summary>
-            Tries to find and assign an Umbraco document to a <c>PublishedContentRequest</c>.
+            Tries to find and assign an Umbraco document to a <c>PublishedRequest</c>.
             </summary>
-            <param name="frequest">The <c>PublishedContentRequest</c>.</param>
+            <param name="frequest">The <c>PublishedRequest</c>.</param>
             <returns>A value indicating whether an Umbraco document was found and assigned.</returns>
         </member>
         <member name="M:Umbraco.Web.Routing.ContentFinderByUrl.FindContent(Umbraco.Web.Routing.PublishedRequest,System.String)">
             <summary>
-            Tries to find an Umbraco document for a <c>PublishedContentRequest</c> and a route.
+            Tries to find an Umbraco document for a <c>PublishedRequest</c> and a route.
             </summary>
             <param name="docreq">The document request.</param>
             <param name="route">The route.</param>
@@ -10385,9 +10432,9 @@
         </member>
         <member name="M:Umbraco.Web.Routing.ContentFinderByUrlAndTemplate.TryFindContent(Umbraco.Web.Routing.PublishedRequest)">
             <summary>
-            Tries to find and assign an Umbraco document to a <c>PublishedContentRequest</c>.
+            Tries to find and assign an Umbraco document to a <c>PublishedRequest</c>.
             </summary>
-            <param name="frequest">The <c>PublishedContentRequest</c>.</param>
+            <param name="frequest">The <c>PublishedRequest</c>.</param>
             <returns>A value indicating whether an Umbraco document was found and assigned.</returns>
             <remarks>If successful, also assigns the template.</remarks>
         </member>
@@ -10439,7 +10486,7 @@
         </member>
         <member name="T:Umbraco.Web.Routing.IContentLastChanceFinder">
             <summary>
-            Provides a method to try to find and assign an Umbraco document to a <c>PublishedContentRequest</c>
+            Provides a method to try to find and assign an Umbraco document to a <c>PublishedRequest</c>
             when everything else has failed.
             </summary>
             <remarks>Identical to <see cref="T:Umbraco.Web.Routing.IContentFinder"/> but required in order to differentiate them in ioc.</remarks>
@@ -10537,9 +10584,9 @@
         </member>
         <member name="M:Umbraco.Web.Routing.ContentFinderByRedirectUrl.TryFindContent(Umbraco.Web.Routing.PublishedRequest)">
             <summary>
-            Tries to find and assign an Umbraco document to a <c>PublishedContentRequest</c>.
+            Tries to find and assign an Umbraco document to a <c>PublishedRequest</c>.
             </summary>
-            <param name="frequest">The <c>PublishedContentRequest</c>.</param>
+            <param name="frequest">The <c>PublishedRequest</c>.</param>
             <returns>A value indicating whether an Umbraco document was found and assigned.</returns>
             <remarks>Optionally, can also assign the template or anything else on the document request, although that is not required.</remarks>
         </member>
@@ -10565,36 +10612,12 @@
             <param name="logger"></param>
             <returns></returns>
         </member>
-        <member name="T:Umbraco.Web.Routing.UrlProviderMode">
-            <summary>
-            Specifies the type of urls that the url provider should produce, Auto is the default
-            </summary>
-            <remarks>
-            <para>The <c>Relative</c> option can lead to invalid results when combined with hostnames, but it is the only way to reproduce
-            the true, pre-4.10, always-relative behavior of Umbraco.</para>
-            </remarks>
-        </member>
-        <member name="F:Umbraco.Web.Routing.UrlProviderMode.Relative">
-            <summary>
-            Indicates that the url provider should produce relative urls exclusively.
-            </summary>
-        </member>
-        <member name="F:Umbraco.Web.Routing.UrlProviderMode.Absolute">
-            <summary>
-            Indicates that the url provider should produce absolute urls exclusively.
-            </summary>
-        </member>
-        <member name="F:Umbraco.Web.Routing.UrlProviderMode.Auto">
-            <summary>
-            Indicates that the url provider should determine automatically whether to return relative or absolute urls.
-            </summary>
-        </member>
         <member name="T:Umbraco.Web.Routing.AliasUrlProvider">
             <summary>
             Provides urls using the <c>umbracoUrlAlias</c> property.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Routing.AliasUrlProvider.GetUrl(Umbraco.Web.UmbracoContext,Umbraco.Core.Models.PublishedContent.IPublishedContent,Umbraco.Web.Routing.UrlProviderMode,System.String,System.Uri)">
+        <member name="M:Umbraco.Web.Routing.AliasUrlProvider.GetUrl(Umbraco.Web.UmbracoContext,Umbraco.Core.Models.PublishedContent.IPublishedContent,Umbraco.Core.Models.PublishedContent.UrlMode,System.String,System.Uri)">
             <inheritdoc />
         </member>
         <member name="M:Umbraco.Web.Routing.AliasUrlProvider.GetOtherUrls(Umbraco.Web.UmbracoContext,System.Int32,System.Uri)">
@@ -10617,9 +10640,9 @@
         </member>
         <member name="M:Umbraco.Web.Routing.ContentFinderByConfigured404.TryFindContent(Umbraco.Web.Routing.PublishedRequest)">
             <summary>
-            Tries to find and assign an Umbraco document to a <c>PublishedContentRequest</c>.
+            Tries to find and assign an Umbraco document to a <c>PublishedRequest</c>.
             </summary>
-            <param name="frequest">The <c>PublishedContentRequest</c>.</param>
+            <param name="frequest">The <c>PublishedRequest</c>.</param>
             <returns>A value indicating whether an Umbraco document was found and assigned.</returns>
         </member>
         <member name="T:Umbraco.Web.Routing.ContentFinderByPageIdQuery">
@@ -10680,7 +10703,7 @@
             Provides urls.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Routing.DefaultUrlProvider.GetUrl(Umbraco.Web.UmbracoContext,Umbraco.Core.Models.PublishedContent.IPublishedContent,Umbraco.Web.Routing.UrlProviderMode,System.String,System.Uri)">
+        <member name="M:Umbraco.Web.Routing.DefaultUrlProvider.GetUrl(Umbraco.Web.UmbracoContext,Umbraco.Core.Models.PublishedContent.IPublishedContent,Umbraco.Core.Models.PublishedContent.UrlMode,System.String,System.Uri)">
             <inheritdoc />
         </member>
         <member name="M:Umbraco.Web.Routing.DefaultUrlProvider.GetOtherUrls(Umbraco.Web.UmbracoContext,System.Int32,System.Uri)">
@@ -10722,9 +10745,9 @@
             Provides urls.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Routing.IUrlProvider.GetUrl(Umbraco.Web.UmbracoContext,Umbraco.Core.Models.PublishedContent.IPublishedContent,Umbraco.Web.Routing.UrlProviderMode,System.String,System.Uri)">
+        <member name="M:Umbraco.Web.Routing.IUrlProvider.GetUrl(Umbraco.Web.UmbracoContext,Umbraco.Core.Models.PublishedContent.IPublishedContent,Umbraco.Core.Models.PublishedContent.UrlMode,System.String,System.Uri)">
             <summary>
-            Gets the nice url of a published content.
+            Gets the url of a published content.
             </summary>
             <param name="umbracoContext">The Umbraco context.</param>
             <param name="content">The published content.</param>
@@ -10885,7 +10908,7 @@
         </member>
         <member name="M:Umbraco.Web.Routing.PublishedRouter.FindDomain(Umbraco.Web.Routing.PublishedRequest)">
             <summary>
-            Finds the site root (if any) matching the http request, and updates the PublishedContentRequest accordingly.
+            Finds the site root (if any) matching the http request, and updates the PublishedRequest accordingly.
             </summary>
             <returns>A value indicating whether a domain was found.</returns>
         </member>
@@ -10899,7 +10922,7 @@
         </member>
         <member name="M:Umbraco.Web.Routing.PublishedRouter.FindPublishedContentAndTemplate(Umbraco.Web.Routing.PublishedRequest)">
             <summary>
-            Finds the Umbraco document (if any) matching the request, and updates the PublishedContentRequest accordingly.
+            Finds the Umbraco document (if any) matching the request, and updates the PublishedRequest accordingly.
             </summary>
             <returns>A value indicating whether a document and template were found.</returns>
         </member>
@@ -10950,21 +10973,23 @@
             Provides urls.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.#ctor(Umbraco.Web.UmbracoContext,Umbraco.Core.Configuration.UmbracoSettings.IWebRoutingSection,System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.IUrlProvider},Umbraco.Core.Models.PublishedContent.IVariationContextAccessor)">
+        <member name="M:Umbraco.Web.Routing.UrlProvider.#ctor(Umbraco.Web.UmbracoContext,Umbraco.Core.Configuration.UmbracoSettings.IWebRoutingSection,System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.IUrlProvider},System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.IMediaUrlProvider},Umbraco.Core.Models.PublishedContent.IVariationContextAccessor)">
             <summary>
             Initializes a new instance of the <see cref="T:Umbraco.Web.Routing.UrlProvider"/> class with an Umbraco context and a list of url providers.
             </summary>
             <param name="umbracoContext">The Umbraco context.</param>
             <param name="routingSettings">Routing settings.</param>
             <param name="urlProviders">The list of url providers.</param>
+            <param name="mediaUrlProviders">The list of media url providers.</param>
             <param name="variationContextAccessor">The current variation accessor.</param>
         </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.#ctor(Umbraco.Web.UmbracoContext,System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.IUrlProvider},Umbraco.Core.Models.PublishedContent.IVariationContextAccessor,Umbraco.Web.Routing.UrlProviderMode)">
+        <member name="M:Umbraco.Web.Routing.UrlProvider.#ctor(Umbraco.Web.UmbracoContext,System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.IUrlProvider},System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.IMediaUrlProvider},Umbraco.Core.Models.PublishedContent.IVariationContextAccessor,Umbraco.Core.Models.PublishedContent.UrlMode)">
             <summary>
             Initializes a new instance of the <see cref="T:Umbraco.Web.Routing.UrlProvider"/> class with an Umbraco context and a list of url providers.
             </summary>
             <param name="umbracoContext">The Umbraco context.</param>
             <param name="urlProviders">The list of url providers.</param>
+            <param name="mediaUrlProviders">The list of media url providers</param>
             <param name="variationContextAccessor">The current variation accessor.</param>
             <param name="mode">An optional provider mode.</param>
         </member>
@@ -10973,55 +10998,9 @@
             Gets or sets the provider url mode.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String,System.Uri)">
+        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(System.Guid,Umbraco.Core.Models.PublishedContent.UrlMode,System.String,System.Uri)">
             <summary>
             Gets the url of a published content.
-            </summary>
-            <param name="content">The published content.</param>
-            <param name="culture">A culture.</param>
-            <param name="current">The current absolute url.</param>
-            <returns>The url for the published content.</returns>
-        </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.Boolean,System.String,System.Uri)">
-            <summary>
-            Gets the nice url of a published content.
-            </summary>
-            <param name="content">The published content.</param>
-            <param name="absolute">A value indicating whether the url should be absolute in any case.</param>
-            <param name="culture">A culture.</param>
-            <param name="current">The current absolute url.</param>
-            <returns>The url for the published content.</returns>
-            <remarks>
-            <para>The url is absolute or relative depending on <c>Mode</c> and on <c>current</c>, unless
-            <c>absolute</c> is true, in which case the url is always absolute.</para>
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(System.Guid,System.String,System.Uri)">
-            <summary>
-            Gets the url of a published content.
-            </summary>
-            <param name="id">The published content identifier.</param>
-            <param name="culture">A culture.</param>
-            <param name="current">The current absolute url.</param>
-            <returns>The url for the published content.</returns>
-        </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(System.Guid,System.Boolean,System.String,System.Uri)">
-            <summary>
-            Gets the nice url of a published content.
-            </summary>
-            <param name="id">The published content identifier.</param>
-            <param name="absolute">A value indicating whether the url should be absolute in any case.</param>
-            <param name="culture">A culture.</param>
-            <param name="current">The current absolute url.</param>
-            <returns>The url for the published content.</returns>
-            <remarks>
-            <para>The url is absolute or relative depending on <c>Mode</c> and on <c>current</c>, unless
-            <c>absolute</c> is true, in which case the url is always absolute.</para>
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(System.Guid,Umbraco.Web.Routing.UrlProviderMode,System.String,System.Uri)">
-            <summary>
-            Gets the nice url of a published content.
             </summary>
             <param name="id">The published content identifier.</param>
             <param name="mode">The url mode.</param>
@@ -11029,32 +11008,9 @@
             <param name="current">The current absolute url.</param>
             <returns>The url for the published content.</returns>
         </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(System.Int32,System.String,System.Uri)">
+        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(System.Int32,Umbraco.Core.Models.PublishedContent.UrlMode,System.String,System.Uri)">
             <summary>
             Gets the url of a published content.
-            </summary>
-            <param name="id">The published content identifier.</param>
-            <param name="culture">A culture.</param>
-            <param name="current">The current absolute url.</param>
-            <returns>The url for the published content.</returns>
-        </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(System.Int32,System.Boolean,System.String,System.Uri)">
-            <summary>
-            Gets the nice url of a published content.
-            </summary>
-            <param name="id">The published content identifier.</param>
-            <param name="absolute">A value indicating whether the url should be absolute in any case.</param>
-            <param name="culture">A culture.</param>
-            <param name="current">The current absolute url.</param>
-            <returns>The url for the published content.</returns>
-            <remarks>
-            <para>The url is absolute or relative depending on <c>Mode</c> and on <c>current</c>, unless
-            <c>absolute</c> is true, in which case the url is always absolute.</para>
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(System.Int32,Umbraco.Web.Routing.UrlProviderMode,System.String,System.Uri)">
-            <summary>
-            Gets the nice url of a published content.
             </summary>
             <param name="id">The published content identifier.</param>
             <param name="mode">The url mode.</param>
@@ -11062,9 +11018,9 @@
             <param name="current">The current absolute url.</param>
             <returns>The url for the published content.</returns>
         </member>
-        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(Umbraco.Core.Models.PublishedContent.IPublishedContent,Umbraco.Web.Routing.UrlProviderMode,System.String,System.Uri)">
+        <member name="M:Umbraco.Web.Routing.UrlProvider.GetUrl(Umbraco.Core.Models.PublishedContent.IPublishedContent,Umbraco.Core.Models.PublishedContent.UrlMode,System.String,System.Uri)">
             <summary>
-            Gets the nice url of a published content.
+            Gets the url of a published content.
             </summary>
             <param name="content">The published content.</param>
             <param name="mode">The url mode.</param>
@@ -11102,6 +11058,23 @@
             urls for the node in other contexts (different domain for current request, umbracoUrlAlias...).</para>
             </remarks>
         </member>
+        <member name="M:Umbraco.Web.Routing.UrlProvider.GetMediaUrl(Umbraco.Core.Models.PublishedContent.IPublishedContent,Umbraco.Core.Models.PublishedContent.UrlMode,System.String,System.String,System.Uri)">
+            <summary>
+            Gets the url of a media item.
+            </summary>
+            <param name="content">The published content.</param>
+            <param name="propertyAlias">The property alias to resolve the url from.</param>
+            <param name="mode">The url mode.</param>
+            <param name="culture">The variation language.</param>
+            <param name="current">The current absolute url.</param>
+            <returns>The url for the media.</returns>
+            <remarks>
+            <para>The url is absolute or relative depending on <c>mode</c> and on <c>current</c>.</para>
+            <para>If the media is multi-lingual, gets the url for the specified culture or,
+            when no culture is specified, the current culture.</para>
+            <para>If the provider is unable to provide a url, it returns <see cref="F:System.String.Empty"/>.</para>
+            </remarks>
+        </member>
         <member name="T:Umbraco.Web.Routing.PublishedContentNotFoundHandler">
             <summary>
             Gets executed when no document can be found in Umbraco
@@ -11123,9 +11096,9 @@
         </member>
         <member name="M:Umbraco.Web.Routing.ContentFinderByUrlAlias.TryFindContent(Umbraco.Web.Routing.PublishedRequest)">
             <summary>
-            Tries to find and assign an Umbraco document to a <c>PublishedContentRequest</c>.
+            Tries to find and assign an Umbraco document to a <c>PublishedRequest</c>.
             </summary>
-            <param name="frequest">The <c>PublishedContentRequest</c>.</param>
+            <param name="frequest">The <c>PublishedRequest</c>.</param>
             <returns>A value indicating whether an Umbraco document was found and assigned.</returns>
         </member>
         <member name="T:Umbraco.Web.Routing.ContentFinderByIdPath">
@@ -11138,20 +11111,38 @@
         </member>
         <member name="M:Umbraco.Web.Routing.ContentFinderByIdPath.TryFindContent(Umbraco.Web.Routing.PublishedRequest)">
             <summary>
-            Tries to find and assign an Umbraco document to a <c>PublishedContentRequest</c>.
+            Tries to find and assign an Umbraco document to a <c>PublishedRequest</c>.
             </summary>
-            <param name="frequest">The <c>PublishedContentRequest</c>.</param>
+            <param name="frequest">The <c>PublishedRequest</c>.</param>
             <returns>A value indicating whether an Umbraco document was found and assigned.</returns>
         </member>
-        <member name="T:Umbraco.Web.Routing.DomainHelper">
+        <member name="T:Umbraco.Web.Routing.DomainUtilities">
             <summary>
             Provides utilities to handle domains.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Routing.DomainHelper.DomainForNode(System.Int32,System.Uri,System.String)">
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.GetCultureFromDomains(System.Int32,System.String,System.Uri,Umbraco.Web.UmbracoContext,Umbraco.Web.Routing.ISiteDomainHelper)">
+            <summary>
+            Gets the culture assigned to a document by domains, in the context of a current Uri.
+            </summary>
+            <param name="contentId">The document identifier.</param>
+            <param name="contentPath">The document path.</param>
+            <param name="current">An optional current Uri.</param>
+            <param name="umbracoContext">An Umbraco context.</param>
+            <param name="siteDomainHelper">The site domain helper.</param>
+            <returns>The culture assigned to the document by domains.</returns>
+            <remarks>
+            <para>In 1:1 multilingual setup, a document contains several cultures (there is not
+            one document per culture), and domains, withing the context of a current Uri, assign
+            a culture to that document.</para>
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.DomainForNode(Umbraco.Web.PublishedCache.IDomainCache,Umbraco.Web.Routing.ISiteDomainHelper,System.Int32,System.Uri,System.String)">
             <summary>
             Finds the domain for the specified node, if any, that best matches a specified uri.
             </summary>
+            <param name="domainCache">A domain cache.</param>
+            <param name="siteDomainHelper">The site domain helper.</param>
             <param name="nodeId">The node identifier.</param>
             <param name="current">The uri, or null.</param>
             <param name="culture">The culture, or null.</param>
@@ -11163,17 +11154,12 @@
             will try with the specified culture, else return null.</para>
             </remarks>
         </member>
-        <member name="M:Umbraco.Web.Routing.DomainHelper.NodeHasDomains(System.Int32)">
-            <summary>
-            Gets a value indicating whether a specified node has domains.
-            </summary>
-            <param name="nodeId">The node identifier.</param>
-            <returns>True if the node has domains, else false.</returns>
-        </member>
-        <member name="M:Umbraco.Web.Routing.DomainHelper.DomainsForNode(System.Int32,System.Uri,System.Boolean)">
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.DomainsForNode(Umbraco.Web.PublishedCache.IDomainCache,Umbraco.Web.Routing.ISiteDomainHelper,System.Int32,System.Uri,System.Boolean)">
             <summary>
             Find the domains for the specified node, if any, that match a specified uri.
             </summary>
+            <param name="domainCache">A domain cache.</param>
+            <param name="siteDomainHelper">The site domain helper.</param>
             <param name="nodeId">The node identifier.</param>
             <param name="current">The uri, or null.</param>
             <param name="excludeDefault">A value indicating whether to exclude the current/default domain. True by default.</param>
@@ -11181,7 +11167,7 @@
             <remarks>If at least a domain is set on the node then the method returns the domains that
             best match the specified uri, else it returns null.</remarks>
         </member>
-        <member name="M:Umbraco.Web.Routing.DomainHelper.SelectDomain(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.Uri,System.String,System.String,System.Func{System.Collections.Generic.IReadOnlyCollection{Umbraco.Web.Routing.DomainAndUri},System.Uri,System.String,System.String,Umbraco.Web.Routing.DomainAndUri})">
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.SelectDomain(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.Uri,System.String,System.String,System.Func{System.Collections.Generic.IReadOnlyCollection{Umbraco.Web.Routing.DomainAndUri},System.Uri,System.String,System.String,Umbraco.Web.Routing.DomainAndUri})">
             <summary>
             Selects the domain that best matches a specified uri and cultures, from a set of domains.
             </summary>
@@ -11201,7 +11187,7 @@
             <para>The filter, if any, will be called only with a non-empty argument, and _must_ return something.</para>
             </remarks>
         </member>
-        <member name="M:Umbraco.Web.Routing.DomainHelper.SelectDomains(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.Uri)">
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.SelectDomains(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.Uri)">
             <summary>
             Selects the domains that match a specified uri, from a set of domains.
             </summary>
@@ -11209,7 +11195,15 @@
             <param name="uri">The uri, or null.</param>
             <returns>The domains and their normalized uris, that match the specified uri.</returns>
         </member>
-        <member name="M:Umbraco.Web.Routing.DomainHelper.ExistsDomainInPath(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.String,System.Nullable{System.Int32})">
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.ParseUriFromDomainName(System.String,System.Uri)">
+            <summary>
+            Parses a domain name into a URI.
+            </summary>
+            <param name="domainName">The domain name to parse</param>
+            <param name="currentUri">The currently requested URI. If the domain name is relative, the authority of URI will be used.</param>
+            <returns>The domain name as a URI</returns>
+        </member>
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.ExistsDomainInPath(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.String,System.Nullable{System.Int32})">
             <summary>
             Gets a value indicating whether there is another domain defined down in the path to a node under the current domain's root node.
             </summary>
@@ -11219,7 +11213,7 @@
             <returns>A value indicating if there is another domain defined down in the path.</returns>
             <remarks>Looks _under_ rootNodeId but not _at_ rootNodeId.</remarks>
         </member>
-        <member name="M:Umbraco.Web.Routing.DomainHelper.FindDomainInPath(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.String,System.Nullable{System.Int32})">
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.FindDomainInPath(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.String,System.Nullable{System.Int32})">
             <summary>
             Gets the deepest non-wildcard Domain, if any, from a group of Domains, in a node path.
             </summary>
@@ -11229,7 +11223,7 @@
             <returns>The deepest non-wildcard Domain in the path, or null.</returns>
             <remarks>Looks _under_ rootNodeId but not _at_ rootNodeId.</remarks>
         </member>
-        <member name="M:Umbraco.Web.Routing.DomainHelper.FindWildcardDomainInPath(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.String,System.Nullable{System.Int32})">
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.FindWildcardDomainInPath(System.Collections.Generic.IEnumerable{Umbraco.Web.Routing.Domain},System.String,System.Nullable{System.Int32})">
             <summary>
             Gets the deepest wildcard Domain, if any, from a group of Domains, in a node path.
             </summary>
@@ -11239,7 +11233,7 @@
             <returns>The deepest wildcard Domain in the path, or null.</returns>
             <remarks>Looks _under_ rootNodeId but not _at_ rootNodeId.</remarks>
         </member>
-        <member name="M:Umbraco.Web.Routing.DomainHelper.PathRelativeToDomain(System.Uri,System.String)">
+        <member name="M:Umbraco.Web.Routing.DomainUtilities.PathRelativeToDomain(System.Uri,System.String)">
             <summary>
             Returns the part of a path relative to the uri of a domain.
             </summary>
@@ -11497,14 +11491,14 @@
         </member>
         <member name="T:Umbraco.Web.Routing.IContentFinder">
             <summary>
-            Provides a method to try to find and assign an Umbraco document to a <c>PublishedContentRequest</c>.
+            Provides a method to try to find and assign an Umbraco document to a <c>PublishedRequest</c>.
             </summary>
         </member>
         <member name="M:Umbraco.Web.Routing.IContentFinder.TryFindContent(Umbraco.Web.Routing.PublishedRequest)">
             <summary>
-            Tries to find and assign an Umbraco document to a <c>PublishedContentRequest</c>.
+            Tries to find and assign an Umbraco document to a <c>PublishedRequest</c>.
             </summary>
-            <param name="frequest">The <c>PublishedContentRequest</c>.</param>
+            <param name="request">The <c>PublishedRequest</c>.</param>
             <returns>A value indicating whether an Umbraco document was found and assigned.</returns>
             <remarks>Optionally, can also assign the template or anything else on the document request, although that is not required.</remarks>
         </member>
@@ -11619,7 +11613,7 @@
             Creates and manages <see cref="T:Umbraco.Web.UmbracoContext"/> instances.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.UmbracoContextFactory.#ctor(Umbraco.Web.IUmbracoContextAccessor,Umbraco.Web.PublishedCache.IPublishedSnapshotService,Umbraco.Core.Models.PublishedContent.IVariationContextAccessor,Umbraco.Web.PublishedCache.IDefaultCultureAccessor,Umbraco.Core.Configuration.UmbracoSettings.IUmbracoSettingsSection,Umbraco.Core.Configuration.IGlobalSettings,Umbraco.Web.Routing.UrlProviderCollection,Umbraco.Core.Services.IUserService)">
+        <member name="M:Umbraco.Web.UmbracoContextFactory.#ctor(Umbraco.Web.IUmbracoContextAccessor,Umbraco.Web.PublishedCache.IPublishedSnapshotService,Umbraco.Core.Models.PublishedContent.IVariationContextAccessor,Umbraco.Web.PublishedCache.IDefaultCultureAccessor,Umbraco.Core.Configuration.UmbracoSettings.IUmbracoSettingsSection,Umbraco.Core.Configuration.IGlobalSettings,Umbraco.Web.Routing.UrlProviderCollection,Umbraco.Web.Routing.MediaUrlProviderCollection,Umbraco.Core.Services.IUserService)">
             <summary>
             Initializes a new instance of the <see cref="T:Umbraco.Web.UmbracoContextFactory"/> class.
             </summary>
@@ -11659,6 +11653,14 @@
         </member>
         <member name="M:Umbraco.Web.UmbracoContextReference.Dispose">
             <inheritdoc />
+        </member>
+        <member name="T:Umbraco.Web.WebApi.Filters.AdminUsersAuthorizeAttribute">
+            <summary>
+            if the users being edited is an admin then we must ensure that the current user is also an admin
+            </summary>
+            <remarks>
+            This will authorize against one or multiple ids
+            </remarks>
         </member>
         <member name="T:Umbraco.Web.WebApi.Filters.HttpQueryStringModelBinder">
             <summary>
@@ -12289,6 +12291,11 @@
             Gets the Umbraco helper.
             </summary>
         </member>
+        <member name="P:Umbraco.Web.WebApi.UmbracoApiControllerBase.Mapper">
+            <summary>
+            Gets the mapper.
+            </summary>
+        </member>
         <member name="P:Umbraco.Web.WebApi.UmbracoApiControllerBase.Security">
             <summary>
             Gets the web security helper.
@@ -12347,19 +12354,19 @@
             Initializes a new instance of the <see cref="T:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter"/> class.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.IsConverter(Umbraco.Core.Models.PublishedContent.PublishedPropertyType)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.IsConverter(Umbraco.Core.Models.PublishedContent.IPublishedPropertyType)">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.GetPropertyValueType(Umbraco.Core.Models.PublishedContent.PublishedPropertyType)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.GetPropertyValueType(Umbraco.Core.Models.PublishedContent.IPublishedPropertyType)">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.GetPropertyCacheLevel(Umbraco.Core.Models.PublishedContent.PublishedPropertyType)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.GetPropertyCacheLevel(Umbraco.Core.Models.PublishedContent.IPublishedPropertyType)">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.ConvertSourceToIntermediate(Umbraco.Core.Models.PublishedContent.IPublishedElement,Umbraco.Core.Models.PublishedContent.PublishedPropertyType,System.Object,System.Boolean)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.ConvertSourceToIntermediate(Umbraco.Core.Models.PublishedContent.IPublishedElement,Umbraco.Core.Models.PublishedContent.IPublishedPropertyType,System.Object,System.Boolean)">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.ConvertIntermediateToObject(Umbraco.Core.Models.PublishedContent.IPublishedElement,Umbraco.Core.Models.PublishedContent.PublishedPropertyType,Umbraco.Core.PropertyEditors.PropertyCacheLevel,System.Object,System.Boolean)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentManyValueConverter.ConvertIntermediateToObject(Umbraco.Core.Models.PublishedContent.IPublishedElement,Umbraco.Core.Models.PublishedContent.IPublishedPropertyType,Umbraco.Core.PropertyEditors.PropertyCacheLevel,System.Object,System.Boolean)">
             <inheritdoc />
         </member>
         <member name="T:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter">
@@ -12373,19 +12380,19 @@
             Initializes a new instance of the <see cref="T:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter"/> class.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.IsConverter(Umbraco.Core.Models.PublishedContent.PublishedPropertyType)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.IsConverter(Umbraco.Core.Models.PublishedContent.IPublishedPropertyType)">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.GetPropertyValueType(Umbraco.Core.Models.PublishedContent.PublishedPropertyType)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.GetPropertyValueType(Umbraco.Core.Models.PublishedContent.IPublishedPropertyType)">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.GetPropertyCacheLevel(Umbraco.Core.Models.PublishedContent.PublishedPropertyType)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.GetPropertyCacheLevel(Umbraco.Core.Models.PublishedContent.IPublishedPropertyType)">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.ConvertSourceToIntermediate(Umbraco.Core.Models.PublishedContent.IPublishedElement,Umbraco.Core.Models.PublishedContent.PublishedPropertyType,System.Object,System.Boolean)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.ConvertSourceToIntermediate(Umbraco.Core.Models.PublishedContent.IPublishedElement,Umbraco.Core.Models.PublishedContent.IPublishedPropertyType,System.Object,System.Boolean)">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.ConvertIntermediateToObject(Umbraco.Core.Models.PublishedContent.IPublishedElement,Umbraco.Core.Models.PublishedContent.PublishedPropertyType,Umbraco.Core.PropertyEditors.PropertyCacheLevel,System.Object,System.Boolean)">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.NestedContentSingleValueConverter.ConvertIntermediateToObject(Umbraco.Core.Models.PublishedContent.IPublishedElement,Umbraco.Core.Models.PublishedContent.IPublishedPropertyType,Umbraco.Core.PropertyEditors.PropertyCacheLevel,System.Object,System.Boolean)">
             <inheritdoc />
         </member>
         <member name="T:Umbraco.Web.PropertyEditors.ValueConverters.MediaPickerValueConverter">
@@ -13326,6 +13333,21 @@
             The recommendation is that the "ResolveUrlsFromTextString" option (in umbracoSettings.config) is set to false for non-Virtual-Directory installs.
             </remarks>
         </member>
+        <member name="M:Umbraco.Web.Templates.TemplateUtilities.ResolveMediaFromTextString(System.String)">
+            <summary>
+            Parses the string looking for Umbraco image tags and updates them to their up-to-date image sources.
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+            <remarks>Umbraco image tags are identified by their data-udi attributes</remarks>
+        </member>
+        <member name="M:Umbraco.Web.Templates.TemplateUtilities.RemoveMediaUrlsFromTextString(System.String)">
+            <summary>
+            Removes media urls from &lt;img&gt; tags where a data-udi attribute is present
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
         <member name="T:Umbraco.Web.Sections.FormsSection">
             <summary>
             Defines the back office media section
@@ -13931,7 +13953,7 @@
             <param name="queryStrings"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Trees.ContentTreeControllerBase.GetSingleTreeNodeWithAccessCheck(Umbraco.Core.Models.Entities.IEntitySlim,System.String,System.Net.Http.Formatting.FormDataCollection)">
+        <member name="M:Umbraco.Web.Trees.ContentTreeControllerBase.GetSingleTreeNodeWithAccessCheck(Umbraco.Core.Models.Entities.IEntitySlim,System.String,System.Net.Http.Formatting.FormDataCollection,System.Int32[],System.String[])">
             <summary>
             Returns a <see cref="T:Umbraco.Web.Models.Trees.TreeNode"/> for the <see cref="T:Umbraco.Core.Models.Entities.IUmbracoEntity"/> and
             attaches some meta data to the node if the user doesn't have start node access to it when in dialog mode
@@ -13955,13 +13977,6 @@
             <summary>
             Returns the user's start node for this tree
             </summary>
-        </member>
-        <member name="M:Umbraco.Web.Trees.ContentTreeControllerBase.GetChildrenFromEntityService(System.Int32)">
-            <summary>
-            Abstract method to fetch the entities from the entity service
-            </summary>
-            <param name="entityId"></param>
-            <returns></returns>
         </member>
         <member name="M:Umbraco.Web.Trees.ContentTreeControllerBase.HasPathAccess(System.String,System.Net.Http.Formatting.FormDataCollection)">
             <summary>
@@ -14053,6 +14068,13 @@
             <remarks>
             This object has it's own contextual cache for these lookups
             </remarks>
+        </member>
+        <member name="M:Umbraco.Web.Trees.ContentTreeControllerBase.IgnoreUserStartNodes(System.Net.Http.Formatting.FormDataCollection)">
+            <summary>
+            If the request should allows a user to choose nodes that they normally don't have access to
+            </summary>
+            <param name="queryStrings"></param>
+            <returns></returns>
         </member>
         <member name="P:Umbraco.Web.Trees.ISearchableTree.TreeAlias">
             <summary>
@@ -14651,6 +14673,14 @@
             <param name="serviceName"></param>
             <param name="methodName"></param>
         </member>
+        <member name="M:Umbraco.Web.Search.SearchableTreeAttribute.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            This constructor defines both the angular service and method name to use and explicitly defines a sort order for the results
+            </summary>
+            <param name="serviceName"></param>
+            <param name="methodName"></param>
+            <param name="sortOrder"></param>
+        </member>
         <member name="M:Umbraco.Web.Search.SearchableTreeAttribute.#ctor(System.String)">
             <summary>
             This constructor will assume that the method name equals `format(searchResult, appAlias, treeAlias)`
@@ -14662,7 +14692,7 @@
             Used for internal Umbraco implementations of <see cref="T:Umbraco.Web.Trees.ISearchableTree"/>
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Search.UmbracoTreeSearcher.ExamineSearch(System.String,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.Int32,System.Int64,System.Int64@,System.String)">
+        <member name="M:Umbraco.Web.Search.UmbracoTreeSearcher.ExamineSearch(System.String,Umbraco.Web.Models.ContentEditing.UmbracoEntityTypes,System.Int32,System.Int64,System.Int64@,System.String,System.Boolean)">
             <summary>
             Searches for results based on the entity type
             </summary>
@@ -14674,6 +14704,7 @@
             </param>
             <param name="pageSize"></param>
             <param name="pageIndex"></param>
+            <param name="ignoreUserStartNodes">If set to true, user and group start node permissions will be ignored.</param>
             <returns></returns>
         </member>
         <member name="M:Umbraco.Web.Search.UmbracoTreeSearcher.MemberFromSearchResults(System.Collections.Generic.IEnumerable{Examine.ISearchResult})">
@@ -14912,7 +14943,7 @@
         </member>
         <member name="M:Umbraco.Web.Security.BackOfficeSignInManager.GetVerifiedUserIdAsync">
             <summary>
-            Get the user id that has been verified already or -1.
+            Get the user id that has been verified already or int.MinValue if the user has not been verified yet
             </summary>
             <returns></returns>
             <remarks>
@@ -14938,7 +14969,7 @@
             This is implemented because we cannot override GetVerifiedUserIdAsync and instead we have to shadow it
             so due to this and because we are using an INT as the TKey and not an object, it can never be null. Adding to that
             the default(int) value returned by the base class is always a valid user (i.e. the admin) so we just have to duplicate
-            all of this code to check for -1 instead.
+            all of this code to check for int.MinValue
             </remarks>
         </member>
         <member name="M:Umbraco.Web.Security.BackOfficeSignInManager.SendTwoFactorCodeAsync(System.String)">
@@ -14949,7 +14980,7 @@
             This is implemented because we cannot override GetVerifiedUserIdAsync and instead we have to shadow it
             so due to this and because we are using an INT as the TKey and not an object, it can never be null. Adding to that
             the default(int) value returned by the base class is always a valid user (i.e. the admin) so we just have to duplicate
-            all of this code to check for -1 instead.
+            all of this code to check for int.MinVale instead.
             </remarks>
         </member>
         <member name="T:Umbraco.Web.Security.BackOfficeUserManager">
@@ -14957,7 +14988,7 @@
             Default back office user manager
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Security.BackOfficeUserManager.Create(Microsoft.AspNet.Identity.Owin.IdentityFactoryOptions{Umbraco.Web.Security.BackOfficeUserManager},Umbraco.Core.Services.IUserService,Umbraco.Core.Services.IMemberTypeService,Umbraco.Core.Services.IEntityService,Umbraco.Core.Services.IExternalLoginService,Umbraco.Core.Security.MembershipProviderBase,Umbraco.Core.Configuration.UmbracoSettings.IContentSection,Umbraco.Core.Configuration.IGlobalSettings)">
+        <member name="M:Umbraco.Web.Security.BackOfficeUserManager.Create(Microsoft.AspNet.Identity.Owin.IdentityFactoryOptions{Umbraco.Web.Security.BackOfficeUserManager},Umbraco.Core.Services.IUserService,Umbraco.Core.Services.IMemberTypeService,Umbraco.Core.Services.IEntityService,Umbraco.Core.Services.IExternalLoginService,Umbraco.Core.Security.MembershipProviderBase,Umbraco.Core.Mapping.UmbracoMapper,Umbraco.Core.Configuration.UmbracoSettings.IContentSection,Umbraco.Core.Configuration.IGlobalSettings)">
             <summary>
             Creates a BackOfficeUserManager instance with all default options and the default BackOfficeUserManager
             </summary>
@@ -15141,6 +15172,12 @@
             * This will execute quite often (every minute per user) and in some cases there might be several requests that end up re-issuing the cookie so the cookie value should be small
             * We want to avoid the user lookup if it's not required so that will only happen when the time diff is great enough in the cookie
             </remarks>
+        </member>
+        <member name="M:Umbraco.Web.Security.UmbracoAntiForgeryAdditionalDataProvider.#ctor(System.Web.Helpers.IAntiForgeryAdditionalDataProvider)">
+            <summary>
+            Constructor, allows wrapping a default provider
+            </summary>
+            <param name="defaultProvider"></param>
         </member>
         <member name="T:Umbraco.Web.Security.AuthenticationExtensions">
             <summary>
@@ -15365,7 +15402,7 @@
             Provides security/identity extension methods to IAppBuilder.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Security.AppBuilderExtensions.ConfigureUserManagerForUmbracoBackOffice(Owin.IAppBuilder,Umbraco.Core.Services.ServiceContext,Umbraco.Core.Configuration.UmbracoSettings.IContentSection,Umbraco.Core.Configuration.IGlobalSettings,Umbraco.Core.Security.MembershipProviderBase)">
+        <member name="M:Umbraco.Web.Security.AppBuilderExtensions.ConfigureUserManagerForUmbracoBackOffice(Owin.IAppBuilder,Umbraco.Core.Services.ServiceContext,Umbraco.Core.Mapping.UmbracoMapper,Umbraco.Core.Configuration.UmbracoSettings.IContentSection,Umbraco.Core.Configuration.IGlobalSettings,Umbraco.Core.Security.MembershipProviderBase)">
             <summary>
             Configure Default Identity User Manager for Umbraco
             </summary>
@@ -16198,6 +16235,12 @@
         <member name="M:Umbraco.Web.WebCompositionExtensions.UrlProviders(Umbraco.Core.Composing.Composition)">
             <summary>
             Gets the url providers collection builder.
+            </summary>
+            <param name="composition">The composition.</param>
+        </member>
+        <member name="M:Umbraco.Web.WebCompositionExtensions.MediaUrlProviders(Umbraco.Core.Composing.Composition)">
+            <summary>
+            Gets the media url providers collection builder.
             </summary>
             <param name="composition">The composition.</param>
         </member>
@@ -17116,6 +17159,21 @@
             <remarks>A content is not visible if it has an umbracoNaviHide property with a value of "1". Otherwise,
             the content is visible.</remarks>
         </member>
+        <member name="M:Umbraco.Web.PublishedElementExtensions.MediaUrl(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String,Umbraco.Core.Models.PublishedContent.UrlMode,System.String)">
+            <summary>
+            Gets the url for a media.
+            </summary>
+            <param name="content">The content item.</param>
+            <param name="culture">The culture (use current culture by default).</param>
+            <param name="mode">The url mode (use site configuration by default).</param>
+            <param name="propertyAlias">The alias of the property (use 'umbracoFile' by default).</param>
+            <returns>The url for the media.</returns>
+            <remarks>
+            <para>The value of this property is contextual. It depends on the 'current' request uri,
+            if any. In addition, when the content type is multi-lingual, this is the url for the
+            specified culture. Otherwise, it is the invariant url.</para>
+            </remarks>
+        </member>
         <member name="T:Umbraco.Web.Tour.BackOfficeTourFilter">
             <summary>
             Represents a back-office tour filter.
@@ -17550,58 +17608,6 @@
             </summary>
             <param name="appCaches"></param>
         </member>
-        <member name="T:Umbraco.Web.Controllers.TagsController">
-            <summary>
-            A public web service for querying tags
-            </summary>
-            <remarks>
-            This controller does not contain methods to query for content, media or members based on tags, those methods would require
-            authentication and should not be exposed publicly.
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.Controllers.TagsController.GetAllTags(System.String)">
-            <summary>
-            Get every tag stored in the database (with optional group)
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.Controllers.TagsController.GetAllContentTags(System.String)">
-            <summary>
-            Get all tags for content items (with optional group)
-            </summary>
-            <param name="group"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Controllers.TagsController.GetAllMediaTags(System.String)">
-            <summary>
-            Get all tags for media items (with optional group)
-            </summary>
-            <param name="group"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Controllers.TagsController.GetAllMemberTags(System.String)">
-            <summary>
-            Get all tags for member items (with optional group)
-            </summary>
-            <param name="group"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Controllers.TagsController.GetTagsForProperty(System.Int32,System.String,System.String)">
-            <summary>
-            Returns all tags attached to a property by entity id
-            </summary>
-            <param name="contentId"></param>
-            <param name="propertyTypeAlias"></param>
-            <param name="tagGroup"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.Controllers.TagsController.GetTagsForEntity(System.Int32,System.String)">
-            <summary>
-            Returns all tags attached to an entity (content, media or member) by entity id
-            </summary>
-            <param name="contentId"></param>
-            <param name="tagGroup"></param>
-            <returns></returns>
-        </member>
         <member name="M:Umbraco.Web.MembershipProviderExtensions.GetConfiguration(System.Web.Security.MembershipProvider,Umbraco.Core.Services.IUserService)">
             <summary>
             Returns the configuration of the membership provider used to configure change password editors
@@ -17846,7 +17852,7 @@
             Implements <see cref="T:Umbraco.Web.ITagQuery"/>.
             </summary>
         </member>
-        <member name="M:Umbraco.Web.TagQuery.#ctor(Umbraco.Core.Services.ITagService,Umbraco.Web.IPublishedContentQuery)">
+        <member name="M:Umbraco.Web.TagQuery.#ctor(Umbraco.Core.Services.ITagService,Umbraco.Web.IPublishedContentQuery,Umbraco.Core.Mapping.UmbracoMapper)">
             <summary>
             Initializes a new instance of the <see cref="T:Umbraco.Web.TagQuery"/> class.
             </summary>
@@ -18915,14 +18921,6 @@
             <param name="additionalRouteVals"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.UrlHelperRenderExtensions.GetAbsoluteMediaUrl(System.Web.Mvc.UrlHelper,Umbraco.Core.Models.PublishedContent.IPublishedContent)">
-            <summary>
-            Generates a Absolute Media Item URL based on the current context
-            </summary>
-            <param name="urlHelper"></param>
-            <param name="mediaItem"></param>
-            <returns></returns>
-        </member>
         <member name="M:Umbraco.Web.UrlHelperRenderExtensions.CreateEncryptedRouteString(System.String,System.String,System.String,System.Object)">
             <summary>
             This is used in methods like BeginUmbracoForm and SurfaceAction to generate an encrypted string which gets submitted in a request for which
@@ -18938,31 +18936,6 @@
             <summary>
             Provides extension methods for <c>IPublishedContent</c>.
             </summary>
-        </member>
-        <member name="M:Umbraco.Web.PublishedContentExtensions.Url(Umbraco.Core.Models.PublishedContent.IPublishedContent)">
-            <summary>
-            Gets the url for the content.
-            </summary>
-            <param name="content">The content.</param>
-            <returns>The url for the content.</returns>
-            <remarks>Better use the <c>Url</c> property but that method is here to complement <c>UrlAbsolute()</c>.</remarks>
-        </member>
-        <member name="M:Umbraco.Web.PublishedContentExtensions.UrlAbsolute(Umbraco.Core.Models.PublishedContent.IPublishedContent)">
-            <summary>
-            Gets the absolute url for the content.
-            </summary>
-            <param name="content">The content.</param>
-            <returns>The absolute url for the content.</returns>
-        </member>
-        <member name="M:Umbraco.Web.PublishedContentExtensions.GetUrlSegment(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
-            <summary>
-            Gets the Url segment.
-            </summary>
-            <remarks>
-            <para>Gets the url segment for the document, taking its content type and a specified
-            culture in account. For invariant content types, the culture is ignored, else it is
-            used to try and find the segment corresponding to the culture. May return null.</para>
-            </remarks>
         </member>
         <member name="M:Umbraco.Web.PublishedContentExtensions.IsComposedOf(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
             <summary>
@@ -19016,27 +18989,18 @@
             <param name="defaultValue">The default value.</param>
             <returns>The value of the content's property identified by the alias, converted to the specified type.</returns>
         </member>
-        <member name="M:Umbraco.Web.PublishedContentExtensions.HasCulture(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
+        <member name="M:Umbraco.Web.PublishedContentExtensions.GetCultureFromDomains(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.Uri)">
             <summary>
-            Determines whether the content has a culture.
+            Gets the culture assigned to a document by domains, in the context of a current Uri.
             </summary>
-            <remarks>Culture is case-insensitive.</remarks>
-        </member>
-        <member name="M:Umbraco.Web.PublishedContentExtensions.WhereIsInvariantOrHasCulture(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.PublishedContent.IPublishedContent},System.String)">
-            <summary>
-            Filters a sequence of <see cref="T:Umbraco.Core.Models.PublishedContent.IPublishedContent"/> to return invariant items, and items that are published for the specified culture.
-            </summary>
-            <param name="contents">The content items.</param>
-            <param name="culture">The specific culture to filter for. If null is used the current culture is used. (Default is null).</param>
-        </member>
-        <member name="M:Umbraco.Web.PublishedContentExtensions.IsVisible(Umbraco.Core.Models.PublishedContent.IPublishedContent)">
-            <summary>
-            Gets a value indicating whether the content is visible.
-            </summary>
-            <param name="content">The content.</param>
-            <returns>A value indicating whether the content is visible.</returns>
-            <remarks>A content is not visible if it has an umbracoNaviHide property with a value of "1". Otherwise,
-            the content is visible.</remarks>
+            <param name="content">The document.</param>
+            <param name="current">An optional current Uri.</param>
+            <returns>The culture assigned to the document by domains.</returns>
+            <remarks>
+            <para>In 1:1 multilingual setup, a document contains several cultures (there is not
+            one document per culture), and domains, withing the context of a current Uri, assign
+            a culture to that document.</para>
+            </remarks>
         </member>
         <member name="M:Umbraco.Web.PublishedContentExtensions.IsDocumentType(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
             <summary>
@@ -19278,18 +19242,6 @@
             <param name="content">The content.</param>
             <returns>The parent of content, of the given content type, else null.</returns>
         </member>
-        <member name="M:Umbraco.Web.PublishedContentExtensions.Children(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
-            <summary>
-            Gets the children of the content.
-            </summary>
-            <param name="content">The content.</param>
-            <param name="culture">The specific culture to filter for. If null is used the current culture is used. (Default is null)</param>
-            <returns>The children of the content.</returns>
-            <remarks>
-            <para>Children are sorted by their sortOrder.</para>
-            <para>This method exists for consistency, it is the same as calling content.Children as a property.</para>
-            </remarks>
-        </member>
         <member name="M:Umbraco.Web.PublishedContentExtensions.Children(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.Func{Umbraco.Core.Models.PublishedContent.IPublishedContent,System.Boolean},System.String)">
             <summary>
             Gets the children of the content, filtered by a predicate.
@@ -19348,6 +19300,67 @@
             <param name="culture">The specific culture to filter for. If null is used the current culture is used. (Default is null)</param>
             <returns>The children of the content.</returns>
         </member>
+        <member name="M:Umbraco.Web.PublishedContentExtensions.Siblings(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
+            <summary>
+            Gets the siblings of the content.
+            </summary>
+            <param name="content">The content.</param>
+            <param name="culture">The specific culture to filter for. If null is used the current culture is used. (Default is null)</param>
+            <returns>The siblings of the content.</returns>
+            <remarks>
+              <para>Note that in V7 this method also return the content node self.</para>
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.PublishedContentExtensions.SiblingsOfType(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String,System.String)">
+            <summary>
+            Gets the siblings of the content, of a given content type.
+            </summary>
+            <param name="content">The content.</param>
+            <param name="culture">The specific culture to filter for. If null is used the current culture is used. (Default is null)</param>
+            <param name="contentTypeAlias">The content type alias.</param>
+            <returns>The siblings of the content, of the given content type.</returns>
+            <remarks>
+              <para>Note that in V7 this method also return the content node self.</para>
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.PublishedContentExtensions.Siblings``1(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
+            <summary>
+            Gets the siblings of the content, of a given content type.
+            </summary>
+            <typeparam name="T">The content type.</typeparam>
+            <param name="content">The content.</param>
+            <param name="culture">The specific culture to filter for. If null is used the current culture is used. (Default is null)</param>
+            <returns>The siblings of the content, of the given content type.</returns>
+            <remarks>
+              <para>Note that in V7 this method also return the content node self.</para>
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.PublishedContentExtensions.SiblingsAndSelf(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
+            <summary>
+            Gets the siblings of the content including the node itself to indicate the position.
+            </summary>
+            <param name="content">The content.</param>
+            <param name="culture">The specific culture to filter for. If null is used the current culture is used. (Default is null)</param>
+            <returns>The siblings of the content including the node itself.</returns>
+        </member>
+        <member name="M:Umbraco.Web.PublishedContentExtensions.SiblingsAndSelfOfType(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String,System.String)">
+            <summary>
+            Gets the siblings of the content including the node itself to indicate the position, of a given content type.
+            </summary>
+            <param name="content">The content.</param>
+            <param name="culture">The specific culture to filter for. If null is used the current culture is used. (Default is null)</param>
+            <param name="contentTypeAlias">The content type alias.</param>
+            <returns>The siblings of the content including the node itself, of the given content type.</returns>
+        </member>
+        <member name="M:Umbraco.Web.PublishedContentExtensions.SiblingsAndSelf``1(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
+            <summary>
+            Gets the siblings of the content including the node itself to indicate the position, of a given content type.
+            </summary>
+            <typeparam name="T">The content type.</typeparam>
+            <param name="content">The content.</param>
+            <param name="culture">The specific culture to filter for. If null is used the current culture is used. (Default is null)</param>
+            <returns>The siblings of the content including the node itself, of the given content type.</returns>
+        </member>
         <member name="M:Umbraco.Web.PublishedContentExtensions.Root(Umbraco.Core.Models.PublishedContent.IPublishedContent)">
             <summary>
             Gets the root content for this content.
@@ -19359,6 +19372,20 @@
             <summary>
             This is used only for unit tests to set the delegate to look up aliases/names dictionary of a content type
             </summary>
+        </member>
+        <member name="M:Umbraco.Web.PublishedContentExtensions.Url(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String,Umbraco.Core.Models.PublishedContent.UrlMode)">
+            <summary>
+            Gets the url of the content item.
+            </summary>
+            <remarks>
+            <para>If the content item is a document, then this method returns the url of the
+            document. If it is a media, then this methods return the media url for the
+            'umbracoFile' property. Use the MediaUrl() method to get the media url for other
+            properties.</para>
+            <para>The value of this property is contextual. It depends on the 'current' request uri,
+            if any. In addition, when the content type is multi-lingual, this is the url for the
+            specified culture. Otherwise, it is the invariant url.</para>
+            </remarks>
         </member>
         <member name="T:Umbraco.Web.ExamineExtensions">
             <summary>
@@ -19906,12 +19933,35 @@
             <param name="propertyAlias"></param>
             <param name="culture">The culture for the property, if the property is invariant than this is empty</param>
         </member>
-        <member name="M:Umbraco.Web.ModelStateExtensions.GetCulturesWithPropertyErrors(System.Web.Http.ModelBinding.ModelStateDictionary)">
+        <member name="M:Umbraco.Web.ModelStateExtensions.AddCultureValidationError(System.Web.Http.ModelBinding.ModelStateDictionary,System.String,System.String)">
             <summary>
-            Returns a list of cultures that have property errors
+            Adds a generic culture error for use in displaying the culture validation error in the save/publish/etc... dialogs
             </summary>
             <param name="modelState"></param>
-            <returns></returns>
+            <param name="culture"></param>
+            <param name="errMsg"></param>
+        </member>
+        <member name="M:Umbraco.Web.ModelStateExtensions.GetCulturesWithPropertyErrors(System.Web.Http.ModelBinding.ModelStateDictionary,Umbraco.Core.Services.ILocalizationService,System.String)">
+            <summary>
+            Returns a list of cultures that have property validation errors errors
+            </summary>
+            <param name="modelState"></param>
+            <param name="localizationService"></param>
+            <param name="cultureForInvariantErrors">The culture to affiliate invariant errors with</param>
+            <returns>
+            A list of cultures that have property validation errors. The default culture will be returned for any invariant property errors.
+            </returns>
+        </member>
+        <member name="M:Umbraco.Web.ModelStateExtensions.GetCulturesWithErrors(System.Web.Http.ModelBinding.ModelStateDictionary,Umbraco.Core.Services.ILocalizationService,System.String)">
+            <summary>
+            Returns a list of cultures that have any validation errors
+            </summary>
+            <param name="modelState"></param>
+            <param name="localizationService"></param>
+            <param name="cultureForInvariantErrors">The culture to affiliate invariant errors with</param>
+            <returns>
+            A list of cultures that have validation errors. The default culture will be returned for any invariant errors.
+            </returns>
         </member>
         <member name="M:Umbraco.Web.ModelStateExtensions.AddValidationError(System.Web.Http.ModelBinding.ModelStateDictionary,System.ComponentModel.DataAnnotations.ValidationResult,System.String[])">
             <summary>
@@ -19922,6 +19972,15 @@
             <param name="parts">
             Each model state validation error has a name and in most cases this name is made up of parts which are delimited by a '.'
             </param>
+        </member>
+        <member name="M:Umbraco.Web.ModelStateExtensions.TryAddModelError(System.Web.Http.ModelBinding.ModelStateDictionary,System.String,System.String)">
+            <summary>
+            Will add an error to model state for a key if that key and error don't already exist
+            </summary>
+            <param name="modelState"></param>
+            <param name="key"></param>
+            <param name="errorMsg"></param>
+            <returns></returns>
         </member>
         <member name="M:Umbraco.Web.ModelStateExtensions.ToJsonErrors(System.Web.Mvc.ModelStateDictionary)">
             <summary>
@@ -20123,6 +20182,22 @@
             <returns>The content items that were found in the cache.</returns>
             <remarks>Does not support mixing identifiers and keys.</remarks>
         </member>
+        <member name="M:Umbraco.Web.UmbracoHelper.Content(Umbraco.Core.Udi[])">
+            <summary>
+            Gets the contents corresponding to the identifiers.
+            </summary>
+            <param name="ids">The content identifiers.</param>
+            <returns>The existing contents corresponding to the identifiers.</returns>
+            <remarks>If an identifier does not match an existing content, it will be missing in the returned value.</remarks>
+        </member>
+        <member name="M:Umbraco.Web.UmbracoHelper.Content(Umbraco.Core.GuidUdi[])">
+            <summary>
+            Gets the contents corresponding to the identifiers.
+            </summary>
+            <param name="ids">The content identifiers.</param>
+            <returns>The existing contents corresponding to the identifiers.</returns>
+            <remarks>If an identifier does not match an existing content, it will be missing in the returned value.</remarks>
+        </member>
         <member name="M:Umbraco.Web.UmbracoHelper.Content(System.Int32[])">
             <summary>
             Gets content items from the cache.
@@ -20146,6 +20221,22 @@
             <remarks>Does not support mixing identifiers and keys.</remarks>
         </member>
         <member name="M:Umbraco.Web.UmbracoHelper.Content(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Gets the contents corresponding to the identifiers.
+            </summary>
+            <param name="ids">The content identifiers.</param>
+            <returns>The existing contents corresponding to the identifiers.</returns>
+            <remarks>If an identifier does not match an existing content, it will be missing in the returned value.</remarks>
+        </member>
+        <member name="M:Umbraco.Web.UmbracoHelper.Content(System.Collections.Generic.IEnumerable{Umbraco.Core.Udi})">
+            <summary>
+            Gets the contents corresponding to the identifiers.
+            </summary>
+            <param name="ids">The content identifiers.</param>
+            <returns>The existing contents corresponding to the identifiers.</returns>
+            <remarks>If an identifier does not match an existing content, it will be missing in the returned value.</remarks>
+        </member>
+        <member name="M:Umbraco.Web.UmbracoHelper.Content(System.Collections.Generic.IEnumerable{Umbraco.Core.GuidUdi})">
             <summary>
             Gets the contents corresponding to the identifiers.
             </summary>
@@ -20208,6 +20299,22 @@
             <returns>The existing medias corresponding to the identifiers.</returns>
             <remarks>If an identifier does not match an existing media, it will be missing in the returned value.</remarks>
         </member>
+        <member name="M:Umbraco.Web.UmbracoHelper.Media(Umbraco.Core.Udi[])">
+            <summary>
+            Gets the medias corresponding to the identifiers.
+            </summary>
+            <param name="ids">The media identifiers.</param>
+            <returns>The existing medias corresponding to the identifiers.</returns>
+            <remarks>If an identifier does not match an existing media, it will be missing in the returned value.</remarks>
+        </member>
+        <member name="M:Umbraco.Web.UmbracoHelper.Media(Umbraco.Core.GuidUdi[])">
+            <summary>
+            Gets the medias corresponding to the identifiers.
+            </summary>
+            <param name="ids">The media identifiers.</param>
+            <returns>The existing medias corresponding to the identifiers.</returns>
+            <remarks>If an identifier does not match an existing media, it will be missing in the returned value.</remarks>
+        </member>
         <member name="M:Umbraco.Web.UmbracoHelper.Media(System.Collections.Generic.IEnumerable{System.Object})">
             <summary>
             Gets the medias corresponding to the identifiers.
@@ -20217,6 +20324,22 @@
             <remarks>If an identifier does not match an existing media, it will be missing in the returned value.</remarks>
         </member>
         <member name="M:Umbraco.Web.UmbracoHelper.Media(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Gets the medias corresponding to the identifiers.
+            </summary>
+            <param name="ids">The media identifiers.</param>
+            <returns>The existing medias corresponding to the identifiers.</returns>
+            <remarks>If an identifier does not match an existing media, it will be missing in the returned value.</remarks>
+        </member>
+        <member name="M:Umbraco.Web.UmbracoHelper.Media(System.Collections.Generic.IEnumerable{Umbraco.Core.Udi})">
+            <summary>
+            Gets the medias corresponding to the identifiers.
+            </summary>
+            <param name="ids">The media identifiers.</param>
+            <returns>The existing medias corresponding to the identifiers.</returns>
+            <remarks>If an identifier does not match an existing media, it will be missing in the returned value.</remarks>
+        </member>
+        <member name="M:Umbraco.Web.UmbracoHelper.Media(System.Collections.Generic.IEnumerable{Umbraco.Core.GuidUdi})">
             <summary>
             Gets the medias corresponding to the identifiers.
             </summary>
@@ -20305,9 +20428,24 @@
             Gets the published content cache.
             </summary>
         </member>
+        <member name="P:Umbraco.Web.UmbracoContext.Content">
+            <summary>
+            Gets the published content cache.
+            </summary>
+        </member>
         <member name="P:Umbraco.Web.UmbracoContext.MediaCache">
             <summary>
             Gets the published media cache.
+            </summary>
+        </member>
+        <member name="P:Umbraco.Web.UmbracoContext.Media">
+            <summary>
+            Gets the published media cache.
+            </summary>
+        </member>
+        <member name="P:Umbraco.Web.UmbracoContext.Domains">
+            <summary>
+            Gets the domains cache.
             </summary>
         </member>
         <member name="P:Umbraco.Web.UmbracoContext.IsFrontEndUmbracoRequest">
@@ -20322,7 +20460,7 @@
         </member>
         <member name="P:Umbraco.Web.UmbracoContext.PublishedRequest">
             <summary>
-            Gets/sets the PublishedContentRequest object
+            Gets/sets the PublishedRequest object
             </summary>
         </member>
         <member name="P:Umbraco.Web.UmbracoContext.HttpContext">
@@ -20334,19 +20472,6 @@
             <summary>
             Gets the variation context accessor.
             </summary>
-        </member>
-        <member name="M:Umbraco.Web.UmbracoContext.GetDomainHelper(Umbraco.Web.Routing.ISiteDomainHelper)">
-             <summary>
-             Creates and caches an instance of a DomainHelper
-             </summary>
-             <remarks>
-             We keep creating new instances of DomainHelper, it would be better if we didn't have to do that so instead we can
-             have one attached to the UmbracoContext. This method accepts an external ISiteDomainHelper otherwise the UmbracoContext
-             ctor will have to have another parameter added only for this one method which is annoying and doesn't make a ton of sense
-             since the UmbracoContext itself doesn't use this.
-            
-             TODO: The alternative is to have a IDomainHelperAccessor singleton which is cached per UmbracoContext
-             </remarks>
         </member>
         <member name="P:Umbraco.Web.UmbracoContext.IsDebug">
             <summary>
@@ -20375,7 +20500,7 @@
             <param name="culture"></param>
             <returns>The url for the content.</returns>
         </member>
-        <member name="M:Umbraco.Web.UmbracoContext.Url(System.Int32,Umbraco.Web.Routing.UrlProviderMode,System.String)">
+        <member name="M:Umbraco.Web.UmbracoContext.Url(System.Int32,Umbraco.Core.Models.PublishedContent.UrlMode,System.String)">
             <summary>
             Gets the url of a content identified by its identifier, in a specified mode.
             </summary>
@@ -20384,7 +20509,7 @@
             <param name="culture"></param>
             <returns>The url for the content.</returns>
         </member>
-        <member name="M:Umbraco.Web.UmbracoContext.Url(System.Guid,Umbraco.Web.Routing.UrlProviderMode,System.String)">
+        <member name="M:Umbraco.Web.UmbracoContext.Url(System.Guid,Umbraco.Core.Models.PublishedContent.UrlMode,System.String)">
             <summary>
             Gets the url of a content identified by its identifier, in a specified mode.
             </summary>
