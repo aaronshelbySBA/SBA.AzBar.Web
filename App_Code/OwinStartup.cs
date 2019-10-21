@@ -27,8 +27,9 @@ namespace SBA.AzBar.Hangfire
             GlobalConfiguration.Configuration
                 .UseSqlServerStorage(connectionString, options);
 
-            // Give hangfire a URL and start the server                
-            app.UseHangfireDashboard("/hangfire");
+            // Give hangfire a URL and start the server           
+            var dashboardOptions = new DashboardOptions { Authorization = new[] { new UmbracoAuthorizationFilter() } };
+            app.UseHangfireDashboard("/hangfire", dashboardOptions);
             app.UseHangfireServer();
         }
     }

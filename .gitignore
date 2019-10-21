@@ -51,4 +51,4 @@ App_Plugins/UmbracoForms/[Ii]nstalled
 /data/Revision/properties/*
 
 node_modules/
-bower_components/
+bin/*
