@@ -1,7 +1,7 @@
 {
   "EditorAlias": "Umbraco.TinyMCE",
   "DatabaseType": 0,
-  "Configuration": {"editor":{"toolbar":["bold","italic","alignleft","aligncenter","alignright","bullist","numlist","link","unlink","anchor"],"stylesheets":[],"maxImageSize":500,"mode":"classic"},"hideLabel":false},
+  "Configuration": {"editor":{"toolbar":["removeformat","bold","italic","alignleft","aligncenter","alignright","bullist","numlist","link","unlink","anchor"],"stylesheets":[],"maxImageSize":500,"mode":"classic"},"hideLabel":false},
   "Parent": null,
   "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
   "Dependencies": [],
