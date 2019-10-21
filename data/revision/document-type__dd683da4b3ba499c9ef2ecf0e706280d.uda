@@ -15,7 +15,8 @@
     "AllowedChildContentTypes": [
       "umb://document-type/4fb3c2d318664ec2a5a4c542ca920c2e",
       "umb://document-type/6b9fc72d54444d4497ed9bc45ce5dd31",
-      "umb://document-type/709b4008b4014af7b251a7cf1f985d76"
+      "umb://document-type/709b4008b4014af7b251a7cf1f985d76",
+      "umb://document-type/ab524469e77345e497fc4d7f73c96c4a"
     ]
   },
   "Parent": null,
@@ -74,6 +75,11 @@
     {
       "Udi": "umb://document-type/9d28055904c14f65acf6241c0ef873f9",
       "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/ab524469e77345e497fc4d7f73c96c4a",
+      "Ordering": false,
       "Mode": 0
     },
     {
