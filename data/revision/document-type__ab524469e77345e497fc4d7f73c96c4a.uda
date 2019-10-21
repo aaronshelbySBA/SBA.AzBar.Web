@@ -6,7 +6,7 @@
   "Icon": "icon-folder-close color-orange",
   "Thumbnail": "folder.png",
   "Description": null,
-  "IsContainer": false,
+  "IsContainer": true,
   "Permissions": {
     "AllowVaryingByCulture": false,
     "AllowVaryingBySegment": false,
