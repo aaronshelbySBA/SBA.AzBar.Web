@@ -25,12 +25,17 @@ namespace SBA.AzBar.Hangfire
                 .ConnectionString;
 
             GlobalConfiguration.Configuration
-                .UseSqlServerStorage(connectionString, options);
+                .UseSqlServerStorage(connectionString, options)
+                .UseConsole();
 
             // Give hangfire a URL and start the server           
             var dashboardOptions = new DashboardOptions { Authorization = new[] { new UmbracoAuthorizationFilter() } };
             app.UseHangfireDashboard("/hangfire", dashboardOptions);
             app.UseHangfireServer();
+
+            // Schedule jobs
+            var scheduler = new ScheduleHangfireJobs();
+            scheduler.ScheduleStaleContent();
         }
     }
 }
