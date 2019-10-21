@@ -1,7 +1,7 @@
 {
   "EditorAlias": "Umbraco.Grid",
   "DatabaseType": 0,
-  "Configuration": {"items":{"styles":[],"config":[],"columns":12,"templates":[{"name":"1 column layout","sections":[{"grid":12}]}],"layouts":[{"name":"Content","areas":[{"grid":12,"allowAll":false,"allowed":["rte","media","headline","macro"]}],"label":"Content"}]},"rte":{"toolbar":["bold","italic","alignleft","aligncenter","alignright","bullist","numlist","link","unlink","anchor","umbmediapicker"],"stylesheets":[],"maxImageSize":0,"mode":"classic"}},
+  "Configuration": {"items":{"styles":[],"config":[],"columns":12,"templates":[{"name":"1 column layout","sections":[{"grid":12}]}],"layouts":[{"name":"Content","areas":[{"grid":12,"allowAll":false,"allowed":["rte","media","headline","macro"]}],"label":"Content"}]},"rte":{"toolbar":["removeformat","bold","italic","alignleft","aligncenter","alignright","bullist","numlist","link","unlink","anchor","umbmediapicker"],"stylesheets":[],"maxImageSize":0,"mode":"classic"}},
   "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
   "Udi": "umb://data-type/133674423bf745399dca947cd2878e93",
   "Dependencies": [
