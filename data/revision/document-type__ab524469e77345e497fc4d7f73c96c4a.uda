@@ -1,0 +1,51 @@
+{
+  "DefaultTemplate": "umb://template/e8f8e26cbe2243b9881eaac2f9964841",
+  "AllowedTemplates": [
+    "umb://template/e8f8e26cbe2243b9881eaac2f9964841"
+  ],
+  "Icon": "icon-folder-close color-orange",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": [
+      "umb://document-type/2b5d164be5be4244a4b21531d5d591e9",
+      "umb://document-type/57c3a6a104394047a586fca323e19c8c"
+    ]
+  },
+  "Parent": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ab524469e77345e497fc4d7f73c96c4a",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/2b5d164be5be4244a4b21531d5d591e9",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/57c3a6a104394047a586fca323e19c8c",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/e8f8e26cbe2243b9881eaac2f9964841",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Macro Items Folder",
+  "Alias": "macroItemsFolder",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}
