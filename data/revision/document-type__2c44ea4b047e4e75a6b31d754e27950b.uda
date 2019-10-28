@@ -1,0 +1,244 @@
+{
+  "DefaultTemplate": "umb://template/21d620a871714448ae54a49ca43b0503",
+  "AllowedTemplates": [
+    "umb://template/21d620a871714448ae54a49ca43b0503"
+  ],
+  "Icon": "icon-home color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": true,
+    "IsElementType": false,
+    "AllowedChildContentTypes": [
+      "umb://document-type/1a47edf1c3fc4660b9f28c27201c4515",
+      "umb://document-type/3ec597f0b05841049e7fae62868a9ba4",
+      "umb://document-type/4fb3c2d318664ec2a5a4c542ca920c2e",
+      "umb://document-type/6b9fc72d54444d4497ed9bc45ce5dd31",
+      "umb://document-type/709b4008b4014af7b251a7cf1f985d76",
+      "umb://document-type/8aec8647cf154fde839884edb9d878a6",
+      "umb://document-type/9036a9d386a44b02a3ddd2937a5c39c4",
+      "umb://document-type/9e81e1b1fd51457f8adc79b97469bef3",
+      "umb://document-type/dd683da4b3ba499c9ef2ecf0e706280d"
+    ]
+  },
+  "Parent": null,
+  "CompositionContentTypes": [
+    "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+    "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+    "umb://document-type/965d85d1aa0c44db98fa9c34177f22f0",
+    "umb://document-type/9d28055904c14f65acf6241c0ef873f9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "792a9910-5d97-455e-b626-6eab709cd5c4",
+      "Name": "Alert",
+      "SortOrder": 2,
+      "PropertyTypes": [
+        {
+          "Key": "6660d191-030f-44ef-a38b-65b7349576b1",
+          "Alias": "alertContent",
+          "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Alert Content",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    },
+    {
+      "Key": "84586a6b-dee2-476a-8fc2-2f0460ecf356",
+      "Name": "SEO",
+      "SortOrder": 7,
+      "PropertyTypes": [
+        {
+          "Key": "49b76e46-4b9b-4813-be1a-15f365511fb4",
+          "Alias": "businessPhone",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Business Phone",
+          "SortOrder": 9,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "63e51590-2023-44a5-b623-deb6764b8d91",
+          "Alias": "faxNumber",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Fax Number",
+          "SortOrder": 11,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "76f35658-d612-4eaa-8b17-45efa2ddc177",
+          "Alias": "twitterHandle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "No special characters.",
+          "Mandatory": false,
+          "Name": "Twitter Handle",
+          "SortOrder": 5,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "778b4695-9530-4c6f-9f10-bbefd1cae16a",
+          "Alias": "tollFreeBusinessPhone",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Toll Free Business Phone",
+          "SortOrder": 10,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "827f41ae-6bed-4698-a5fd-04a43ef86b4f",
+          "Alias": "businessAddress",
+          "DataType": "umb://data-type/5d72e592856b471d87c7beecad9aa86a",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Business Address",
+          "SortOrder": 8,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "9286870d-2d7c-4fbe-83a1-92087641b03d",
+          "Alias": "businessName",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Business Name",
+          "SortOrder": 7,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "fc8c145b-e645-478d-94c4-4763240ab9d3",
+          "Alias": "schemaMarkupType",
+          "DataType": "umb://data-type/3a10efc0c3c4450cb1aec46f3fdf876d",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Schema Markup Type",
+          "SortOrder": 6,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/2c44ea4b047e4e75a6b31d754e27950b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3a10efc0c3c4450cb1aec46f3fdf876d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/5d72e592856b471d87c7beecad9aa86a",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/1a47edf1c3fc4660b9f28c27201c4515",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/3ec597f0b05841049e7fae62868a9ba4",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/4fb3c2d318664ec2a5a4c542ca920c2e",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/6b9fc72d54444d4497ed9bc45ce5dd31",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/709b4008b4014af7b251a7cf1f985d76",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/8aec8647cf154fde839884edb9d878a6",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9036a9d386a44b02a3ddd2937a5c39c4",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/965d85d1aa0c44db98fa9c34177f22f0",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9d28055904c14f65acf6241c0ef873f9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9e81e1b1fd51457f8adc79b97469bef3",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/dd683da4b3ba499c9ef2ecf0e706280d",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/21d620a871714448ae54a49ca43b0503",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Home",
+  "Alias": "home",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}

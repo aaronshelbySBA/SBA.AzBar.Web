@@ -1,0 +1,21 @@
+{
+  "File": "umb://template-file/ArticlePage.cshtml",
+  "Master": "umb://template/01443a6ed047410686e5fd175f620783",
+  "Udi": "umb://template/bf9bdf51d4154a6e98855e275d9427e4",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/01443a6ed047410686e5fd175f620783",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template-file/ArticlePage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Article Page",
+  "Alias": "ArticlePage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}

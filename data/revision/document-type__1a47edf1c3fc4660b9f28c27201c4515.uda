@@ -1,0 +1,111 @@
+{
+  "DefaultTemplate": "umb://template/e8f8e26cbe2243b9881eaac2f9964841",
+  "AllowedTemplates": [
+    "umb://template/e8f8e26cbe2243b9881eaac2f9964841"
+  ],
+  "Icon": "icon-globe-alt color-orange",
+  "Thumbnail": "folder.png",
+  "Description": "*Admin Permissions Required",
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6150abe2-46f5-4fb1-8a60-73caf747b6eb",
+      "Name": "Global Advertising Settings",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "7e553b7b-a46c-41d9-adaf-d3b3809f012b",
+          "Alias": "globalAds",
+          "DataType": "umb://data-type/a57625742ff849a58bd3a50b22618640",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Global Ads",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    },
+    {
+      "Key": "753919df-fc4a-445b-b740-6945e802c6c4",
+      "Name": "Global Markup",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "27d9b3e0-374f-4479-9ad5-884b65d9aba9",
+          "Alias": "globalScripts",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "Inserted at the bottom of body tag markup.",
+          "Mandatory": false,
+          "Name": "Scripts",
+          "SortOrder": 2,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "6d568272-1873-4281-9655-7dd87586b0a2",
+          "Alias": "globalHeadTag",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "Inserted in the head tag markup.",
+          "Mandatory": false,
+          "Name": "Head Tag",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "81597da8-3ca5-4376-b404-a638908c5caa",
+          "Alias": "globalBodyTag",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "Inserted at the beginning of body tag markup.",
+          "Mandatory": false,
+          "Name": "Body Tag",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1a47edf1c3fc4660b9f28c27201c4515",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/a57625742ff849a58bd3a50b22618640",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/ab55b4d21e2d42a5bb9cf72c30a62235",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/e8f8e26cbe2243b9881eaac2f9964841",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Global Settings",
+  "Alias": "globalSettings",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}

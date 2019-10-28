@@ -1,0 +1,18 @@
+{
+  "EditorAlias": "Umbraco.NestedContent",
+  "DatabaseType": 0,
+  "Configuration": {"contentTypes":[{"ncAlias":"nestedAddress","ncTabAlias":"Content","nameTemplate":"{{streetAddress}}"}],"minItems":0,"maxItems":1,"confirmDeletes":true,"showIcons":true,"hideLabel":false},
+  "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+  "Udi": "umb://data-type/5d72e592856b471d87c7beecad9aa86a",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Nested Address",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}

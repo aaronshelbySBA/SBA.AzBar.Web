@@ -1,0 +1,18 @@
+{
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": 1,
+  "Configuration": {"multiple":false,"items":[{"id":1,"value":"Local Business"},{"id":2,"value":"Restaurant"},{"id":3,"value":"Government Office"},{"id":4,"value":"Financial Service"},{"id":5,"value":"Store"},{"id":6,"value":"Real Estate Agent"},{"id":7,"value":"Medical Organization"},{"id":8,"value":"Automotive Business"},{"id":9,"value":"Organization"}]},
+  "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+  "Udi": "umb://data-type/3a10efc0c3c4450cb1aec46f3fdf876d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Schema Markup Type",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}

@@ -1,0 +1,18 @@
+{
+  "EditorAlias": "Umbraco.MultiNodeTreePicker",
+  "DatabaseType": 0,
+  "Configuration": {"startNode":{"type":"content","query":null,"id":"umb://document/9efedef4e91947aaa55046050c2915e9"},"filter":"advertItem","minNumber":0,"maxNumber":0,"showOpenButton":false},
+  "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+  "Udi": "umb://data-type/a57625742ff849a58bd3a50b22618640",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Advert Picker",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}

@@ -1,0 +1,18 @@
+{
+  "EditorAlias": "Umbraco.MediaPicker",
+  "DatabaseType": 0,
+  "Configuration": {"multiPicker":false,"onlyImages":true,"disableFolderSelect":true,"startNodeId":null},
+  "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+  "Udi": "umb://data-type/53ba0e56b603499596ba4d0c329b1afb",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Image Picker",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}

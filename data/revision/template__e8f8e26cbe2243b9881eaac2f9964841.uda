@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/parentRedirect.cshtml",
+  "Master": null,
+  "Udi": "umb://template/e8f8e26cbe2243b9881eaac2f9964841",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/parentRedirect.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Parent Redirect",
+  "Alias": "parentRedirect",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}

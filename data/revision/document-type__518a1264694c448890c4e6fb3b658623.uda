@@ -1,0 +1,174 @@
+{
+  "DefaultTemplate": "umb://template/bf9bdf51d4154a6e98855e275d9427e4",
+  "AllowedTemplates": [
+    "umb://template/bf9bdf51d4154a6e98855e275d9427e4"
+  ],
+  "Icon": "icon-newspaper color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [
+    "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+    "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+    "umb://document-type/85ce8bab4fcb4a9fae975ab9ec519a1d",
+    "umb://document-type/9bde43b151f747daa40cae788193c66d",
+    "umb://document-type/9d28055904c14f65acf6241c0ef873f9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "6747831a-4f8b-4415-998e-284444835800",
+      "Name": "Content",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "32d84100-6e31-4130-adc5-43daa35728dc",
+          "Alias": "articleDate",
+          "DataType": "umb://data-type/5046194e4237453ca54715db3a07c4e1",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Date",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "33238d86-2e5c-4927-a526-6789a2e5afc8",
+          "Alias": "articleTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "If empty, node name will be used.",
+          "Mandatory": false,
+          "Name": "Title",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "4d392e55-74a7-45a0-bb97-7e98d7e9ba88",
+          "Alias": "pageContact",
+          "DataType": "umb://data-type/3b39609b108a48d7959e3a82af697d6f",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Page Contact",
+          "SortOrder": 4,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "5b21fe7a-0b70-458f-a675-1ad313726fb4",
+          "Alias": "bodyText",
+          "DataType": "umb://data-type/ddd5a244cb264feda313b16355f32689",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Body Text",
+          "SortOrder": 5,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "61c8772c-04da-4e59-8904-4f9d46d967a6",
+          "Alias": "articleImage",
+          "DataType": "umb://data-type/8ab4c88f17f542b8a8c8a72d1b31896e",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Article Image",
+          "SortOrder": 2,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "670fa8de-8c20-4c7e-90e1-8f9251e0f875",
+          "Alias": "previewText",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Preview Text",
+          "SortOrder": 3,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/518a1264694c448890c4e6fb3b658623",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3b39609b108a48d7959e3a82af697d6f",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/5046194e4237453ca54715db3a07c4e1",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/8ab4c88f17f542b8a8c8a72d1b31896e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/ddd5a244cb264feda313b16355f32689",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/85ce8bab4fcb4a9fae975ab9ec519a1d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9bde43b151f747daa40cae788193c66d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9d28055904c14f65acf6241c0ef873f9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/bf9bdf51d4154a6e98855e275d9427e4",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Article Page",
+  "Alias": "articlePage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}

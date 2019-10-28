@@ -1,0 +1,18 @@
+{
+  "EditorAlias": "Umbraco.NestedContent",
+  "DatabaseType": 0,
+  "Configuration": {"contentTypes":[{"ncAlias":"nestedQuickLink","ncTabAlias":"Content","nameTemplate":"{{title}}"}],"confirmDeletes":true,"showIcons":true,"hideLabel":false},
+  "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+  "Udi": "umb://data-type/98c76e34267e424089fd41457e6917cb",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Nested Quick Links",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}

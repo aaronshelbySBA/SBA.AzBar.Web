@@ -1,0 +1,30 @@
+{
+  "MacroType": 7,
+  "MacroSource": "~/Views/MacroPartials/Accordion.cshtml",
+  "UseInEditor": true,
+  "CacheDuration": 0,
+  "CacheByPage": false,
+  "CacheByMember": false,
+  "DontRender": true,
+  "Properties": [
+    {
+      "Key": "4266121c-40b3-439e-ac6d-9fe8871c05da",
+      "Alias": "parentPage",
+      "Name": "Accordion Parent Page",
+      "SortOrder": 0,
+      "EditorAlias": "Umbraco.ContentPicker"
+    }
+  ],
+  "Udi": "umb://macro/0d34230fabf14c55ad1c21fdea859db5",
+  "Dependencies": [
+    {
+      "Udi": "umb://partial-view-macro/Accordion.cshtml",
+      "Ordering": true,
+      "Mode": 1
+    }
+  ],
+  "Name": "Accordion",
+  "Alias": "Accordion",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.MacroArtifact",
+  "__version": "3.0.2"
+}

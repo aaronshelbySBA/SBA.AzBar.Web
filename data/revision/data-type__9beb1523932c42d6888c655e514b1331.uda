@@ -1,0 +1,18 @@
+{
+  "EditorAlias": "Umbraco.NestedContent",
+  "DatabaseType": 0,
+  "Configuration": {"contentTypes":[{"ncAlias":"nestedCarouselPanel","ncTabAlias":"Content","nameTemplate":"{{title}}"}],"confirmDeletes":true,"showIcons":true,"hideLabel":false},
+  "Parent": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+  "Udi": "umb://data-type/9beb1523932c42d6888c655e514b1331",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/511b5387ac2c457381571400185c9e6d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Nested Carousel Panel",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "3.0.2"
+}
