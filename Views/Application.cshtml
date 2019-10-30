@@ -1,5 +1,30 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Application>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = null;
+    Layout = null;
 }
+
+<script type="text/javascript">
+    window.addEventListener('message', function (e) {
+        var $iframe = jQuery("#myIframe");
+        var eventName = e.data[0];
+        var data = e.data[1];
+        switch (eventName) {
+            case 'setHeight':
+                $iframe.height(data);
+                break;
+        }
+    }, false);
+</script>
+
+<iframe src="https://membertools.azbar.org/mcle/" style="width:100%" scrolling="no"></iframe>
+
+@*
+    framed content must have the following code called every time the page height changes
+
+    function resize() {
+      var height = document.getElementsByTagName("html")[0].scrollHeight;
+      parent.postMessage(["setHeight", height], "*");
+    }
+
+*@
