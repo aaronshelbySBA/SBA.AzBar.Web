@@ -1,0 +1,21 @@
+{
+  "File": "umb://template-file/NewsPage.cshtml",
+  "Master": "umb://template/01443a6ed047410686e5fd175f620783",
+  "Udi": "umb://template/e1677f5763ab4a4b9c0b7957524ecd8f",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/01443a6ed047410686e5fd175f620783",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template-file/NewsPage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "News Page",
+  "Alias": "NewsPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}

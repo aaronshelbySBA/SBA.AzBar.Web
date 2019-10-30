@@ -1,0 +1,22 @@
+{
+  "MacroType": 7,
+  "MacroSource": "~/Views/MacroPartials/Candidates.cshtml",
+  "UseInEditor": true,
+  "CacheDuration": 0,
+  "CacheByPage": false,
+  "CacheByMember": false,
+  "DontRender": true,
+  "Properties": [],
+  "Udi": "umb://macro/cb8570b37e8d4561885b8268d7e52ccb",
+  "Dependencies": [
+    {
+      "Udi": "umb://partial-view-macro/Candidates.cshtml",
+      "Ordering": true,
+      "Mode": 1
+    }
+  ],
+  "Name": "Candidates",
+  "Alias": "Candidates",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.MacroArtifact",
+  "__version": "3.0.2"
+}

@@ -1,0 +1,73 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-settings color-black",
+  "Thumbnail": "folder.png",
+  "Description": "*Admin Permissions Required",
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/caebe16815c44eccbe6f780c20bde573",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "50c7aea9-cfe0-4289-9039-041d602ef9f1",
+      "Name": "Page Settings",
+      "SortOrder": 9,
+      "PropertyTypes": [
+        {
+          "Key": "a4aa3c2c-da6f-4d7f-a899-4321b02fe5df",
+          "Alias": "pageAds",
+          "DataType": "umb://data-type/a57625742ff849a58bd3a50b22618640",
+          "Description": "Override global ads with page settings.",
+          "Mandatory": false,
+          "Name": "Page Ads",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        },
+        {
+          "Key": "e8590c7a-3ef3-4f40-9432-0392d9f60659",
+          "Alias": "showAds",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Show Ads",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/9bde43b151f747daa40cae788193c66d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/a57625742ff849a58bd3a50b22618640",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/caebe16815c44eccbe6f780c20bde573",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Advertising Settings",
+  "Alias": "compAdSettings",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}

@@ -1,0 +1,9 @@
+﻿{
+	"dashboards": [
+    {
+      "alias": "sba.azbar.Hangfire",
+      "view": "/App_Plugins/SBA.AzBar.Hangfire/dashboard.html",
+      "sections": [ "content" ]
+    }
+    ]
+}

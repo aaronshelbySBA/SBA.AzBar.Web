@@ -1,0 +1,71 @@
+{
+  "DefaultTemplate": "umb://template/b572a30834e048af9531323e5f372ce9",
+  "AllowedTemplates": [
+    "umb://template/b572a30834e048af9531323e5f372ce9"
+  ],
+  "Icon": "icon-calendar-alt color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": true,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": [
+      "umb://document-type/5a10a93e3b47406cbf0b8f77a676528a"
+    ]
+  },
+  "Parent": null,
+  "CompositionContentTypes": [
+    "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+    "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+    "umb://document-type/85ce8bab4fcb4a9fae975ab9ec519a1d",
+    "umb://document-type/9bde43b151f747daa40cae788193c66d",
+    "umb://document-type/9d28055904c14f65acf6241c0ef873f9"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/709b4008b4014af7b251a7cf1f985d76",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/2f0514e97a09421e978183785e7f3bfb",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/5a10a93e3b47406cbf0b8f77a676528a",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/7ea673d93a684fb69f091b3cc6d07fe3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/85ce8bab4fcb4a9fae975ab9ec519a1d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9bde43b151f747daa40cae788193c66d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9d28055904c14f65acf6241c0ef873f9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/b572a30834e048af9531323e5f372ce9",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Calendar Page",
+  "Alias": "calendarPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "3.0.2"
+}

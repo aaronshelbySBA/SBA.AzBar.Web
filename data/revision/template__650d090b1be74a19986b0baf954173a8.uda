@@ -1,0 +1,21 @@
+{
+  "File": "umb://template-file/ApplicationPage.cshtml",
+  "Master": "umb://template/01443a6ed047410686e5fd175f620783",
+  "Udi": "umb://template/650d090b1be74a19986b0baf954173a8",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/01443a6ed047410686e5fd175f620783",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template-file/ApplicationPage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Application Page",
+  "Alias": "ApplicationPage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "3.0.2"
+}
